@@ -1,0 +1,5 @@
+﻿-2 : DB error
+-1 : Generic exception
+-3 : Configuration error
+-4 : Parameter data is missing (mandatory)
+-5 : RDLC can not be found

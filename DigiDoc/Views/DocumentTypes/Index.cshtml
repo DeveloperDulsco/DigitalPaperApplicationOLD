@@ -1,0 +1,342 @@
+﻿@using DigiDoc.Models;
+@model  DocumentTypeMaster
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" href="~/assets/css/datatables.min.css">
+<link href="~/Assets/css/styles.css" rel="stylesheet" />
+<link href="~/Assets/css/custom.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+<div class="container-fluid px-4 pt-4">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-2 mb-3 mb-0">Document Types</h1>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <ul class="search">
+                <li>
+                    <a class="btn-link" href="javascript:openDetailModal('', '', '','');">Add Type</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <div class="row">
+            @if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+
+                if (ViewBag.Success)
+                {
+                    <div class="alert alert-success" role="alert">
+
+                        @(ViewBag.Message)
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-danger" role="alert">
+
+                        @(ViewBag.Message)
+                    </div>
+                }
+            }
+
+            <div class="table-wrap">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="table-responsive cstm-table">
+                            <table id="docTable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-nowrap" scope="col">Serial #</th>
+                                        <th class="text-nowrap" scope="col">Document Type Code</th>
+                                        <th class="text-nowrap" scope="col">Document Type</th>
+                                        <th class="text-nowrap" scope="col">Status</th>
+                                        <th class="text-nowrap" scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+}
+
+<div class="modal model-cstm fade" id="DocumentTypeViewEditModel" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Document Type Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="frmdocumenttypedit" action="@Url.Action("UpdateDocumentTypeMaster","DocumentTypes")">
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <input name="DocumentID" id="documentID" hidden>
+                        <div class="col-md-6">
+                            <div class="form-group ">
+                                <label>Code</label>
+                                <input name="DocumentCode" id="documentCode" placeholder="Document Type Code" class="form-control" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input name="DocumentName" id="documentName" placeholder="Document Type" class="form-control" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input name="IsActive" id="IsActive" class="form-check-input" type="checkbox" value="true" onclick="checkactive(this)">
+                                <label class="form-check-label" style="padding: 3px 4px;">
+                                    Enable
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.Label("Error", new { @class = "field-validation-error", @id = "Errortext" })
+
+                    <div class="button-wrapper d-flex justify-content-center">
+                        <input type="button" name="CancelButon" id="cancel_buton" value="Cancel" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <input type="submit" name="UpdateButon" id="update_buton" value="Ok" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal model-cstm fade" id="ConfirmModal" aria-hidden="true" aria-labelledby="ConfirmmessageModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Confirm</h5>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("SetDocumentActive", "DocumentTypes", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="message">
+                        <p id="modalMessageContent">
+                            Do you want to deactivate this DocumentType?
+                        </p>
+                    </div>
+                    <div class="button-wrapper d-flex justify-content-center">
+
+                        <input type="hidden" id="hfdocname" name="DocumentCode">
+                        <input type="hidden" id="hfdocId" name="DocumentID">
+                        <input type="submit" name="ConfirmButon" id="ConfirmButon" value="Confirm"  class="btn btn-primary"/>
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts{
+
+
+
+
+    <script src="~/Assets/js/datatables/dataTables.min.js"></script>
+    <script src="~/Assets/js/datatables/dataTables.bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.alert').remove();
+                if (window.location.href.indexOf('?') > -1) {
+                    history.pushState('', document.title, window.location.pathname);
+                }
+            }, 15000);
+
+
+            $("#Errortext").empty();
+            $('#frmdocumenttypedit').on('submit', function (e) {
+                    e.preventDefault();
+                    var url = $(this).attr('action');
+                    var data = $(this).serialize();
+
+                    $.ajax({
+                        url: url,
+                        data: data,
+                        type: "POST",
+                        success: function (data) {
+                            //
+
+
+
+                            if (data.Result) {
+
+                                var baseUrl = "@Url.Action("Index", "DocumentTypes")?Message=" + data.Message + "&Success=" + true;
+                                window.location.href=baseUrl;
+                            }
+                            else {
+
+                                $("#Errortext").text(data.Message);
+                            }
+
+
+                        },
+                        error: function (error) {
+                            //  bootbox.alert("Failed");
+                        }
+                    })
+
+
+
+                })
+        });
+        $("#loadingModal").css("display", "none");
+       // $('#ConfirmModal').modal('hide');
+        $(document).ready(function () {
+
+
+            $('#docTable').on('error.dt', function(e, settings, techNote, message){
+                console.log('An error has been reported by DataTables: ', message );
+                e.preventDefault();
+            });
+
+
+
+            var dt = $('#docTable').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    url: "@Url.Action("GetDocListAjax", "DocumentTypes")"
+
+                },
+                "columns": [
+                    { "data": "DocumentID" },
+                    { "data": "DocumentCode" },
+                    { "data": "DocumentName" },
+
+                    {
+                        "data": "IsActive",
+                        "render": function (data, type, row) {
+                            if (row.IsActive == true || row.IsActive==null)
+                                return 'Enabled'
+                            else
+                                return 'Disabled'
+                        }
+                    },
+                    {
+                        "data": null,
+                        "render": function (data, type, row) {
+
+                            if (row.DocumentCode == "OTH" || row.DocumentCode == "PA" || row.DocumentCode == "RB") {
+                                return ''
+                            }
+                            else {
+                                if (row.IsActive == true) {
+                                    return '<a class="tb-icon" href="#" onclick="openDetailModal(' + row.DocumentID + ', \'' + row.DocumentName + '\', \'' + row.IsActive + '\', \'' + row.DocumentCode + '\');"><i class="far fa-eye"></i></a>&nbsp;<a class="tb-icon" href="#" confirm="Are you want to delete document type?" onclick="return DeleteDocument(\'' + row.DocumentCode + '\',' + row.DocumentID + ');"><i class="fa fa-trash"></i></a>'
+                                }
+                                else {
+                                    return '<a class="tb-icon" href="#" onclick="openDetailModal(' + row.DocumentID + ', \'' + row.DocumentName + '\', \'' + row.IsActive + '\', \'' + row.DocumentCode + '\');"><i class="far fa-eye">'
+                                }
+                            }
+                        }
+
+
+                    }
+
+
+                ],
+               // "order": [[1, 'asc']]
+            });
+
+
+
+
+        });
+
+
+    </script>
+
+
+
+
+
+    <script>
+        $('#IsActive').click(function () {
+            if ($(this).is(":checked")) {
+
+                $('#IsActive').val(true);
+            }
+            else if ($(this).is(":not(:checked)")) {
+                $('#IsActive').val(false);
+            }
+        });
+        $("#loadingModal").css("display", "none");
+        function openDetailModal(docID, docName, IsActive, docCode) {
+            $('#IsActive').removeAttr('checked');
+            $('#IsActive').removeAttr('disabled');
+            $("#Errortext").empty();
+            if (docID === "") {
+
+                $('#documentCode').attr('readonly', false);
+                $('#documentCode').val(null);
+                $('#documentName').val(null);
+                $('#documentID').val(null);
+                $('#IsActive').val(IsActive);
+                $('#IsActive').prop('checked', IsActive);
+                $('#IsActive').attr('disabled', true);
+                $('#DocumentTypeViewEditModel').modal('show');
+            }
+            else {
+
+                $('#documentName').removeAttr('readonly');
+                if (docCode == "OTH" || docCode == "PA" || docCode == "RB") {
+                    $('#documentName').attr('readonly', true);
+                }
+                $('#documentCode').attr('readonly', true);
+                $('#documentCode').val(docCode);
+                $('#documentName').val(docName);
+                $('#documentID').val(docID);
+                $('#IsActive').val(IsActive);
+
+               
+                if(IsActive == 'true')
+                {
+                    $('#IsActive').prop('checked', IsActive);
+                }
+                $('#DocumentTypeViewEditModel').modal('show');
+            }
+
+
+        }
+        function DeleteDocument(DocumnetName, DocumentID) {
+            $("#hfdocname").val(DocumnetName);
+            $("#hfdocId").val(DocumentID);
+            $('#ConfirmModal').modal('show');
+        }
+        $(document).ready(function () {
+
+
+        });
+
+    </script>
+
+
+}
+

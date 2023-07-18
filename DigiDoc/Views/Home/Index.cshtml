@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" href="~/assets/css/datatables.min.css">
+<link href="~/assets/css/styles.css" rel="stylesheet" />
+<link href="~/assets/css/custom.css" rel="stylesheet" />
+
+<div class="container-fluid px-4 pt-4">
+
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("DocumentGroups", "Home")">Document</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">View</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <a class="mb-4 back-btn" href="@Url.Action("DocumentGroups", "Home")"><i class="fas fa-arrow-left"></i>Back</a>
+        </div>
+        @*<div class="col-12 col-sm-auto">
+            <ul class="search">
+                <li>
+                    <a class="btn-link" href="#">Upload File</a>
+                </li>
+                <li class="input-bx">
+                    <input type="text" class="form-control" placeholder="Search ...">
+                    <a class="icon" href="#"><img src="~/assets/images/search.svg"></a>
+                </li>
+            </ul>
+        </div>*@
+    </div>
+    <div class="table-wrap">
+        <div class="row">
+            <div class="col-md-12">
+                
+                    <table id="documentTable" class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-nowrap" scope="col">Document Type</th>
+                                <th class="text-nowrap" scope="col">Document Name</th>
+                                <th class="text-nowrap" scope="col">Created Date</th>
+                                <th class="text-nowrap" scope="col">Updated Date</th>
+                                <th class="text-nowrap" scope="col">Last Modified By</th>
+                                <th class="text-nowrap text-center" scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+@section Scripts{
+
+    <script src="~/Assets/js/datatables/dataTables.min.js"></script>
+    <script src="~/Assets/js/datatables/dataTables.bootstrap.min.js"></script>
+
+    <script>
+
+       
+
+        $(document).ready(function () {
+
+
+            $('#documentTable').on('error.dt', function(e, settings, techNote, message){
+                console.log('An error has been reported by DataTables: ', message );
+                e.preventDefault();
+            });
+
+
+
+            var dt = $('#documentTable').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    url: "@Url.Action("GetDocumentListAjax", "Home",new { DocumentType = ViewBag.documentType })"
+                    
+                },
+                "columns": [
+                    { "data": "DocumentType" },
+                    { "data": "DocumentName" },
+                    {
+
+                        "data": "CreatedDatetime",
+                        "render": function (data, type, row) {
+                            return formatDate(new Date(parseInt(row.CreatedDatetime.substr(6))));
+                        }
+                    },
+                    {
+                        "data": "CreatedDatetime",
+                        "render": function (data, type, row) {
+                            return formatDate(new Date(parseInt(row.CreatedDatetime.substr(6))));
+                        }
+                    },
+                    { "data": "LastCommentedUser" },
+                    {
+                        "data": null,
+                        "render": function (data, type, row) {
+                            return ' <a class="tb-icon" href="@Url.Action("DocumentDetails", "Document")?DetailID=' + row.DocumentDetailID + '"><i class="far fa-eye"></i></a>'
+                        }
+
+                    }
+                ],
+               // "order": [[1, 'asc']]
+            });
+
+
+
+            //var table = $('#fixedHeader').DataTable({
+            //    fixedHeader: true,
+            //    'iDisplayLength': 25,
+            //    "language": {
+            //        "lengthMenu": "Display _MENU_ Records Per Page",
+            //        "info": "Showing Page _PAGE_ of _PAGES_",
+            //    }
+            //});
+        });
+
+    </script>
+
+
+}

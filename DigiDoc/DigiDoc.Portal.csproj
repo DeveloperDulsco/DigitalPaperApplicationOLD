@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38876471-BABB-4F06-8915-A4801F55C48D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigiDoc</RootNamespace>
+    <AssemblyName>DigiDoc</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44344</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.25.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.25.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.6.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Identity.1.6.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Blobs, Version=12.13.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Storage.Blobs.12.13.0\lib\netstandard2.0\Azure.Storage.Blobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Common, Version=12.12.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Storage.Common.12.12.0\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=27.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.27.2.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=3.1.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.3.1.0\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.2.46.3\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.2.46.3\lib\net45\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.0.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Identity.Client, Version=4.39.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.39.0\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=2.19.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.2.19.3\lib\net45\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.3.3\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.13\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Hashing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Hashing.6.0.0\lib\net461\System.IO.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.4.7.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\DigidocMobileController.cs" />
+    <Compile Include="CoverLetterReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoverLetterReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DigiDocHub\DgigDocHub.cs" />
+    <Compile Include="Helper\AntiForgeryTokenFilter.cs" />
+    <Compile Include="Helper\DigiDocMobileHelper.cs" />
+    <Compile Include="Helper\NoDirectAccessAttribute.cs" />
+    <Compile Include="Helper\RefreshDetectFilter.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Base\BaseController.cs" />
+    <Compile Include="Controllers\DocumentController.cs" />
+    <Compile Include="Controllers\DocumentTypesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PropertiesController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SideMenuController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserProfileController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AuditHelper.cs" />
+    <Compile Include="Helper\ConfigurationReader.cs" />
+    <Compile Include="Helper\DatatabletoPdf.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\ListtoDataTableConverter.cs" />
+    <Compile Include="Helper\NlogHelper.cs" />
+    <Compile Include="Helper\UtilityHelper.cs" />
+    <Compile Include="Helper\WSClientHelper.cs" />
+    <Compile Include="Models\ApprovalResponseModel.cs" />
+    <Compile Include="Models\AuditJsonObject.cs" />
+    <Compile Include="Models\BlobStorage.cs" />
+    <Compile Include="Models\CommentsModel.cs" />
+    <Compile Include="Models\ConfigurationModel.cs" />
+    <Compile Include="Models\DocumentCount.cs" />
+    <Compile Include="Models\DocumentModel.cs" />
+    <Compile Include="Models\DocumentPdfModel.cs" />
+    <Compile Include="Models\DPO\DocumentDetailsDTO.cs" />
+    <Compile Include="Models\DPO\UserDetailRequestDTO.cs" />
+    <Compile Include="Models\Email\EmailModel.cs" />
+    <Compile Include="Models\Email\ServiceParameter.cs" />
+    <Compile Include="Models\Ereg\App.cs" />
+    <Compile Include="Models\Ereg\EregRequest.cs" />
+    <Compile Include="Models\Ereg\SliderImage.cs" />
+    <Compile Include="Models\FileUpload.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\NewUserModel.cs" />
+    <Compile Include="Models\ResetPasswordModel.cs" />
+    <Compile Include="Models\SessionDataModel.cs" />
+    <Compile Include="Models\UpdateUserDetailsModel.cs" />
+    <Compile Include="Models\UpdateUserModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UtilityModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="_HA5G8_dmsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_HA5G8_dmsDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\css\custom.css" />
+    <Content Include="Assets\css\dataTables.checkboxes.css" />
+    <Content Include="Assets\css\datatables.css" />
+    <Content Include="Assets\css\datatables.min.css" />
+    <Content Include="Assets\css\ie9.css" />
+    <Content Include="Assets\css\signature-pad.css" />
+    <Content Include="Assets\css\styles.css" />
+    <Content Include="Assets\images\arrow-left.svg" />
+    <Content Include="Assets\images\arrow-right.svg" />
+    <Content Include="Assets\images\avatar.jpg" />
+    <Content Include="Assets\images\avtar.svg" />
+    <Content Include="Assets\images\close.svg" />
+    <Content Include="Assets\images\favicon-16x16.png" />
+    <Content Include="Assets\images\home.svg" />
+    <Content Include="Assets\images\log-out.svg" />
+    <Content Include="Assets\images\Login_bg.svg" />
+    <Content Include="Assets\images\logo.svg" />
+    <Content Include="Assets\images\Logo_login.svg" />
+    <Content Include="Assets\images\logo_sample.png" />
+    <Content Include="Assets\images\search.svg" />
+    <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\bootstrap-datepicker.min.js" />
+    <Content Include="Assets\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\js\dataTables.checkboxes.min.js" />
+    <Content Include="Assets\js\datatables\buttons.bs.css" />
+    <Content Include="Assets\js\datatables\buttons.min.js" />
+    <Content Include="Assets\js\datatables\buttons.print.min.js" />
+    <Content Include="Assets\js\datatables\custom\custom-datatables.js" />
+    <Content Include="Assets\js\datatables\custom\fixedHeader.js" />
+    <Content Include="Assets\js\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Assets\js\datatables\dataTables.bs4-custom.css" />
+    <Content Include="Assets\js\datatables\dataTables.bs4.css" />
+    <Content Include="Assets\js\datatables\dataTables.min.js" />
+    <Content Include="Assets\js\datatables\html5.min.js" />
+    <Content Include="Assets\js\datatables\jszip.min.js" />
+    <Content Include="Assets\js\datatables\vfs_fonts.js" />
+    <Content Include="Assets\js\jquery-3.5.1.slim.min.js" />
+    <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\js\jquery.validate.min.js" />
+    <Content Include="Assets\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\js\scripts.js" />
+    <Content Include="Assets\js\signature_pad.umd.js" />
+    <Content Include="Asset\css\all.min.css" />
+    <Content Include="Asset\css\bootstrap.min.css" />
+    <Content Include="Asset\css\ie9.css" />
+    <Content Include="Asset\css\signature-pad.css" />
+    <Content Include="Asset\css\style.css" />
+    <Content Include="Asset\images\bell.svg" />
+    <Content Include="Asset\images\logo.svg" />
+    <Content Include="Asset\images\notification.svg" />
+    <Content Include="Asset\js\app.js" />
+    <Content Include="Asset\js\bootstrap-datepicker.min.js" />
+    <Content Include="Asset\js\bootstrap.bundle.js" />
+    <Content Include="Asset\js\bootstrap.bundle.min.js" />
+    <Content Include="Asset\js\dataTables.checkboxes.min.js" />
+    <Content Include="Asset\js\datatables\buttons.bs.css" />
+    <Content Include="Asset\js\datatables\buttons.min.js" />
+    <Content Include="Asset\js\datatables\buttons.print.min.js" />
+    <Content Include="Asset\js\datatables\custom\custom-datatables.js" />
+    <Content Include="Asset\js\datatables\custom\fixedHeader.js" />
+    <Content Include="Asset\js\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Asset\js\datatables\dataTables.bs4-custom.css" />
+    <Content Include="Asset\js\datatables\dataTables.bs4.css" />
+    <Content Include="Asset\js\datatables\dataTables.min.js" />
+    <Content Include="Asset\js\datatables\html5.min.js" />
+    <Content Include="Asset\js\datatables\jszip.min.js" />
+    <Content Include="Asset\js\datatables\vfs_fonts.js" />
+    <Content Include="Asset\js\jquery-3.5.1.slim.min.js" />
+    <Content Include="Asset\js\jquery.min.js" />
+    <Content Include="Asset\js\jquery.validate.min.js" />
+    <Content Include="Asset\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Asset\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Asset\js\scripts.js" />
+    <Content Include="Asset\js\signature_pad.umd.js" />
+    <Content Include="build\pdf.js" />
+    <Content Include="build\pdf.sandbox.js" />
+    <Content Include="build\pdf.worker.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="EregAssets\css\all.css" />
+    <Content Include="EregAssets\css\bootstrap-select.min.css" />
+    <Content Include="EregAssets\css\bootstrap.min.css" />
+    <Content Include="EregAssets\css\custom.css" />
+    <Content Include="EregAssets\css\ie9.css" />
+    <Content Include="EregAssets\css\signature-pad.css" />
+    <Content Include="EregAssets\fonts\fa-brands-400.svg" />
+    <Content Include="EregAssets\fonts\fa-regular-400.svg" />
+    <Content Include="EregAssets\fonts\fa-solid-900.svg" />
+    <Content Include="EregAssets\images\arrow-top.svg" />
+    <Content Include="EregAssets\images\bell.svg" />
+    <Content Include="EregAssets\images\benifits.jpeg" />
+    <Content Include="EregAssets\images\bg_image.png" />
+    <Content Include="EregAssets\images\check.svg" />
+    <Content Include="EregAssets\images\check_hover.svg" />
+    <Content Include="EregAssets\images\close.svg" />
+    <Content Include="EregAssets\images\close_hover.svg" />
+    <Content Include="EregAssets\images\close_icon.png" />
+    <Content Include="EregAssets\images\favicon.ico" />
+    <Content Include="EregAssets\images\Iconclose.svg" />
+    <Content Include="EregAssets\images\logo.jpg" />
+    <Content Include="EregAssets\images\logo.png" />
+    <Content Include="EregAssets\images\logo.svg" />
+    <Content Include="EregAssets\images\notification.svg" />
+    <Content Include="EregAssets\js\app.js" />
+    <Content Include="EregAssets\js\bootstrap-select.min.js" />
+    <Content Include="EregAssets\js\bootstrap.bundle.min.js" />
+    <Content Include="EregAssets\js\jquery-3.5.1.slim.min.js" />
+    <Content Include="EregAssets\js\jquery.min.js" />
+    <Content Include="EregAssets\js\Script.js" />
+    <Content Include="EregAssets\js\signature_pad.umd.js" />
+    <Content Include="error.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ReleaseNote.txt" />
+    <Content Include="ReturnCodes.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\images\Folio.pdf" />
+    <Content Include="RDLC\AuditReport\AuditReport.rdlc" />
+    <Content Include="CoverLetterDataset.xsc" />
+    <Content Include="CoverLetterDataset.xss" />
+    <Content Include="Assets\Samples\UserUploadSample.csv" />
+    <Content Include="CoverLetterReportDataSet.xsc">
+      <DependentUpon>CoverLetterReportDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Asset\images\Folio.pdf" />
+    <Content Include="build\pdf.js.map" />
+    <Content Include="build\pdf.sandbox.js.map" />
+    <Content Include="build\pdf.worker.js.map" />
+    <None Include="CoverLetterReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoverLetterReportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CoverLetterReportDataSet.xss">
+      <DependentUpon>CoverLetterReportDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="EregAssets\fonts\fa-brands-400.eot" />
+    <Content Include="EregAssets\fonts\fa-brands-400.ttf" />
+    <Content Include="EregAssets\fonts\fa-brands-400.woff" />
+    <Content Include="EregAssets\fonts\fa-brands-400.woff2" />
+    <Content Include="EregAssets\fonts\fa-regular-400.eot" />
+    <Content Include="EregAssets\fonts\fa-regular-400.ttf" />
+    <Content Include="EregAssets\fonts\fa-regular-400.woff" />
+    <Content Include="EregAssets\fonts\fa-regular-400.woff2" />
+    <Content Include="EregAssets\fonts\fa-solid-900.eot" />
+    <Content Include="EregAssets\fonts\fa-solid-900.ttf" />
+    <Content Include="EregAssets\fonts\fa-solid-900.woff" />
+    <Content Include="EregAssets\fonts\fa-solid-900.woff2" />
+    <Content Include="EregAssets\images\Folio.pdf" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="SliderImages\img1.jfif" />
+    <Content Include="SliderImages\img2.jfif" />
+    <Content Include="SliderImages\img3.jfif" />
+    <Content Include="SliderImages\img4.jfif" />
+    <Content Include="SliderImages\img5.jfif" />
+    <Content Include="SliderImages\img6.jfif" />
+    <Content Include="SliderImages\img7.jfif" />
+    <Content Include="SliderImages\img8.jfif" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Document\Index.cshtml" />
+    <Content Include="Views\Home\PropertyMaster.cshtml" />
+    <Content Include="Views\Home\ProfileMaster.cshtml" />
+    <Content Include="Views\User\UserList.cshtml" />
+    <Content Include="Views\User\NewUser.cshtml" />
+    <Content Include="Views\UserProfile\NewUserProfile.cshtml" />
+    <Content Include="Views\Properties\NewProperty.cshtml" />
+    <Content Include="Views\SideMenu\Index.cshtml" />
+    <Content Include="Views\Document\DocumentDetails.cshtml" />
+    <Content Include="Views\Document\DocumentGroups.cshtml" />
+    <Content Include="Views\Reports\AuditReport.cshtml" />
+    <Content Include="Views\User\ViewUserDetails.cshtml" />
+    <Content Include="Views\Reports\GetAuditDetails.cshtml" />
+    <Content Include="Views\DocumentTypes\Index.cshtml" />
+    <Content Include="Views\Document\ApprovalList.cshtml" />
+    <Content Include="Views\Document\DocumentSignature.cshtml" />
+    <Content Include="Views\ccc\Index.cshtml" />
+    <Content Include="web\customToolbar.js.js" />
+    <Content Include="web\debugger.css" />
+    <Content Include="web\debugger.js" />
+    <Content Include="web\images\annotation-check.svg" />
+    <Content Include="web\images\annotation-comment.svg" />
+    <Content Include="web\images\annotation-help.svg" />
+    <Content Include="web\images\annotation-insert.svg" />
+    <Content Include="web\images\annotation-key.svg" />
+    <Content Include="web\images\annotation-newparagraph.svg" />
+    <Content Include="web\images\annotation-noicon.svg" />
+    <Content Include="web\images\annotation-note.svg" />
+    <Content Include="web\images\annotation-paperclip.svg" />
+    <Content Include="web\images\annotation-paragraph.svg" />
+    <Content Include="web\images\annotation-pushpin.svg" />
+    <Content Include="web\images\cursor-editorFreeText.svg" />
+    <Content Include="web\images\cursor-editorInk.svg" />
+    <Content Include="web\images\findbarButton-next.svg" />
+    <Content Include="web\images\findbarButton-previous.svg" />
+    <Content Include="web\images\loading-dark.svg" />
+    <Content Include="web\images\loading-icon.gif" />
+    <Content Include="web\images\loading.svg" />
+    <Content Include="web\images\secondaryToolbarButton-documentProperties.svg" />
+    <Content Include="web\images\secondaryToolbarButton-firstPage.svg" />
+    <Content Include="web\images\secondaryToolbarButton-handTool.svg" />
+    <Content Include="web\images\secondaryToolbarButton-lastPage.svg" />
+    <Content Include="web\images\secondaryToolbarButton-rotateCcw.svg" />
+    <Content Include="web\images\secondaryToolbarButton-rotateCw.svg" />
+    <Content Include="web\images\secondaryToolbarButton-scrollHorizontal.svg" />
+    <Content Include="web\images\secondaryToolbarButton-scrollPage.svg" />
+    <Content Include="web\images\secondaryToolbarButton-scrollVertical.svg" />
+    <Content Include="web\images\secondaryToolbarButton-scrollWrapped.svg" />
+    <Content Include="web\images\secondaryToolbarButton-selectTool.svg" />
+    <Content Include="web\images\secondaryToolbarButton-spreadEven.svg" />
+    <Content Include="web\images\secondaryToolbarButton-spreadNone.svg" />
+    <Content Include="web\images\secondaryToolbarButton-spreadOdd.svg" />
+    <Content Include="web\images\shadow.png" />
+    <Content Include="web\images\toolbarButton-bookmark.svg" />
+    <Content Include="web\images\toolbarButton-currentOutlineItem.svg" />
+    <Content Include="web\images\toolbarButton-download.svg" />
+    <Content Include="web\images\toolbarButton-editorFreeText.svg" />
+    <Content Include="web\images\toolbarButton-editorInk.svg" />
+    <Content Include="web\images\toolbarButton-menuArrow.svg" />
+    <Content Include="web\images\toolbarButton-openFile.svg" />
+    <Content Include="web\images\toolbarButton-pageDown.svg" />
+    <Content Include="web\images\toolbarButton-pageUp.svg" />
+    <Content Include="web\images\toolbarButton-presentationMode.svg" />
+    <Content Include="web\images\toolbarButton-print.svg" />
+    <Content Include="web\images\toolbarButton-search.svg" />
+    <Content Include="web\images\toolbarButton-secondaryToolbarToggle.svg" />
+    <Content Include="web\images\toolbarButton-sidebarToggle.svg" />
+    <Content Include="web\images\toolbarButton-viewAttachments.svg" />
+    <Content Include="web\images\toolbarButton-viewLayers.svg" />
+    <Content Include="web\images\toolbarButton-viewOutline.svg" />
+    <Content Include="web\images\toolbarButton-viewThumbnail.svg" />
+    <Content Include="web\images\toolbarButton-zoomIn.svg" />
+    <Content Include="web\images\toolbarButton-zoomOut.svg" />
+    <Content Include="web\images\treeitem-collapsed.svg" />
+    <Content Include="web\images\treeitem-expanded.svg" />
+    <Content Include="web\JavaScript.js" />
+    <Content Include="web\viewer.css" />
+    <Content Include="web\viewer.html" />
+    <Content Include="web\viewer.js" />
+    <Content Include="XMLFile1.xml" />
+    <Content Include="_HA5G8_dmsDataSet.xsc">
+      <DependentUpon>_HA5G8_dmsDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\DigidocMobile\GetFolio.cshtml" />
+    <Content Include="Views\DigidocMobile\SliderIndex.cshtml" />
+    <Content Include="Views\Shared\DigiDocMobLayout.cshtml" />
+    <Content Include="Views\DigidocMobile\GetRegistration.cshtml" />
+    <Content Include="Views\DigidocMobile\PDfApprove.cshtml" />
+    <Content Include="Views\DigidocMobile\GetViews.cshtml" />
+    <Content Include="Views\DigidocMobile\GetRegistration - Copy.cshtml" />
+    <Content Include="Views\DigidocMobile\GetFolio - Copy.cshtml" />
+    <Content Include="Views\Shared\DigiDocMobileLayout.cshtml" />
+    <Content Include="Views\DigidocMobile\GetAnyPDF.cshtml" />
+    <Content Include="web\cmaps\78-EUC-H.bcmap" />
+    <Content Include="web\cmaps\78-EUC-V.bcmap" />
+    <Content Include="web\cmaps\78-H.bcmap" />
+    <Content Include="web\cmaps\78-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\78-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\78-V.bcmap" />
+    <Content Include="web\cmaps\78ms-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\78ms-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\83pv-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\90ms-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\90ms-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\90msp-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\90msp-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\90pv-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\90pv-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\Add-H.bcmap" />
+    <Content Include="web\cmaps\Add-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\Add-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\Add-V.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-0.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-1.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-2.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-3.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-4.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-5.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-6.bcmap" />
+    <Content Include="web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-0.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-1.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-2.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-3.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-4.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-5.bcmap" />
+    <Content Include="web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-0.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-1.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-2.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-3.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-4.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-5.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-6.bcmap" />
+    <Content Include="web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <Content Include="web\cmaps\Adobe-Korea1-0.bcmap" />
+    <Content Include="web\cmaps\Adobe-Korea1-1.bcmap" />
+    <Content Include="web\cmaps\Adobe-Korea1-2.bcmap" />
+    <Content Include="web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <Content Include="web\cmaps\B5-H.bcmap" />
+    <Content Include="web\cmaps\B5-V.bcmap" />
+    <Content Include="web\cmaps\B5pc-H.bcmap" />
+    <Content Include="web\cmaps\B5pc-V.bcmap" />
+    <Content Include="web\cmaps\CNS-EUC-H.bcmap" />
+    <Content Include="web\cmaps\CNS-EUC-V.bcmap" />
+    <Content Include="web\cmaps\CNS1-H.bcmap" />
+    <Content Include="web\cmaps\CNS1-V.bcmap" />
+    <Content Include="web\cmaps\CNS2-H.bcmap" />
+    <Content Include="web\cmaps\CNS2-V.bcmap" />
+    <Content Include="web\cmaps\ETen-B5-H.bcmap" />
+    <Content Include="web\cmaps\ETen-B5-V.bcmap" />
+    <Content Include="web\cmaps\ETenms-B5-H.bcmap" />
+    <Content Include="web\cmaps\ETenms-B5-V.bcmap" />
+    <Content Include="web\cmaps\ETHK-B5-H.bcmap" />
+    <Content Include="web\cmaps\ETHK-B5-V.bcmap" />
+    <Content Include="web\cmaps\EUC-H.bcmap" />
+    <Content Include="web\cmaps\EUC-V.bcmap" />
+    <Content Include="web\cmaps\Ext-H.bcmap" />
+    <Content Include="web\cmaps\Ext-RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\Ext-RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\Ext-V.bcmap" />
+    <Content Include="web\cmaps\GB-EUC-H.bcmap" />
+    <Content Include="web\cmaps\GB-EUC-V.bcmap" />
+    <Content Include="web\cmaps\GB-H.bcmap" />
+    <Content Include="web\cmaps\GB-V.bcmap" />
+    <Content Include="web\cmaps\GBK-EUC-H.bcmap" />
+    <Content Include="web\cmaps\GBK-EUC-V.bcmap" />
+    <Content Include="web\cmaps\GBK2K-H.bcmap" />
+    <Content Include="web\cmaps\GBK2K-V.bcmap" />
+    <Content Include="web\cmaps\GBKp-EUC-H.bcmap" />
+    <Content Include="web\cmaps\GBKp-EUC-V.bcmap" />
+    <Content Include="web\cmaps\GBpc-EUC-H.bcmap" />
+    <Content Include="web\cmaps\GBpc-EUC-V.bcmap" />
+    <Content Include="web\cmaps\GBT-EUC-H.bcmap" />
+    <Content Include="web\cmaps\GBT-EUC-V.bcmap" />
+    <Content Include="web\cmaps\GBT-H.bcmap" />
+    <Content Include="web\cmaps\GBT-V.bcmap" />
+    <Content Include="web\cmaps\GBTpc-EUC-H.bcmap" />
+    <Content Include="web\cmaps\GBTpc-EUC-V.bcmap" />
+    <Content Include="web\cmaps\H.bcmap" />
+    <Content Include="web\cmaps\Hankaku.bcmap" />
+    <Content Include="web\cmaps\Hiragana.bcmap" />
+    <Content Include="web\cmaps\HKdla-B5-H.bcmap" />
+    <Content Include="web\cmaps\HKdla-B5-V.bcmap" />
+    <Content Include="web\cmaps\HKdlb-B5-H.bcmap" />
+    <Content Include="web\cmaps\HKdlb-B5-V.bcmap" />
+    <Content Include="web\cmaps\HKgccs-B5-H.bcmap" />
+    <Content Include="web\cmaps\HKgccs-B5-V.bcmap" />
+    <Content Include="web\cmaps\HKm314-B5-H.bcmap" />
+    <Content Include="web\cmaps\HKm314-B5-V.bcmap" />
+    <Content Include="web\cmaps\HKm471-B5-H.bcmap" />
+    <Content Include="web\cmaps\HKm471-B5-V.bcmap" />
+    <Content Include="web\cmaps\HKscs-B5-H.bcmap" />
+    <Content Include="web\cmaps\HKscs-B5-V.bcmap" />
+    <Content Include="web\cmaps\Katakana.bcmap" />
+    <Content Include="web\cmaps\KSC-EUC-H.bcmap" />
+    <Content Include="web\cmaps\KSC-EUC-V.bcmap" />
+    <Content Include="web\cmaps\KSC-H.bcmap" />
+    <Content Include="web\cmaps\KSC-Johab-H.bcmap" />
+    <Content Include="web\cmaps\KSC-Johab-V.bcmap" />
+    <Content Include="web\cmaps\KSC-V.bcmap" />
+    <Content Include="web\cmaps\KSCms-UHC-H.bcmap" />
+    <Content Include="web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <Content Include="web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <Content Include="web\cmaps\KSCms-UHC-V.bcmap" />
+    <Content Include="web\cmaps\KSCpc-EUC-H.bcmap" />
+    <Content Include="web\cmaps\KSCpc-EUC-V.bcmap" />
+    <Content Include="web\cmaps\LICENSE" />
+    <Content Include="web\cmaps\NWP-H.bcmap" />
+    <Content Include="web\cmaps\NWP-V.bcmap" />
+    <Content Include="web\cmaps\RKSJ-H.bcmap" />
+    <Content Include="web\cmaps\RKSJ-V.bcmap" />
+    <Content Include="web\cmaps\Roman.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <Content Include="web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <Content Include="web\cmaps\UniGB-UCS2-H.bcmap" />
+    <Content Include="web\cmaps\UniGB-UCS2-V.bcmap" />
+    <Content Include="web\cmaps\UniGB-UTF16-H.bcmap" />
+    <Content Include="web\cmaps\UniGB-UTF16-V.bcmap" />
+    <Content Include="web\cmaps\UniGB-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniGB-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniGB-UTF8-H.bcmap" />
+    <Content Include="web\cmaps\UniGB-UTF8-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <Content Include="web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <Content Include="web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <Content Include="web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <Content Include="web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <Content Include="web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniKS-UCS2-H.bcmap" />
+    <Content Include="web\cmaps\UniKS-UCS2-V.bcmap" />
+    <Content Include="web\cmaps\UniKS-UTF16-H.bcmap" />
+    <Content Include="web\cmaps\UniKS-UTF16-V.bcmap" />
+    <Content Include="web\cmaps\UniKS-UTF32-H.bcmap" />
+    <Content Include="web\cmaps\UniKS-UTF32-V.bcmap" />
+    <Content Include="web\cmaps\UniKS-UTF8-H.bcmap" />
+    <Content Include="web\cmaps\UniKS-UTF8-V.bcmap" />
+    <Content Include="web\cmaps\V.bcmap" />
+    <Content Include="web\cmaps\WP-Symbol.bcmap" />
+    <Content Include="web\compressed.tracemonkey-pldi-09.pdf" />
+    <Content Include="web\locale\ach\viewer.properties" />
+    <Content Include="web\locale\af\viewer.properties" />
+    <Content Include="web\locale\an\viewer.properties" />
+    <Content Include="web\locale\ar\viewer.properties" />
+    <Content Include="web\locale\ast\viewer.properties" />
+    <Content Include="web\locale\az\viewer.properties" />
+    <Content Include="web\locale\be\viewer.properties" />
+    <Content Include="web\locale\bg\viewer.properties" />
+    <Content Include="web\locale\bn\viewer.properties" />
+    <Content Include="web\locale\bo\viewer.properties" />
+    <Content Include="web\locale\brx\viewer.properties" />
+    <Content Include="web\locale\br\viewer.properties" />
+    <Content Include="web\locale\bs\viewer.properties" />
+    <Content Include="web\locale\cak\viewer.properties" />
+    <Content Include="web\locale\ca\viewer.properties" />
+    <Content Include="web\locale\ckb\viewer.properties" />
+    <Content Include="web\locale\cs\viewer.properties" />
+    <Content Include="web\locale\cy\viewer.properties" />
+    <Content Include="web\locale\da\viewer.properties" />
+    <Content Include="web\locale\de\viewer.properties" />
+    <Content Include="web\locale\dsb\viewer.properties" />
+    <Content Include="web\locale\el\viewer.properties" />
+    <Content Include="web\locale\en-CA\viewer.properties" />
+    <Content Include="web\locale\en-GB\viewer.properties" />
+    <Content Include="web\locale\en-US\viewer.properties" />
+    <Content Include="web\locale\eo\viewer.properties" />
+    <Content Include="web\locale\es-AR\viewer.properties" />
+    <Content Include="web\locale\es-CL\viewer.properties" />
+    <Content Include="web\locale\es-ES\viewer.properties" />
+    <Content Include="web\locale\es-MX\viewer.properties" />
+    <Content Include="web\locale\et\viewer.properties" />
+    <Content Include="web\locale\eu\viewer.properties" />
+    <Content Include="web\locale\fa\viewer.properties" />
+    <Content Include="web\locale\ff\viewer.properties" />
+    <Content Include="web\locale\fi\viewer.properties" />
+    <Content Include="web\locale\fr\viewer.properties" />
+    <Content Include="web\locale\fur\viewer.properties" />
+    <Content Include="web\locale\fy-NL\viewer.properties" />
+    <Content Include="web\locale\ga-IE\viewer.properties" />
+    <Content Include="web\locale\gd\viewer.properties" />
+    <Content Include="web\locale\gl\viewer.properties" />
+    <Content Include="web\locale\gn\viewer.properties" />
+    <Content Include="web\locale\gu-IN\viewer.properties" />
+    <Content Include="web\locale\he\viewer.properties" />
+    <Content Include="web\locale\hi-IN\viewer.properties" />
+    <Content Include="web\locale\hr\viewer.properties" />
+    <Content Include="web\locale\hsb\viewer.properties" />
+    <Content Include="web\locale\hu\viewer.properties" />
+    <Content Include="web\locale\hy-AM\viewer.properties" />
+    <Content Include="web\locale\hye\viewer.properties" />
+    <Content Include="web\locale\ia\viewer.properties" />
+    <Content Include="web\locale\id\viewer.properties" />
+    <Content Include="web\locale\is\viewer.properties" />
+    <Content Include="web\locale\it\viewer.properties" />
+    <Content Include="web\locale\ja\viewer.properties" />
+    <Content Include="web\locale\kab\viewer.properties" />
+    <Content Include="web\locale\ka\viewer.properties" />
+    <Content Include="web\locale\kk\viewer.properties" />
+    <Content Include="web\locale\km\viewer.properties" />
+    <Content Include="web\locale\kn\viewer.properties" />
+    <Content Include="web\locale\ko\viewer.properties" />
+    <Content Include="web\locale\lij\viewer.properties" />
+    <Content Include="web\locale\locale.properties" />
+    <Content Include="web\locale\lo\viewer.properties" />
+    <Content Include="web\locale\ltg\viewer.properties" />
+    <Content Include="web\locale\lt\viewer.properties" />
+    <Content Include="web\locale\lv\viewer.properties" />
+    <Content Include="web\locale\meh\viewer.properties" />
+    <Content Include="web\locale\mk\viewer.properties" />
+    <Content Include="web\locale\mr\viewer.properties" />
+    <Content Include="web\locale\ms\viewer.properties" />
+    <Content Include="web\locale\my\viewer.properties" />
+    <Content Include="web\locale\nb-NO\viewer.properties" />
+    <Content Include="web\locale\ne-NP\viewer.properties" />
+    <Content Include="web\locale\nl\viewer.properties" />
+    <Content Include="web\locale\nn-NO\viewer.properties" />
+    <Content Include="web\locale\oc\viewer.properties" />
+    <Content Include="web\locale\pa-IN\viewer.properties" />
+    <Content Include="web\locale\pl\viewer.properties" />
+    <Content Include="web\locale\pt-BR\viewer.properties" />
+    <Content Include="web\locale\pt-PT\viewer.properties" />
+    <Content Include="web\locale\rm\viewer.properties" />
+    <Content Include="web\locale\ro\viewer.properties" />
+    <Content Include="web\locale\ru\viewer.properties" />
+    <Content Include="web\locale\sat\viewer.properties" />
+    <Content Include="web\locale\scn\viewer.properties" />
+    <Content Include="web\locale\sco\viewer.properties" />
+    <Content Include="web\locale\sc\viewer.properties" />
+    <Content Include="web\locale\si\viewer.properties" />
+    <Content Include="web\locale\sk\viewer.properties" />
+    <Content Include="web\locale\sl\viewer.properties" />
+    <Content Include="web\locale\son\viewer.properties" />
+    <Content Include="web\locale\sq\viewer.properties" />
+    <Content Include="web\locale\sr\viewer.properties" />
+    <Content Include="web\locale\sv-SE\viewer.properties" />
+    <Content Include="web\locale\szl\viewer.properties" />
+    <Content Include="web\locale\ta\viewer.properties" />
+    <Content Include="web\locale\te\viewer.properties" />
+    <Content Include="web\locale\tg\viewer.properties" />
+    <Content Include="web\locale\th\viewer.properties" />
+    <Content Include="web\locale\tl\viewer.properties" />
+    <Content Include="web\locale\trs\viewer.properties" />
+    <Content Include="web\locale\tr\viewer.properties" />
+    <Content Include="web\locale\uk\viewer.properties" />
+    <Content Include="web\locale\ur\viewer.properties" />
+    <Content Include="web\locale\uz\viewer.properties" />
+    <Content Include="web\locale\vi\viewer.properties" />
+    <Content Include="web\locale\wo\viewer.properties" />
+    <Content Include="web\locale\xh\viewer.properties" />
+    <Content Include="web\locale\zh-CN\viewer.properties" />
+    <Content Include="web\locale\zh-TW\viewer.properties" />
+    <Content Include="web\standard_fonts\FoxitDingbats.pfb" />
+    <Content Include="web\standard_fonts\FoxitFixed.pfb" />
+    <Content Include="web\standard_fonts\FoxitFixedBold.pfb" />
+    <Content Include="web\standard_fonts\FoxitFixedBoldItalic.pfb" />
+    <Content Include="web\standard_fonts\FoxitFixedItalic.pfb" />
+    <Content Include="web\standard_fonts\FoxitSans.pfb" />
+    <Content Include="web\standard_fonts\FoxitSansBold.pfb" />
+    <Content Include="web\standard_fonts\FoxitSansBoldItalic.pfb" />
+    <Content Include="web\standard_fonts\FoxitSansItalic.pfb" />
+    <Content Include="web\standard_fonts\FoxitSerif.pfb" />
+    <Content Include="web\standard_fonts\FoxitSerifBold.pfb" />
+    <Content Include="web\standard_fonts\FoxitSerifBoldItalic.pfb" />
+    <Content Include="web\standard_fonts\FoxitSerifItalic.pfb" />
+    <Content Include="web\standard_fonts\FoxitSymbol.pfb" />
+    <Content Include="web\standard_fonts\LiberationSans-Bold.ttf" />
+    <Content Include="web\standard_fonts\LiberationSans-BoldItalic.ttf" />
+    <Content Include="web\standard_fonts\LiberationSans-Italic.ttf" />
+    <Content Include="web\standard_fonts\LiberationSans-Regular.ttf" />
+    <Content Include="web\standard_fonts\LICENSE_FOXIT" />
+    <Content Include="web\standard_fonts\LICENSE_LIBERATION" />
+    <Content Include="web\viewer.js.map" />
+    <None Include="_HA5G8_dmsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_HA5G8_dmsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_HA5G8_dmsDataSet.xss">
+      <DependentUpon>_HA5G8_dmsDataSet.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Temp\" />
+    <Folder Include="uploads\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigiDoc.DataAccess\DigiDoc.DataAccess.csproj">
+      <Project>{b6ed0816-62f4-4f1d-a8a8-f10239119b62}</Project>
+      <Name>DigiDoc.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DigiDoc.PdfHelper\DigiDoc.PdfHelper.csproj">
+      <Project>{8dc62822-df6b-49a2-9a0e-749890b1dd45}</Project>
+      <Name>DigiDoc.PdfHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RDLC\CoverLetter\CoverLetter.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61727</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44344/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.46.3\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.46.3\build\net45\Grpc.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\Grpc.Core.2.46.3\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.46.3\build\net45\Grpc.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

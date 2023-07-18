@@ -1,0 +1,56 @@
+﻿@using DigiDoc.Models;
+@{
+    ViewBag.Title = "DocumentGroups";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4 pt-4">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-2 mb-3 mb-0">Documents</h1>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <ul class="search">
+
+                @*<li class="input-bx">
+                    <input type="text" class="form-control" placeholder="Search ...">
+                    <a class="icon" href="#"><img src="~/Assets/images/search.svg"></a>
+                </li>*@
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list-folder">
+                @if (ViewBag.DocumentList != null)
+                {
+                    foreach (DocumentTypeMaster Foldername in ViewBag.DocumentList)
+                    {
+                    <li>
+                        <a href="@Url.Action("Index", "Home",new { DocumentType = Foldername.DocumentName})">
+                            <img src="~/Assets/images/folder.svg">
+                            <label>@Foldername.DocumentName</label>
+                        </a>
+                    </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts{
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+}
+
