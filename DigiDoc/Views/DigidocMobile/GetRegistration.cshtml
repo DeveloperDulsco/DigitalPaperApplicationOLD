@@ -20,10 +20,10 @@
 <form method="post" id="frmRegCard">
     @Html.HiddenFor(m => m.TempReservationID)
     @Html.HiddenFor(m => m.DocumentType)
-    @Html.HiddenFor(m=>m.ClientConnection)
+    @Html.HiddenFor(m => m.ClientConnection)
     <div class="">
         <div class="detail-wrapper bg mb-4">
-          @{
+            @{
                 var fullname = "";
                 if (Model.FirstName != "")
 
@@ -97,16 +97,16 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="det-wrap">
-                        <label>Adult</label>
+                        <label>Adult Count</label>
                         <span>@Model.AdultCount</span>
                     </div>
                 </div>
-           
+
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <div class="det-wrap">
-                        <label>Child</label>
+                        <label>Child Count</label>
                         <span>@Model.ChildCount</span>
                     </div>
                 </div>
@@ -118,24 +118,15 @@
                             <span>@Model.AverageRoomRate</span>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="det-wrap">
-                            <label>Membership No</label>
-                            <span>@Model.MembershipNo</span>
-                        </div>
-                    </div>
                 }
-                else
-                {
-                <div class="col-md-6 col-lg-4">
+                @*<div class="col-md-6 col-lg-3">
                     <div class="det-wrap">
                         <label>Membership No</label>
                         <span>@Model.MembershipNo</span>
-                    </div>
-                </div>
-                }
+                    </div> </div>*@
+
             </div>
-              
+
 
         </div>
 
@@ -182,35 +173,35 @@
 
 
             </div>
-            
+
             @*<div class="row">
-                <div class="col-lg-12 ">
-                    <div class="d-flex justify-content-center">
-                        <a class="btn-link" href="#exampleModal1" data-toggle="modal">IHG One Rewards Membership Benefits</a>
-                    </div>
-                </div>
-            </div>*@
-        </div>
-            <div class="form terms">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="check">
-                            <label class="checkwrap">
-                                <input id="myCheck" type="checkbox">
-                                <span class="checkmark"></span>
-                            </label><label class="mb-0 text-term">To read Terms and Condition '<a href="#exampleModal" data-toggle="modal">Click here</a>'.</label>
+                    <div class="col-lg-12 ">
+                        <div class="d-flex justify-content-center">
+                            <a class="btn-link" href="#exampleModal1" data-toggle="modal">IHG One Rewards Membership Benefits</a>
                         </div>
                     </div>
-                </div>
-
-
-            </div>
+                </div>*@
         </div>
+        <div class="form terms  mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="check">
+                        <label class="checkwrap">
+                            <input id="myCheck" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label><label class="mb-0 text-term">To read Terms and Condition '<a href="#exampleModal" data-toggle="modal">Click here</a>'.</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
-            <div class="btn-grp d-flex justify-content-center">
-                @*<button type="button" class="btn_red" onclick="reject()"><i class="fas fa-times-circle"></i>Reject</button>*@
-                <button type="button" class="btn_green" onclick="approve()"><i class="fas fa-check-circle"></i>Accept</button>
+            <div class="btn-grp d-flex justify-content-between">
+                <button type="button" class="btn_red" onclick="reject()"><i class="fas fa-times-circle"></i>Reject</button>
+                <button type="button" class="btn_green" onclick="approve()"><i class="fas fa-check-circle"></i>Approve</button>
             </div>
         </div>
     </div>
@@ -225,29 +216,29 @@
 
 
 <div class="modal fade" id="customerSignature" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Signature</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="signature-pad" class="signature-pad">
-                        <div class="signature-pad--body">
-                            <canvas></canvas>
-                        </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Signature</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="signature-pad" class="signature-pad">
+                    <div class="signature-pad--body">
+                        <canvas></canvas>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning clear">Clear</button>
-                    <button type="button" class="btn btn-success save">Save</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning clear">Clear</button>
+                <button type="button" class="btn btn-success save">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
 <div class="modal fade cstm-modal" id="confirmmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
     <div class="modal-dialog  modal-dialog-centered privacy-model" role="document">
@@ -260,10 +251,10 @@
             </div>
             <div class="modal-body">
                 <div class="messagewarn">
-                    <div class="alert alert-info text-center" role="alert"  id="modalMessageContent">
+                    <div class="alert alert-info text-center" role="alert" id="modalMessageContent">
                         Do you want to reject the document?
                     </div>
-                   
+
                 </div>
                 <div class="button-wrap">
 
@@ -305,10 +296,10 @@
             //    required: true,
 
             //},
-            'Phone': {
-                phonevalidation: true,
-            },
+            //'Phone': {
+            //    phonevalidation: true,
 
+           // },
             //'AddressLine1': {
             //    required: true,
 
@@ -329,7 +320,7 @@
 
             },
             'Phone': {
-                
+
                 /*required: 'Phone is Required',*/
 
             },
@@ -352,8 +343,8 @@
 
         return this.optional(element) ||
 
-           // phone_number.match(/^[\d+ ]*$/);
-           phone_number.match(/^(?=.{0,30}$)([\d+(]{0,1}[\d-() ]*)$/);
+            // phone_number.match(/^[\d-+() ]*$/);
+            phone_number.match(/(?=.{0,50}$)([\d+( ]{0,1}[\d-()+ ]*)$/);
     }, "Please specify a valid phone number");
     jQuery.validator.addMethod("EmailValidate", function (value, element) {
 
@@ -369,10 +360,10 @@
                 var terms = $('#myCheck').is(':checked')
 
                 if (terms) {
-                  
+
 
                     $('#customerSignature').modal('show');
-                   
+
                 }
                 else {
 
@@ -398,7 +389,7 @@
                                 url: "@Url.Action("RejectReservation", "DigidocMobile")",
                                 type: "POST",
                          data: {
-                        
+
                              Id: $('#TempReservationID').val()
                          },
                                 success: function (data) {
@@ -455,7 +446,7 @@
                                         debugger;
                                         CallServer(data.ClientConnection, data.TempId, data.DocumentId);
 
-                                       
+
                                         //var myModal = $('#SuccesNotify').on('shown', function () {
                                         //    clearTimeout(myModal.data('hideInteval'))
                                         //    var id = setTimeout(function () {
@@ -500,9 +491,9 @@
                     return decodeURIComponent(results[2].replace(/\+/g, ' '));
                 }
 </script>
-   
-    <script type="text/javascript">
-      
+
+<script type="text/javascript">
+
         let signaturePad;
         $('#customerSignature').on('shown.bs.modal', function (e) {
             notfication('@Model.ClientConnection', '106');
@@ -523,7 +514,7 @@
         });
 
         $(document).on('click', '#customerSignature .save', function () {
-          
+
             if (signaturePad.isEmpty()) {
                 $('#NotifyDiv').empty();
                 $("#NotifyDiv").append("<div><center><label>signature required</label></center></div>")
@@ -539,7 +530,7 @@
                          type: "POST",
 
                          data: {
-                        
+
                              Base64Signature: strImage,
                              TempReservationID: $("#TempReservationID").val(),
                              DocumentType: $("#DocumentType").val(),
@@ -549,14 +540,17 @@
                         PostalCode: $("#PostalCode").val(),
                         CountryMasterID: $("#CountryMasterID").val(),
                         StateMasterID: $("#StateMasterID").val(),
-                        City: $("#City").val(),
+                             City: $("#City").val(),
+                             MembershipNo: null,
+                             EnrollMembership:false
                          },
                          dataType: 'json',
                                 success: function (data) {
 
                                     if (data.Result) {
+
                                         CallServer(data.ClientConnection, data.TempId, data.DocumentId);
-                                    
+
                                         var appid = getParameterByName('AppId');
 
                                         if (appid != null) {
@@ -579,27 +573,27 @@
 
             }
         });
-    </script>
-    <style type="text/css">
+</script>
+<style type="text/css">
 
-        #signature .modal-content .modal-body
-        {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: block;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            height: 70vh !important;
-            width: 100%;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            margin: 0;
-            padding: 32px 16px;
-        }
-    </style>
+    #signature .modal-content .modal-body
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 70vh !important;
+        width: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0;
+        padding: 32px 16px;
+    }
+</style>

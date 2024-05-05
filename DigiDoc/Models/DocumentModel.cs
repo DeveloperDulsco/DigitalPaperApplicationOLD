@@ -59,7 +59,7 @@ namespace DigiDoc.Models
         public string DocumentCode { get; set; }
         public string DocumentName { get; set; }
         public bool? IsActive { get; set; }
-        public string Result {get;set;}
+        public string Result { get; set; }
         public string Message { get; set; }
         public string TotalRecords { get; set; }
     }
@@ -114,5 +114,15 @@ namespace DigiDoc.Models
         public string Message { get; set; }
         public string DocID { get; set; }
         public string DocumentDetailID { get; set; }
+    }
+
+    public class SearchRequestModel
+    {
+        public string SearchQuery { get; set; }
+    }
+
+    public class ReservationData
+    {
+        public string ReservationNumber { get;set; }
     }
 }

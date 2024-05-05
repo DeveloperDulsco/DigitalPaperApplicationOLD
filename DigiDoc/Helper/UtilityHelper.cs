@@ -553,37 +553,75 @@ namespace DigiDoc.Helper
         {
             try
             {
-                var spResponse = new DapperHelper().ExecuteSP<DocumentModel>("Usp_GetDocumentDetails", ConfigurationModel.ConnectionString, new { DocumentDetailID = documentDetailID, userID = Int32.Parse(UserID)}).ToList();
-                if (spResponse != null && spResponse.Count > 0)
+                if (string.IsNullOrEmpty(UserID))
                 {
-                    if (!string.IsNullOrEmpty(spResponse.First().Result) && spResponse.First().Result.Equals("200"))
+                    var spResponse = new DapperHelper().ExecuteSP<DocumentModel>("Usp_GetDocumentDetails", ConfigurationModel.ConnectionString, new { DocumentDetailID = documentDetailID }).ToList();
+                    if (spResponse != null && spResponse.Count > 0)
                     {
-                        return new UtilityResponseModel()
+                        if (!string.IsNullOrEmpty(spResponse.First().Result) && spResponse.First().Result.Equals("200"))
                         {
-                            ResponseData = spResponse,
-                            result = true,
-                            ResultCode = "200"
-                        };
+                            return new UtilityResponseModel()
+                            {
+                                ResponseData = spResponse,
+                                result = true,
+                                ResultCode = "200"
+                            };
+                        }
+                        else
+                        {
+                            return new UtilityResponseModel()
+                            {
+                                ResponseMessage = spResponse.First().Message,
+                                result = false,
+                                ResultCode = spResponse.First().Result
+                            };
+                        }
                     }
                     else
                     {
+                        LogHelper.Instance.Debug("SP Usp_GetDocumentDetails returned null", "Get Document Details", "Portal", "Document");
                         return new UtilityResponseModel()
                         {
-                            ResponseMessage = spResponse.First().Message,
                             result = false,
-                            ResultCode = spResponse.First().Result
+                            ResponseMessage = "DB Error",
+                            ResultCode = "-2"
                         };
                     }
                 }
-                else
+               else
                 {
-                    LogHelper.Instance.Debug("SP Usp_GetDocumentDetails returned null", "Get Document Details", "Portal", "Document");
-                    return new UtilityResponseModel()
+                    var spResponse = new DapperHelper().ExecuteSP<DocumentModel>("Usp_GetDocumentDetails", ConfigurationModel.ConnectionString, new { DocumentDetailID = documentDetailID, userID = Int32.Parse(UserID) }).ToList();
+                    if (spResponse != null && spResponse.Count > 0)
                     {
-                        result = false,
-                        ResponseMessage = "DB Error",
-                        ResultCode = "-2"
-                    };
+                        if (!string.IsNullOrEmpty(spResponse.First().Result) && spResponse.First().Result.Equals("200"))
+                        {
+                            return new UtilityResponseModel()
+                            {
+                                ResponseData = spResponse,
+                                result = true,
+                                ResultCode = "200"
+                            };
+                        }
+                        else
+                        {
+                            return new UtilityResponseModel()
+                            {
+                                ResponseMessage = spResponse.First().Message,
+                                result = false,
+                                ResultCode = spResponse.First().Result
+                            };
+                        }
+                    }
+                    else
+                    {
+                        LogHelper.Instance.Debug("SP Usp_GetDocumentDetails returned null", "Get Document Details", "Portal", "Document");
+                        return new UtilityResponseModel()
+                        {
+                            result = false,
+                            ResponseMessage = "DB Error",
+                            ResultCode = "-2"
+                        };
+                    }
                 }
             }
             catch (Exception ex)

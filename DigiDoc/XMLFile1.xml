@@ -1,72 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <PDFTYPES>
-	<PDFTYPE>
-		<DocumentName>CONTROLLED DOCUMENT</DocumentName>
-		<Signature>Signature</Signature>
-		<DataIdentifier>MRN</DataIdentifier>
-		<DocumentType>RegCardTemplate</DocumentType>
-		<imgheight>30</imgheight>
-		<imgwidth>60</imgwidth>
-		<imgxaxis>30</imgxaxis>
-		<imgyaxis>2</imgyaxis>
-		<Address>Street Name</Address>
-		<Addressxaxis>65</Addressxaxis>
-		<Addressyaxis>2</Addressyaxis>
-		<Addressheight>13</Addressheight>
-		<Addresswidth>180</Addresswidth>
-		<Addresssize>10</Addresssize>
-		<City>City</City>
-		<Cityxaxis>-100</Cityxaxis>
-		<Cityyaxis>2</Cityyaxis>
-		<Cityheight>10</Cityheight>
-		<Citywidth>30</Citywidth>
-		<Citysize>10</Citysize>
-		<Country>Country</Country>
-		<Countryxaxis>30</Countryxaxis>
-		<Countryyaxis>2</Countryyaxis>
-		<Countrysize>10</Countrysize>
-		<Countryheight>13</Countryheight>
-		<Countrywidth>30</Countrywidth>
-		<Email>Email Address</Email>
-		<EmailAddressxaxis>-120</EmailAddressxaxis>
-		<EmailAddressyaxis>-9</EmailAddressyaxis>
-		<EmailAddressheight>8</EmailAddressheight>
-		<EmailAddresswidth>180</EmailAddresswidth>
-		<EmailAddresssize>8</EmailAddresssize>
-		<Phone>Mobile no</Phone>
-		<PhoneNumberxaxis>-80</PhoneNumberxaxis>
-		<PhoneNumberyaxis>-7</PhoneNumberyaxis>
-		<PhoneNumberheight>7</PhoneNumberheight>
-		<PhoneNumberwidth>180</PhoneNumberwidth>
-		<PhoneNumbersize>8</PhoneNumbersize>
-		<PinCode>Postal\ZIP</PinCode>
-		<PinCodexaxis>30</PinCodexaxis>
-		<PinCodeyaxis>2</PinCodeyaxis>
-		<PinCodeheight>13</PinCodeheight>
-		<PinCodewidth>60</PinCodewidth>
-		<PinCodesize>9</PinCodesize>
-		<State>Province</State>
-		<Statexaxis>-40</Statexaxis>
-		<Stateyaxis>2</Stateyaxis>
-		<Stateheight>13</Stateheight>
-		<Statewidth>50</Statewidth>
-		<Statesize>9</Statesize>
-		<Email2>Email ID</Email2>
-		<Email2Addressxaxis>200</Email2Addressxaxis>
-		<Email2Addressyaxis>1</Email2Addressyaxis>
-		<Email2Addressheight>11</Email2Addressheight>
-		<Email2Addresswidth>200</Email2Addresswidth>
-		<Email2Addresssize>12</Email2Addresssize>
-	</PDFTYPE>
+<PDFTYPE>
+<DocumentName>Booking</DocumentName>
+<Signature>Guest Signature</Signature>
+<DataIdentifier>MRN</DataIdentifier>
+<DocumentType>RegCardTemplate</DocumentType>
+<imgheight>30</imgheight>
+<imgwidth>60</imgwidth>
+<imgxaxis>30</imgxaxis>
+<imgyaxis>2</imgyaxis>
 
-	<PDFTYPE>
-		<DocumentName>INFORMATION INVOICE</DocumentName>
-		<Signature>Guest Signature</Signature>
-		<DataIdentifier>Conf. No.</DataIdentifier>
-		<DocumentType>FolioTemplate</DocumentType>
-		<imgheight>60</imgheight>
-		<imgwidth>60</imgwidth>
-		<imgxaxis>300</imgxaxis>
-		<imgyaxis>+10</imgyaxis>
-	</PDFTYPE>
+<Email>Email</Email>
+<EmailAddressxaxis>58</EmailAddressxaxis>
+<EmailAddressyaxis>2</EmailAddressyaxis>
+<EmailAddressheight>8</EmailAddressheight>
+<EmailAddresswidth>180</EmailAddresswidth>
+<EmailAddresssize>8</EmailAddresssize>
+<Phone>Contact No</Phone>
+<PhoneNumberxaxis>58</PhoneNumberxaxis>
+<PhoneNumberyaxis>2</PhoneNumberyaxis>
+<PhoneNumberheight>8</PhoneNumberheight>
+<PhoneNumberwidth>180</PhoneNumberwidth>
+<PhoneNumbersize>8</PhoneNumbersize>
+<Address>Address</Address>
+<Addressxaxis>58</Addressxaxis>
+<Addressyaxis>2</Addressyaxis>
+<Addressheight>8</Addressheight>
+<Addresswidth>180</Addresswidth>
+<Addresssize>10</Addresssize>
+<City>City</City>
+<Cityxaxis>58</Cityxaxis>
+<Cityyaxis>2</Cityyaxis>
+<Cityheight>8</Cityheight>
+<Citywidth>8</Citywidth>
+<Citysize>180</Citysize>
+<Country>Country</Country>
+<Countryxaxis>58</Countryxaxis>
+<Countryyaxis>2</Countryyaxis>
+<Countrysize>8</Countrysize>
+<Countryheight>8</Countryheight>
+<Countrywidth>180</Countrywidth>												
+</PDFTYPE>
+<PDFTYPE>
+<DocumentName>TAX INVOICE</DocumentName>
+<Signature>Tourism12 Dirham</Signature>
+<DataIdentifier>guest signature</DataIdentifier>
+<DocumentType>FolioTemplate</DocumentType>
+<imgheight>60</imgheight>
+<imgwidth>60</imgwidth>
+<imgxaxis>450</imgxaxis>
+<imgyaxis>-60</imgyaxis>
+</PDFTYPE>
 </PDFTYPES>
+

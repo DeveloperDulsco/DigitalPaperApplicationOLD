@@ -223,10 +223,18 @@ namespace DigiDoc.DigiDocHib
           
             try
             {
-               var username = Context.QueryString.GetValues("username").FirstOrDefault();
+                if (Context.QueryString.GetValues("username") == null)
+                {
+                    LogHelper.Instance.Log($"Context.QueryString.GetValues(username) is null", "OnConnected", "DigiPortal", "OnConnected");
+                }
+                else
+                {
+                    LogHelper.Instance.Log($"Context.QueryString.GetValues(username) value is "+ Context.QueryString.GetValues("username").FirstOrDefault(), "OnConnected", "DigiPortal", "OnConnected");
+                }
+                var username = Context.QueryString.GetValues("username").FirstOrDefault();
                 username = username != null ? username = username.Replace("\"", string.Empty).Trim() : username;
                 bool writelog = Context.QueryString.GetValues("writelog")!=null? Context.QueryString.GetValues("writelog").FirstOrDefault() != null ? Convert.ToBoolean(Context.QueryString.GetValues("writelog").FirstOrDefault()) : false:false;
-
+                LogHelper.Instance.Log($"Ipad name and connection used for creating connection are "+username+ "and "+ Context.ConnectionId, "OnConnected", "DigiPortal", "OnConnected");
                 List<string> existingUserConnectionIds;
                 ConnectedUsers.TryGetValue(username, out existingUserConnectionIds);
 
@@ -238,8 +246,9 @@ namespace DigiDoc.DigiDocHib
                 {
                     existingUserConnectionIds.Clear();
                 }
-
+                LogHelper.Instance.Log($"existingUserConnectionIds Ipad name used for creating connection" + username, "OnConnected", "DigiPortal", "OnConnected");
                 existingUserConnectionIds.Add(Context.ConnectionId);
+                LogHelper.Instance.Log($"Ipad name used for creating connection" + Context.ConnectionId, "OnConnected", "DigiPortal", "OnConnected");
                 if (!String.IsNullOrEmpty(username) && !String.IsNullOrEmpty(Context.ConnectionId))
                 {
                     var assignedval = "";
@@ -291,6 +300,7 @@ namespace DigiDoc.DigiDocHib
             }
             catch (Exception ex)
             {
+                LogHelper.Instance.Log($"Inner Exception while creating connection" + ex.InnerException, "OnConnected", "DigiPortal", "OnConnected");
                 LogHelper.Instance.Log($"Exception while creating connection" + ex.Message, "OnConnected", "DigiPortal", "OnConnected");
             }
             return con;

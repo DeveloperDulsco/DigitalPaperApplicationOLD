@@ -27,7 +27,8 @@ namespace DigiDoc.WebAPI.Controllers
     {
         Reject,
         Accept,
-        SendToApproval
+        SendToApproval,
+        GuestFolio
     }
 
 

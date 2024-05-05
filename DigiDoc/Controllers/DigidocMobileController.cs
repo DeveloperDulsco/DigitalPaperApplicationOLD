@@ -354,11 +354,13 @@ namespace DigiDoc.Controllers.DigiDocMobile
                                 {
                                    
                                     string ConnectionString = ConfigurationManager.AppSettings["CloudConnectionString"];
-
+                                if (!string.IsNullOrEmpty(ConnectionString))
+                                {
                                     BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
 
 
                                     await new BlobStorage().UploadFileBlobAsync(temp.FolioTemplate, "document" + doc.ResponseData.ToString() + ".pdf", blobServiceClient);
+                                }
                                 string FilePath = Server.MapPath($"~/temp/{tempReservation.TempReservationID}.pdf");
                                 if (System.IO.File.Exists(FilePath))
                                 {
@@ -437,8 +439,13 @@ namespace DigiDoc.Controllers.DigiDocMobile
                           
                             temp.FolioTemplate = null;
                             temp.ReservationNumber = tempReservation.ReservationNumber;
-                           
-                            var tempupdate = DigiDocMobileHelper.UpdateRegistration(temp);
+                            temp.RoomNo = tempReservation.RoomNo;
+                            temp.ArrivalDate = tempReservation.ArrivalDate;
+                            temp.DepartureDate = tempReservation.DepartureDate;
+                            temp.GuestName = tempReservation.FirstName;
+                            temp.CountryName = tempReservation.CountryName;
+                            temp.StateName = tempReservation.StateName;
+                        var tempupdate = DigiDocMobileHelper.UpdateRegistration(temp);
                         if (!Convert.ToBoolean(IsMCIEnabled))
                         {
                             var existcheck = DigiDocMobileHelper.CheckDocumentExistsDocument(temp);
@@ -638,11 +645,13 @@ namespace DigiDoc.Controllers.DigiDocMobile
                             {
 
                                 string ConnectionString = ConfigurationManager.AppSettings["CloudConnectionString"];
+                                if (!string.IsNullOrEmpty(ConnectionString))
+                                {
+                                    BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
 
-                                BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
 
-
-                                await new BlobStorage().UploadFileBlobAsync(temp.FolioTemplate, "document" + doc.ResponseData.ToString() + ".pdf", blobServiceClient);
+                                    await new BlobStorage().UploadFileBlobAsync(temp.FolioTemplate, "document" + doc.ResponseData.ToString() + ".pdf", blobServiceClient);
+                                }
                                 string FilePath = Server.MapPath($"~/temp/{tempReservation.TempReservationID}.pdf");
                                 if (System.IO.File.Exists(FilePath))
                                 {

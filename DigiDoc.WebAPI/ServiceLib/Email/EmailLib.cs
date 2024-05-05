@@ -123,6 +123,10 @@ namespace DigiDoc.WebAPI.Controllers
             {
                 throw ex;
             }
+            return new EmailResponse()
+            {
+                result = false,
+            };
         }
 
 
@@ -206,6 +210,34 @@ namespace DigiDoc.WebAPI.Controllers
                     if (!string.IsNullOrEmpty(ApprovedUser))
                         htmlBody = htmlBody.Replace("$$Sender_Name$$", ApprovedUser);
 
+
+                    AlternateView avHtml = AlternateView.CreateAlternateViewFromString(htmlBody, null, MediaTypeNames.Text.Html);
+                    LinkedResource inline = new LinkedResource(header_image_path, MediaTypeNames.Image.Jpeg);
+                    inline.ContentId = header_content_id;
+                    avHtml.LinkedResources.Add(inline);
+                    //inline = new LinkedResource(button_image_path, MediaTypeNames.Image.Jpeg);
+                    //inline.ContentId = buton_content_id;
+                    //avHtml.LinkedResources.Add(inline);
+
+                    message.Subject = Subject;
+                    message.IsBodyHtml = true;
+                    message.AlternateViews.Add(avHtml);
+                    message.From = new MailAddress(FromEmail, displayFromEmail);
+                    return message;
+                }
+                else if (emailType == EmailType.GuestFolio)
+                {
+                    MailMessage message = new MailMessage();
+                    string header_content_id = Guid.NewGuid().ToString();
+                    string buton_content_id = Guid.NewGuid().ToString();
+                    string header_image_path = System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\Images\\Logo_login.jpg");
+                    //string button_image_path = System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\Images\\checkout\\chkout.png");
+                    string htmlBody = System.IO.File.ReadAllText(System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\HTML\\GuestFolio.html"));
+                    htmlBody = htmlBody.Replace("$$HEADER_IMAGE$$", header_content_id);
+                   
+                    if (!string.IsNullOrEmpty(UserName))
+                        htmlBody = htmlBody.Replace("$$$$GUEST_NAME$$$$", UserName);
+                  
 
                     AlternateView avHtml = AlternateView.CreateAlternateViewFromString(htmlBody, null, MediaTypeNames.Text.Html);
                     LinkedResource inline = new LinkedResource(header_image_path, MediaTypeNames.Image.Jpeg);

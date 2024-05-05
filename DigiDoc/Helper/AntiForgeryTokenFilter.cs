@@ -14,7 +14,7 @@ namespace DigiDoc.App_Start
 
             string incomingVerb = controllerContext.HttpContext.Request.HttpMethod;
             if (actionDescriptor.ActionName == "SaveRegCardSignature" || actionDescriptor.ActionName == "SaveFolioSignature" || actionDescriptor.ActionName == "RejectReservation" ||
-actionDescriptor.ActionName == "SaveRegCardSignatureWOI" ||  actionDescriptor.ActionName == "SaveAnyPDfSignature")
+actionDescriptor.ActionName == "SaveRegCardSignatureWOI" ||  actionDescriptor.ActionName == "SaveAnyPDfSignature" ||  actionDescriptor.ActionName == "GetGuestDocumentListAjax")
             {
                 return result;
             }

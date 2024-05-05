@@ -13,7 +13,7 @@ namespace DigiDoc
             filters.Add(new RefreshDetectFilter());
             //filters.Add(new NoDirectAccessAttribute());
             FilterProviders.Providers.Add(new AntiForgeryTokenFilter());
-
+            //filters.Add(new SessionCheck());
         }
     }
 }

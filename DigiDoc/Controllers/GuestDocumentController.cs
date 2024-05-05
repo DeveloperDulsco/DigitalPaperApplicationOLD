@@ -1,126 +1,102 @@
-﻿using System;
+﻿using Azure.Storage.Blobs;
+using DigiDoc.DataAccess;
+using DigiDoc.DataAccess.Models;
+using DigiDoc.Helper;
+using DigiDoc.Models;
+using DigiDoc.Models.DPO;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Azure.Storage.Blobs;
-using DigiDoc.DataAccess;
-using DigiDoc.DataAccess.Models;
-using DigiDoc.Helper;
-using DigiDoc.Models;
-using DigiDoc.Models.DPO;
-using System.Xml.Linq;
+
 namespace DigiDoc.Controllers
 {
-    public class DocumentController : BaseController
+    [SessionCheck]
+    public class GuestDocumentController :Controller
     {
-
-        public ActionResult DocumentGroups()
-        {
-            //string actionName = this.ControllerContext.RouteData.Values["action"].ToString();
-            string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
-            sessionData.MenuName = controllerName;
-            sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
-            AuditHelper.InsertAuditLog("Document", sessionData != null ? sessionData.UserName : "", "Viewed document groups");
-            var PACount = UtilityHelper.GetDocumentPerUserCount(sessionData.UserID, 0);
-            if (PACount != null && PACount.result)
-            {
-                ViewBag.APCount = PACount.ResponseData;
-            }
-            else
-            {
-                ViewBag.APCount = 0;
-            }
-
-            var documentGroupList = UtilityHelper.getDocumentGroupList();
-            if (documentGroupList != null && documentGroupList.result)
-            {
-                List<DocumentTypeMaster> dtm = new List<DocumentTypeMaster>();
-                dtm = (List<DocumentTypeMaster>)documentGroupList.ResponseData;
-                dtm = dtm.OrderBy(c => c.DocumentCode == "RB").ThenBy(c => c.DocumentCode).ToList();
-                ViewBag.DocumentList = dtm;
-            }
-            else if (documentGroupList != null)
-            {
-                ViewBag.Message = $"Message : {documentGroupList.ResponseMessage} , Code : {documentGroupList.ResultCode}";
-            }
-            else
-            {
-                ViewBag.Message = "Message : Document Type Not Configured Or Not Able To Retreave";
-            }
-            return View();
-        }
-
-        public ActionResult Index(string DocumentType = null, string Message = null, bool Success = false)
+        // GET: GuestDocuments
+        public ActionResult Index(string ResId, string Message = null, bool Success = false,string Username=null)
         {
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
-            sessionData.MenuName = controllerName;
-            sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
-            AuditHelper.InsertAuditLog("Document", sessionData != null ? sessionData.UserName : "", $"Viewed document list from {DocumentType} groups");
-            if (DocumentType == "Pending Approvals")
+            DocumentInfoModel document = new DocumentInfoModel();
+            var reservationnumberdetails = new DapperHelper().ExecuteSP<ReservationData>("usp_GetLinkedReservation", ConfigurationModel.ConnectionString, new { ResId = ResId }).ToList();
+            if (reservationnumberdetails.Count > 0)
             {
-                DocumentType = "ApprovalList";
+                document.DocumentFileName = reservationnumberdetails.FirstOrDefault().ReservationNumber;
             }
-            ViewBag.documentType = DocumentType;
-            //  ViewBag.Isapproval = Isapproval;
-            var timezoneid = "Singapore Standard Time";
-            if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
-            {
-                timezoneid = sessionData.TimeZoneId;
-            }
-            DateTime startDate = DateTimeHelper.ConvertFromUTC(DateTime.UtcNow, timezoneid);
-            ViewBag.startDate = startDate.ToString("dd-MM-yyyy");
+            ViewBag.ResId = ResId;
             ViewBag.Message = Message;
             ViewBag.Success = Success;
-            return View();
+            var userdetails = Username;
+            if (string.IsNullOrEmpty(Username))
+            {
+                userdetails = ConfigurationManager.AppSettings["DefaultUser"] != null ? ConfigurationManager.AppSettings["DefaultUser"].ToString() : Username;
+            }
+            var loginStatus = new DapperHelper().ExecuteSP<LoginUserDetailsModel>("usp_ValidateUser", ConfigurationModel.ConnectionString, new { UserName = userdetails}).ToList();
+            if (loginStatus != null && loginStatus.Count > 0 && !string.IsNullOrEmpty(loginStatus.First().Result) && loginStatus.First().Result.Equals("200"))
+            {
+                
+                var timezoneid = "Singapore Standard Time";
+                var sppropertresponse = UtilityHelper.getPropertyDetails(loginStatus.First().PropertyID.ToString());
+                if (sppropertresponse != null)
+                {
+                    var propertlist = (List<PropertyMasterModel>)sppropertresponse.ResponseData;
+                    timezoneid = propertlist.FirstOrDefault().TimeZone;
+
+                }
+                Session["GuestDigiDocData"] = new SessionDataModel()
+                {
+                    ProfileID = loginStatus.First().UserProfileID.ToString(),
+                    ProfileName = loginStatus.First().ProfileName,
+                    UserID = loginStatus.First().UserID,
+                    UserName = loginStatus.First().UserName,
+                    RealName = loginStatus.First().RealName,
+                    PropertyID = loginStatus.First().PropertyID.ToString(),
+                    TimeZoneId = timezoneid,
+                    Email = loginStatus.First().Email
+                };
+                var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
+                if (sessionData != null)
+                {
+                    var spResponse = UtilityHelper.getUserProfileDetails(sessionData.ProfileID);
+                    if (spResponse != null && spResponse.result && spResponse.ResponseData != null)
+                    {
+                        var UserProfile = (List<UserProfileModel>)spResponse.ResponseData;
+                        sessionData.IsEdit = UserProfile.FirstOrDefault().IsEdit;
+                        sessionData.IsDelete = UserProfile.FirstOrDefault().IsDelete;
+                        sessionData.IsPrint = UserProfile.FirstOrDefault().IsPrint;
+                        sessionData.IsComment = UserProfile.FirstOrDefault().IsComment;
+                        sessionData.IsEditable = UserProfile.FirstOrDefault().IsEditable;
+                        Session["GuestDigiDocData"] = sessionData;
+                        
+                    }
+                }
+                AuditHelper.InsertAuditLog("GuestSearch", userdetails, "Succesfully logged-in");
+                
+             }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
+            return View(document);
         }
-        public ActionResult DocumentSearch(string ReservationNumber=null,string DocumentType = null, string Message = null, bool Success = false)
+
+        public JsonResult GetGuestDocumentListAjax(string DocumentType,string DocumentFileName, DocumentDataTableModel model, Search search, string CreatedDate)
         {
-            string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
-            sessionData.MenuName = controllerName;
-            sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
-            AuditHelper.InsertAuditLog("Document", sessionData != null ? sessionData.UserName : "", $"Viewed document list from {DocumentType} groups");
+            DateTime StartDateDT;
+            DateTime EndDateDT;
+            var timezoneid = "Singapore Standard Time";
+            timezoneid = ConfigurationManager.AppSettings["TimeZone"] != null ? ConfigurationManager.AppSettings["TimeZone"].ToString() : "Singapore Standard Time";
+          
            
-            ViewBag.documentType = DocumentType;
-            //  ViewBag.Isapproval = Isapproval;
-            var timezoneid = "Singapore Standard Time";
-            if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
-            {
-                timezoneid = sessionData.TimeZoneId;
-            }
-
-            DateTime startDate = DateTimeHelper.ConvertFromUTC(DateTime.UtcNow, timezoneid);
-            ViewBag.startDate = startDate.ToString("dd-MM-yyyy");
-            ViewBag.Message = Message;
-            ViewBag.Success = Success;
-            SearchRequestModel search =new SearchRequestModel();
-            search.SearchQuery = ReservationNumber;
-            return View();
-        }
-        public JsonResult GetDocumentListAjax(string DocumentType, DocumentDataTableModel model, Search search, string CreatedDate, string ReservationNumber=null)
-        {
-            DateTime StartDateDT;
-            DateTime EndDateDT;
-            var timezoneid = "Singapore Standard Time";
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
-            if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
-            {
-                timezoneid = sessionData.TimeZoneId;
-            }
+           
             if (string.IsNullOrEmpty(CreatedDate))
                 StartDateDT = DateTimeHelper.ConvertFromUTC(DateTime.UtcNow, timezoneid);
             else
@@ -208,150 +184,8 @@ namespace DigiDoc.Controllers
                 soryOrder = Request.Params["order[0][dir]"].ToString();
             }
 
-            //var documentList = new DapperHelper().ExecuteSP<DocumentFileSummaryModel>("Usp_GetDocumentFileSummary", ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString, new { PageNumber = start, PageSize = model.Length, search = filterby, DocumentType = DocumentType, SortBy = soryOrder, Sort = sortColumn, StartDate = string.IsNullOrEmpty(CreatedDate) ? null : StartDateDT.ToString("yyyyMMdd"), EndDate = string.IsNullOrEmpty(CreatedDate) ? null : EndDateDT.ToString("yyyyMMdd"), TimezoneId = timezoneid }).ToList();
-
-            var documentList = new DapperHelper().ExecuteSP<DocumentFileSummaryModel>("Usp_GetDocumentFileSummary", ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString, new { PageNumber = start, PageSize = model.Length, search = filterby, DocumentType = DocumentType, SortBy = soryOrder, Sort = sortColumn, StartDate = string.IsNullOrEmpty(CreatedDate) ? null : StartDateDT.ToString("yyyyMMdd"), EndDate = string.IsNullOrEmpty(CreatedDate) ? null : EndDateDT.ToString("yyyyMMdd"), TimezoneId = timezoneid, DocumentFileName = ReservationNumber }).ToList();//db.usp_GetReservationList(ReservationGroup, "", start, model.Length, filterby, soryOrder, sortColumn).ToList();
-
-
-
-
-            if (documentList != null && documentList.Count > 0)
-            {
-                documentList.ToList().ForEach(s => {
-                    s.CreatedDate = s.CreatedDatetime.ToString("dd-MM-yyyy");
-
-                    s.Createdtime = s.CreatedDatetime.ToString("hh:mm:ss tt"); });
-                var TotalCount = documentList != null ? documentList.First().TotalRecords : 1;
-
-                var response = new
-                {
-                    draw = model.draw,
-                    data = documentList,
-                    recordsFiltered = TotalCount,
-                    recordsTotal = TotalCount
-                };
-
-                return Json(response, JsonRequestBehavior.AllowGet);
-            }
-            else
-            {
-                var TotalCount = model.Length;
-
-                var response = new
-                {
-                    draw = model.draw,
-
-                    recordsFiltered = 0,
-                    recordsTotal = 0
-                };
-
-                return Json(response, JsonRequestBehavior.AllowGet);
-            }
-
-
-
-
-        }
-        public JsonResult GetDocumentSearchListAjax(string DocumentType,  DocumentDataTableModel model, Search search, string CreatedDate, string ReservationNumber = null)
-        {
-            DateTime StartDateDT;
-            DateTime EndDateDT;
-            var timezoneid = "Singapore Standard Time";
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
-            if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
-            {
-                timezoneid = sessionData.TimeZoneId;
-            }
-            if (string.IsNullOrEmpty(CreatedDate))
-                StartDateDT = DateTimeHelper.ConvertFromUTC(DateTime.UtcNow, timezoneid);
-            else
-            {
-                StartDateDT = DateTime.ParseExact(CreatedDate, "dd-MM-yyyy", CultureInfo.InvariantCulture);
-            }
-
-            if (string.IsNullOrEmpty(CreatedDate))
-                EndDateDT = DateTimeHelper.ConvertFromUTC(DateTime.UtcNow, timezoneid);
-            else
-            {
-                EndDateDT = DateTime.ParseExact(CreatedDate, "dd-MM-yyyy", CultureInfo.InvariantCulture);
-            }
-            int start = 0;
-
-            if (model.Start > 0)
-            {
-                start = model.Start / model.Length;
-            }
-
-            start += 1;
-
-            string filterby = string.Empty;
-            string soryOrder = "DEC";
-            string sortBy = "";
-            string sortColumn = "";
-
-
-
-            if (Request.Params["search[value]"] != null)
-            {
-                filterby = Request.Params["search[value]"].ToString();
-            }
-
-
-
-            if (Request.Params["order[0][column]"] != null)
-            {
-                sortBy = Request.Params["order[0][column]"].ToString();
-            }
-
-
-            if (sortBy == "1")
-            {
-                sortColumn = "Document Type";
-            }
-            else if (sortBy == "2")
-            {
-                sortColumn = "Document Name";
-            }
-            else if (sortBy == "3")
-            {
-                sortColumn = "Created Date";
-            }
-            else if (sortBy == "4")
-            {
-                sortColumn = "Guest Name";
-            }
-            else if (sortBy == "5")
-            {
-                sortColumn = "Room No";
-            }
-            else if (sortBy == "6")
-            {
-                sortColumn = "Chek-In Date";
-            }
-            else if (sortBy == "7")
-            {
-                sortColumn = "Check-Out Date";
-            }
-            else if (sortBy == "8")
-            {
-                sortColumn = "Last Modified By";
-            }
-            else if (sortBy == "8")
-            {
-                sortColumn = "Approval Status";
-            }
-            else if (sortBy == "9")
-            {
-                sortColumn = "Approver";
-            }
-            if (Request.Params["order[0][dir]"] != null)
-            {
-                soryOrder = Request.Params["order[0][dir]"].ToString();
-            }
-
-            //var documentList = new DapperHelper().ExecuteSP<DocumentFileSummaryModel>("Usp_GetDocumentFileSummary", ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString, new { PageNumber = start, PageSize = model.Length, search = filterby, DocumentType = DocumentType, SortBy = soryOrder, Sort = sortColumn, StartDate = string.IsNullOrEmpty(CreatedDate) ? null : StartDateDT.ToString("yyyyMMdd"), EndDate = string.IsNullOrEmpty(CreatedDate) ? null : EndDateDT.ToString("yyyyMMdd"), TimezoneId = timezoneid }).ToList();
-
-            var documentList = new DapperHelper().ExecuteSP<DocumentFileSummaryModel>("Usp_GetDocumentFileSummary", ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString, new { PageNumber = start, PageSize = model.Length, search = filterby, DocumentType = DocumentType, SortBy = soryOrder, Sort = sortColumn, StartDate = string.IsNullOrEmpty(CreatedDate) ? null : StartDateDT.ToString("yyyyMMdd"), EndDate = string.IsNullOrEmpty(CreatedDate) ? null : EndDateDT.ToString("yyyyMMdd"), TimezoneId = timezoneid, DocumentFileName=ReservationNumber }).ToList();//db.usp_GetReservationList(ReservationGroup, "", start, model.Length, filterby, soryOrder, sortColumn).ToList();
+            
+            var documentList = new DapperHelper().ExecuteSP<DocumentFileSummaryModel>("Usp_GetUserDocumentFileSummary", ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString, new { PageNumber = start, PageSize = model.Length, search = filterby, DocumentType = DocumentType, SortBy = soryOrder, Sort = sortColumn, StartDate = string.IsNullOrEmpty(CreatedDate) ? null : StartDateDT.ToString("yyyyMMdd"), EndDate = string.IsNullOrEmpty(CreatedDate) ? null : EndDateDT.ToString("yyyyMMdd"), TimezoneId = timezoneid, DocumentFileName= DocumentFileName }).ToList();
 
 
 
@@ -363,6 +197,7 @@ namespace DigiDoc.Controllers
 
                     s.Createdtime = s.CreatedDatetime.ToString("hh:mm:ss tt");
                 });
+                documentList.ToList().Where(x => x.DocumentCode != "RB");
                 var TotalCount = documentList != null ? documentList.First().TotalRecords : 1;
 
                 var response = new
@@ -395,13 +230,14 @@ namespace DigiDoc.Controllers
 
         }
 
-        // GET: Dcument
         [HttpGet]
         public async Task<ActionResult> DocumentDetails(DocumentDetailsDTO dTO)
         {
             int DetailID = dTO.DetailID; string UserID = dTO.UserID; string DocumentType = dTO.DocumentType; bool IsPageReloaded = dTO.IsPageReloaded; string Message = dTO.Message; bool Isapproval = dTO.Isapproval;
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             ViewBag.IsApproval = Isapproval;
+            
+                ViewBag.ResId = dTO.ResId;
             DocumentModel temp = new DocumentModel();
             var timezoneid = "Singapore Standard Time";
             if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
@@ -431,7 +267,7 @@ namespace DigiDoc.Controllers
 
                         temp.IsNotRecycleBin = false;
                     }
-                    Session["DigiDocData"] = sessionData;
+                    Session["GuestDigiDocData"] = sessionData;
 
 
                     temp.UserID = UserID;
@@ -454,7 +290,7 @@ namespace DigiDoc.Controllers
                         temp.DocumentFileName = $"{fileName}.pdf";
 
                     }
-                   
+
                     var spResponse = UtilityHelper.getApprovalDetailsForDocID(temp.DocumentHeaderID);
                     if (spResponse != null && spResponse.result)
                     {
@@ -585,10 +421,10 @@ namespace DigiDoc.Controllers
             if (spResponse != null && spResponse.result)
             {
                 string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-                var sessionData = (SessionDataModel)Session["DigiDocData"];
+                var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
                 sessionData.MenuName = controllerName;
                 sessionData.SubMenu = "Document List";
-                Session["DigiDocData"] = sessionData;
+                Session["GuestDigiDocData"] = sessionData;
                 AuditHelper.InsertAuditLog("Document", sessionData != null ? sessionData.UserName : "", $"Comment added : {commentsRequest.Comments}");
                 var timezoneid = "Singapore Standard Time";
                 if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
@@ -609,10 +445,10 @@ namespace DigiDoc.Controllers
         public async Task<ActionResult> SaveDocumentInfo(DocumentInfoModel documentInfo)
         {
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = controllerName;
             sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             var spResponse = UtilityHelper.saveDocumentInfo(documentInfo.UpdatedDocumentType, documentInfo.UpdatedDocumentName, documentInfo.DocumentHeaderID, documentInfo.DocumentDetailID);
             if (spResponse != null && spResponse.result)
             {
@@ -652,10 +488,10 @@ namespace DigiDoc.Controllers
 
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
             var approverUser = Newtonsoft.Json.JsonConvert.DeserializeObject<ApproverUser>(documentInfo.ApproverUser);
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = controllerName;
             sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             if (!string.IsNullOrEmpty(documentInfo.DocumentHeaderID))
             {
                 var spResponse = UtilityHelper.insertApprovalStatus(Int32.Parse(documentInfo.DocumentHeaderID), null, approverUser.ApprUserID, false, false, Int32.Parse(sessionData.UserID));
@@ -664,14 +500,16 @@ namespace DigiDoc.Controllers
                     UserModel touser = new UserModel();
                     var userresponse = UtilityHelper.getUserById(Convert.ToInt32(approverUser.ApprUserID));
                     if (userresponse != null)
-                    { try
+                    {
+                        try
                         {
                             var tousers = (List<UserModel>)userresponse.ResponseData;
                             if (tousers.Count > 0)
                             {
                                 touser = tousers.FirstOrDefault();
                             }
-                        } catch (Exception ex)
+                        }
+                        catch (Exception ex)
                         {
 
                         }
@@ -752,10 +590,10 @@ namespace DigiDoc.Controllers
             string RejectedSubject = ConfigurationManager.AppSettings["DocumentAcceptedSubject"].ToString();
 
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = controllerName;
             sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             if (!string.IsNullOrEmpty(documentInfo.Base64Signature) && !string.IsNullOrEmpty(documentInfo.DocumentHeaderID))
             {
                 LogHelper.Instance.Debug("DocumentSignature" + documentInfo.Base64Signature, "Save Document Signature", "Portal", "Document");
@@ -913,10 +751,10 @@ namespace DigiDoc.Controllers
 
         public async Task<ActionResult> ApprovalList()
         {
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = "Document";
             sessionData.SubMenu = "Approvals";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             return View();
         }
 
@@ -926,10 +764,10 @@ namespace DigiDoc.Controllers
         {
             //if (string.IsNullOrEmpty(SubmitButon))
             {
-                var sessionData = (SessionDataModel)Session["DigiDocData"];
+                var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
                 sessionData.MenuName = "Document";
                 sessionData.SubMenu = "Approvals";
-                Session["DigiDocData"] = sessionData;
+                Session["GuestDigiDocData"] = sessionData;
                 bool tempStatus;
                 bool status = !string.IsNullOrEmpty(ApprovalStatus) ?
                                         (bool.TryParse(ApprovalStatus, out tempStatus) ? tempStatus : false)
@@ -1049,10 +887,10 @@ namespace DigiDoc.Controllers
         public async Task<ActionResult> ChangeDocumentType(DocumentInfoModel documentInfo)
         {
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = controllerName;
             sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             var spResponse = UtilityHelper.saveDocumentInfo(documentInfo.UpdatedDocumentType, documentInfo.UpdatedDocumentName, documentInfo.DocumentHeaderID, documentInfo.DocumentDetailID);
             if (spResponse != null && spResponse.result)
             {
@@ -1119,7 +957,7 @@ namespace DigiDoc.Controllers
         public ActionResult GetApproverDetails(int DocumentHeaderID)
         {
 
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             var timezoneid = "Singapore Standard Time";
             if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
             {
@@ -1175,7 +1013,7 @@ namespace DigiDoc.Controllers
             //        row.r["CreatedDateTime"] = DateTimeHelper.ConvertFromUTC(row.r["CreatedDateTime"], timezoneid);
 
             //    }
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             var timezoneid = "Singapore Standard Time";
             if (!string.IsNullOrEmpty(sessionData.TimeZoneId))
             {
@@ -1209,7 +1047,7 @@ namespace DigiDoc.Controllers
                 if (response.Result)
                 {
                     byte[] pdfBytes = Convert.FromBase64String(response.Data.ToString());
-                  
+
                     return File(pdfBytes, "PDF", "DigiDocCoverLetter.pdf");
                 }
                 else
@@ -1225,10 +1063,10 @@ namespace DigiDoc.Controllers
         public async Task<ActionResult> ChangeMultipleDocumentType(string DocumentDetailIDs, string DocumentTypes, string UpdatedDocumentType)
         {
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = controllerName;
             sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             var s = DocumentDetailIDs.Split(',');
             foreach (var item in s)
             {
@@ -1250,10 +1088,10 @@ namespace DigiDoc.Controllers
 
             string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
 
-            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
             sessionData.MenuName = controllerName;
             sessionData.SubMenu = "Document List";
-            Session["DigiDocData"] = sessionData;
+            Session["GuestDigiDocData"] = sessionData;
             if (!string.IsNullOrEmpty(documentInfo.DocumentHeaderID))
             {
                 var spResponse = UtilityHelper.insertApprovalStatus(Int32.Parse(documentInfo.DocumentHeaderID), null, documentInfo.UserID, false, true, 0);
@@ -1263,7 +1101,7 @@ namespace DigiDoc.Controllers
                     {
                         spResponse = UtilityHelper.insertComments(Convert.ToInt32(documentInfo.DocumentHeaderID), Convert.ToInt32(documentInfo.DocumentDetailID), documentInfo.Comment, documentInfo.UserID, Convert.ToInt32(spResponse.ResponseData));
                     }
-                        UserModel touser = new UserModel();
+                    UserModel touser = new UserModel();
                     int sendersid = 0;
                     if (String.IsNullOrEmpty(documentInfo.SenderId) || documentInfo.SenderId == "0")
                     {
@@ -1279,8 +1117,8 @@ namespace DigiDoc.Controllers
                     {
                         touser = tousers.FirstOrDefault();
                     }
-                    
-                  
+
+
                     EmailResponse emailResponse = await new WSClientHelper().SendEmail(new EmailRequest()
 
                     {
@@ -1318,7 +1156,7 @@ namespace DigiDoc.Controllers
             }
 
         }
-        public  async  Task<FileResult> GetPDFStream(int DocumentFile)
+        public async Task<FileResult> GetPDFStream(int DocumentFile)
         {
             try
             {
@@ -1342,21 +1180,21 @@ namespace DigiDoc.Controllers
                         {
                             LogHelper.Instance.Debug($"Get Connectiostring", "GetPDFStream", "Portal", "DocumentDetails");
                             string ConnectionString = ConfigurationManager.AppSettings["CloudConnectionString"];
-                            LogHelper.Instance.Debug($"Connectionstring value"+ConnectionString, "ProcessDocument", "PortalAPI", "ProcessDocument");
+                            LogHelper.Instance.Debug($"Connectionstring value" + ConnectionString, "ProcessDocument", "PortalAPI", "ProcessDocument");
 
                             BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
-                            LogHelper.Instance.Debug($"BlobServiceClient Connection","GetPDFStream", "Portal", "DocumentDetails");
+                            LogHelper.Instance.Debug($"BlobServiceClient Connection", "GetPDFStream", "Portal", "DocumentDetails");
                             //var s = new BlobStorage().DownloadToStream(blobServiceClient, path, "document" + DocumentFile.ToString() + ".pdf").Result;
                             var downloadedblob = await new BlobStorage().DownloadBlob(blobServiceClient, Server.MapPath($"~/temp/" + "document" + DocumentFile.ToString() + ".pdf"), "document" + DocumentFile.ToString() + ".pdf");
                             LogHelper.Instance.Debug($"Document downloaded successfully" + "document" + downloadedblob.ToString(), "GetPDFStream", "Portal", "DocumentDetails");
                             byte[] filefromblob = new BlobStorage().FileToByteArray(Server.MapPath($"~/temp/" + "document" + DocumentFile.ToString() + ".pdf"));
-                            if(filefromblob.Length > 0)
+                            if (filefromblob.Length > 0)
                             {
                                 DocumentFiles = filefromblob;
                             }
-                          
+
                             //DocumentFiles = new BlobStorage().GetFileBlobAsync("document" + DocumentFile.ToString() + ".pdf", blobServiceClient).Result;
-                          
+
                         }
                         filename = documentdetails.FirstOrDefault().DocumentFileName;
                     }
@@ -1368,14 +1206,14 @@ namespace DigiDoc.Controllers
                 return File(Stream, "application/pdf");
                 //return new FileContentResult(DocumentFiles, "application/pdf");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                LogHelper.Instance.Debug($"Exception" +ex,"GetPDFStream", "Portal", "DocumentDetails");
+                LogHelper.Instance.Debug($"Exception" + ex, "GetPDFStream", "Portal", "DocumentDetails");
             }
             return null;
         }
         [HttpPost]
-        
+
         public async Task<ActionResult> Upload(DocumentRequestModel docreq)
         {
 
@@ -1400,7 +1238,7 @@ namespace DigiDoc.Controllers
                             {
                                 LogHelper.Instance.Debug($"FileType is PDF for filename" + file.FileName + "Position:" + i, "Upload", "Portal", "Upload");
 
-                                var sessionData = (SessionDataModel)Session["DigiDocData"];
+                                var sessionData = (SessionDataModel)Session["GuestDigiDocData"];
                                 MemoryStream target = new MemoryStream();
                                 file.InputStream.CopyTo(target);
                                 byte[] data = target.ToArray();
@@ -1410,8 +1248,8 @@ namespace DigiDoc.Controllers
                                     DocumentType = docreq.DocumentType,
                                     Username = sessionData.UserName,
                                     DocumentBase64 = Convert.ToBase64String(data),
-                                    RoomNo= docreq.RoomNo
-                                    
+                                    RoomNo = docreq.RoomNo
+
                                 };
 
                                 var result = UtilityHelper.ProcessDocument(model);
@@ -1479,6 +1317,6 @@ namespace DigiDoc.Controllers
 
 
         }
-    
+
     }
 }

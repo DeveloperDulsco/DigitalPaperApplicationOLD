@@ -12,6 +12,7 @@ namespace DigiDoc.Models.DPO
         public string DocumentType { get; set; } = null;
         public bool IsPageReloaded { get; set; } = false;
         public string Message { get; set; } = null;
-        public bool Isapproval { get; set; } = false;   
+        public bool Isapproval { get; set; } = false;
+        public string ResId { get; set; } = null;
     }
 }

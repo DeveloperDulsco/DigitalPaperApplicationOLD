@@ -283,6 +283,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\DigidocMobileController.cs" />
+    <Compile Include="Controllers\GuestDocumentController.cs" />
     <Compile Include="CoverLetterReportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -314,6 +315,7 @@
     <Compile Include="Helper\DateTimeHelper.cs" />
     <Compile Include="Helper\ListtoDataTableConverter.cs" />
     <Compile Include="Helper\NlogHelper.cs" />
+    <Compile Include="Helper\SessionCheck.cs" />
     <Compile Include="Helper\UtilityHelper.cs" />
     <Compile Include="Helper\WSClientHelper.cs" />
     <Compile Include="Models\ApprovalResponseModel.cs" />
@@ -631,7 +633,6 @@
     <Content Include="Views\DigidocMobile\GetRegistration.cshtml" />
     <Content Include="Views\DigidocMobile\PDfApprove.cshtml" />
     <Content Include="Views\DigidocMobile\GetViews.cshtml" />
-    <Content Include="Views\DigidocMobile\GetRegistration - Copy.cshtml" />
     <Content Include="Views\DigidocMobile\GetFolio - Copy.cshtml" />
     <Content Include="Views\Shared\DigiDocMobileLayout.cshtml" />
     <Content Include="Views\DigidocMobile\GetAnyPDF.cshtml" />
@@ -937,6 +938,12 @@
     <Content Include="web\standard_fonts\LICENSE_FOXIT" />
     <Content Include="web\standard_fonts\LICENSE_LIBERATION" />
     <Content Include="web\viewer.js.map" />
+    <Content Include="Views\GuestDocuments\Index.cshtml" />
+    <Content Include="Views\Shared\_Layoutguest.cshtml" />
+    <Content Include="Views\GuestDocuments\DocumentDetails.cshtml" />
+    <Content Include="Views\Document\DocumentSearch.cshtml" />
+    <Content Include="Views\GuestDocument\Index.cshtml" />
+    <Content Include="Views\GuestDocument\DocumentDetails.cshtml" />
     <None Include="_HA5G8_dmsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_HA5G8_dmsDataSet.Designer.cs</LastGenOutput>

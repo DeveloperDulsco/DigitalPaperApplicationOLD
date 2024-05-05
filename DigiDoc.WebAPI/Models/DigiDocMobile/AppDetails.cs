@@ -95,7 +95,8 @@ namespace DigiDoc.WebAPI.Models.DigiDocMobile
     }
     public class DocumentModel
     {
-
+        public string EmailAddress { get; set; }
+        public string GuestName { get; set; }
         public byte[] DocumentFile { get; set; }
 
     }
@@ -112,6 +113,17 @@ namespace DigiDoc.WebAPI.Models.DigiDocMobile
         public int AppId { get; set; }
         public string SystemIP { get; set; }
     }
+    public class LinkReservationRequest
+    {
+        public string ReservationNameID { get; set; }
 
+        public string ReservationNumber { get; set; }
+        public string GuestProfileID { get; set; }
+    }
 
+    public class RequestModel
+    {
+        public object RequestObject { get; set; }
+       
+    }
 }

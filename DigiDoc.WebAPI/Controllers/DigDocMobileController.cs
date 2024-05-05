@@ -5,6 +5,7 @@ using DigiDoc.Helper;
 using DigiDoc.WebAPI.Helper;
 using DigiDoc.WebAPI.Models;
 using DigiDoc.WebAPI.Models.DigiDocMobile;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -270,15 +271,16 @@ namespace DigiDoc.WebAPI.Controllers
 
 
                 string ConnectionString = ConfigurationManager.AppSettings["CloudConnectionString"];
+                if (!string.IsNullOrEmpty(ConnectionString))
+                {
+                    BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
 
-                BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
+                    await new BlobStorage().DeleteFile(blobServiceClient, "document" + result.FirstOrDefault().DocumentDetailID + ".pdf");
 
-                await new BlobStorage().DeleteFile(blobServiceClient, "document" + result.FirstOrDefault().DocumentDetailID + ".pdf");
+                    await new BlobStorage().UploadFileBlobAsync(documentBytes, "document" + result.FirstOrDefault().DocumentDetailID + ".pdf", blobServiceClient);
 
-                await new BlobStorage().UploadFileBlobAsync(documentBytes, "document" + result.FirstOrDefault().DocumentDetailID + ".pdf", blobServiceClient);
-
-                LogHelper.Instance.Debug($"document inserted successfully to blob" + documentRequest.DocumentId, "ProcessDocument", "PortalAPI", "ProcessDocument");
-
+                    LogHelper.Instance.Debug($"document inserted successfully to blob" + documentRequest.DocumentId, "ProcessDocument", "PortalAPI", "ProcessDocument");
+                }
                 var spResponse =
                                 new DapperHelper().ExecuteSP<EregResponseModel>("Usp_DeleteTempReservation", ConfigurationModel.ConnectionString,
                                     new { Id = documentRequest.TempId });
@@ -763,7 +765,77 @@ namespace DigiDoc.WebAPI.Controllers
             }
 
         }
+        [HttpPost]
+        public async Task<EregResponseModel> PostLinkReservation(RequestModel localDataRequest)
+        {
+            try
+            {
+                LogHelper.Instance.Debug("PostLinkReservation request into DB : " + JsonConvert.SerializeObject(localDataRequest), "PostLinkReservation", "API", "PostLinkReservation");
+
+                //System.IO.File.AppendAllText(System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\LocalPush.txt"), localDataRequest.RequestObject.ToString());
+                List<LinkReservationRequest> reservations = Newtonsoft.Json.JsonConvert.DeserializeObject<List<LinkReservationRequest>>(localDataRequest.RequestObject.ToString());
+               
+
+               
+                string connectionstring = ConfigurationModel.ConnectionString;
+                DapperHelper dapper = new DapperHelper();
+
+
+                var result = dapper.ExecuteSP<EregTempResponseModel>("Usp_Insert_LinkReservation", connectionstring, new
+                {
+
+                    Linkreservation = new DatatableHelper().ToDataTable(reservations),
+                    
+
+
+
+                });
+                bool ActualResult = false;
+                if (result != null)
+                {
+                   ;
+                    if (result.FirstOrDefault().Result == "200")
+                    {
+                        ActualResult= true;
+                        LogHelper.Instance.Debug($"Link Reservation inserted successfully", "PostLinkReservation", "PortalAPI", "PostLinkReservation");
+                    }
+                    else if (result.FirstOrDefault().Result == "201")
+                    {
+                        ActualResult= false;
+                        LogHelper.Instance.Debug($"Link Reservation Error Occured" + reservations.FirstOrDefault().ReservationNumber, "PostLinkReservation", "PortalAPI", "PostLinkReservation");
+                    }
+                    else if (result.FirstOrDefault().Result == "210")
+                    {
+                        ActualResult = true;
+                        LogHelper.Instance.Debug($"Link Reservation already" + reservations.FirstOrDefault().ReservationNumber, "PostLinkReservation", "PortalAPI", "PostLinkReservation");
+                    }
+                }
+
+                return new EregResponseModel()
+                {
+                    result = ActualResult,
+                    statusCode = 200,
+                    responseMessage = result!=null?result.FirstOrDefault().Message:"success",
+                    responseData = null
+
+
+                };
+            }
+            catch (Exception ex)
+            {
+                LogHelper.Instance.Debug($"Error" + ex, "PostTempReservation", "PortalAPI", "PostTempReservation");
+                return new EregResponseModel()
+                {
+                    result = false,
+                    statusCode = -1,
+                    responseMessage = $"Generic error : {ex.Message}"
+                };
+            }
+        }
+
+
+
     }
 
-    
+
 }
