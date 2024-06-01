@@ -219,13 +219,13 @@ namespace DigiDoc.PdfHelper
         {
             try
             {
-
-
+                
+                
                 byte[] imageByte = Convert.FromBase64String(ImageBase64);
-                byte[] pdfBytes = Convert.FromBase64String(PDFBase64);
+                byte[] pdfBytes = Convert.FromBase64String(PDFBase64);  
                 using (PdfReader pdfReader = new PdfReader(pdfBytes))
                 {
-
+                   
                     //string strText = string.Empty;
                     ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
                     //for (int page = 1; page <= pdfReader.NumberOfPages; page++)
@@ -315,7 +315,7 @@ namespace DigiDoc.PdfHelper
 
                                     BaseFont font = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
                                     BaseFont subfont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-                                    PdfContentByte overContent = stamper.GetUnderContent((pdfReader.NumberOfPages));
+                                    PdfContentByte overContent = stamper.GetOverContent((pdfReader.NumberOfPages));
 
                                     overContent.SaveState();
                                     float imageX = rectangle.Right - ImageScaleWidth - 70;
@@ -851,6 +851,45 @@ namespace DigiDoc.PdfHelper
                         }
                     }
                     #endregion
+                    if (!checksignature)
+                    {
+
+                        pdfBytesTemp = !String.IsNullOrEmpty(resultBase64) ? Convert.FromBase64String(resultBase64) : pdfBytes;
+                        PdfReader pdfReadersignature = new PdfReader(pdfBytesTemp);
+
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+
+                            using (PdfStamper stamper = new PdfStamper(pdfReadersignature, ms))
+                            {
+
+                                iTextSharp.text.Rectangle rectangle = pdfReaders.GetPageSizeWithRotation(pdfReaders.NumberOfPages);
+
+
+
+                                BaseFont font = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                                BaseFont subfont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                                PdfContentByte overContent = stamper.GetOverContent((pdfReaders.NumberOfPages));
+
+                                overContent.SaveState();
+                                float imageX = rectangle.Right - ImageScaleWidth;
+                                float imageY = rectangle.Bottom + 100;
+                                Image image = Image.GetInstance(imageByte);
+                                if (ImageScaleHeight != 0 && ImageScaleWidth != 0)
+                                    image.ScaleAbsolute(ImageScaleWidth, ImageScaleHeight);
+                                image.SetAbsolutePosition(imageX, imageY);
+                                // image.SetAbsolutePosition(rectangle.Width - 160, rectangle.Height - 150);
+                                overContent.AddImage(image);
+
+
+                                overContent.RestoreState();
+
+                                stamper.Close();
+                            }
+                            resultBase64 = Convert.ToBase64String(ms.ToArray());
+
+                        }
+                    }
                     return new ResponseModel()
                     {
                         Data = resultBase64,

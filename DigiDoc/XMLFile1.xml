@@ -41,15 +41,16 @@
 <Countryheight>8</Countryheight>
 <Countrywidth>180</Countrywidth>												
 </PDFTYPE>
-<PDFTYPE>
-<DocumentName>TAX INVOICE</DocumentName>
-<Signature>Tourism12 Dirham</Signature>
-<DataIdentifier>guest signature</DataIdentifier>
-<DocumentType>FolioTemplate</DocumentType>
-<imgheight>60</imgheight>
-<imgwidth>60</imgwidth>
-<imgxaxis>450</imgxaxis>
-<imgyaxis>-60</imgyaxis>
-</PDFTYPE>
+
+	<PDFTYPE>
+	<DocumentName>Registration</DocumentName>
+	<Signature>TOTAL</Signature>
+	<DataIdentifier>Guestsignature</DataIdentifier>
+	<DocumentType>FolioTemplate</DocumentType>
+	<imgheight>100</imgheight>
+	<imgwidth>100</imgwidth>
+	<imgxaxis>0</imgxaxis>
+	<imgyaxis>0</imgyaxis>
+	</PDFTYPE>
 </PDFTYPES>
 

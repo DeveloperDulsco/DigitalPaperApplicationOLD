@@ -192,9 +192,11 @@
 </script>
 <script type="text/javascript">
 
-        let signaturePad;
-    $('#customerSignature').on('shown.bs.modal', function (e) {
-        notfication('@Model.ClientConnection', '106');
+    let signaturePad;
+    $(document).ready(function () {
+
+        $('#customerSignature').on('shown.bs.modal', function (e) {
+            notfication('@Model.ClientConnection', '106');
             let canvas = $("#signature-pad canvas");
             let parentWidth = $(canvas).parent().outerWidth();
             let parentHeight = $(canvas).parent().outerHeight();
@@ -203,7 +205,7 @@
             signaturePad = new SignaturePad(canvas[0], {
                 backgroundColor: 'rgb(255, 255, 255)'
             });
-        })
+        });
         $('#customerSignature').on('hidden.bs.modal', function (e) {
             signaturePad.clear();
         });
@@ -218,50 +220,51 @@
                 $('#Notify').modal('show');
             } else {
                 $('#customerSignature').modal('hide');
-                 notfication('@Model.ClientConnection','107');
+                notfication('@Model.ClientConnection', '107');
                 let dataURL = signaturePad.toDataURL();
                 var strImage = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
 
 
-                      $.ajax({
-                         url: "@Url.Action("SaveAnyPDfSignature", "DigidocMobile")",
-                         cache: false,
-                         type: "POST",
-                         data: {
-                           /*  __RequestVerificationToken: token,*/
-                             Base64Signature: strImage,
-                             TempReservationID: $("#TempReservationID").val(),
-                             DocumentType: $("#DocumentType").val()
-                         },
+                $.ajax({
+                    url: "@Url.Action("SaveAnyPDfSignature", "DigidocMobile")",
+                    cache: false,
+                    type: "POST",
+                    data: {
+                        /*  __RequestVerificationToken: token,*/
+                        Base64Signature: strImage,
+                        TempReservationID: $("#TempReservationID").val(),
+                        DocumentType: $("#DocumentType").val()
+                    },
 
-                         dataType: 'json',
-                                success: function (data) {
+                    dataType: 'json',
+                    success: function (data) {
 
-                                    if (data.Result) {
-                                        Folionotfication('@Model.ClientConnection', data.DocumentId, data.TempId);
-                                       // a();
-                                        var appid = getParameterByName('AppId');
+                        if (data.Result) {
+                            Folionotfication('@Model.ClientConnection', data.DocumentId, data.TempId);
+                            // a();
+                            var appid = getParameterByName('AppId');
 
-                                        if (appid != null) {
-                                            window.location = "/DigidocMobile/SliderIndex?AppId=" + appid;
-                                        }
-                                        else {
-                                            location.reload();
-                                        }
-                                    }
-                                    else {
+                            if (appid != null) {
+                                window.location = "/DigidocMobile/SliderIndex?AppId=" + appid;
+                            }
+                            else {
+                                location.reload();
+                            }
+                        }
+                        else {
 
-                                    }
-                                },
-                         error: function (xhr, status, error) {
-                             var errorMessage = xhr.status + ': ' + xhr.statusText
-                            /* alert('Error - ' + errorMessage);*/
-                         }
-                            })
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        var errorMessage = xhr.status + ': ' + xhr.statusText
+                        /* alert('Error - ' + errorMessage);*/
+                    }
+                })
 
 
             }
         });
+    });
 </script>
 <style type="text/css">
 
