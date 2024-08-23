@@ -1,0 +1,219 @@
+﻿@using DigiDoc.Models;
+
+@model DocumentModel
+@{ ViewBag.Title = "DocumentDetails";
+    Layout = "~/Views/Shared/_Layoutguest.cshtml";
+}
+
+
+@{var AddSignatureComment = System.Configuration.ConfigurationManager.AppSettings["AddSignatureComment"];
+    var docname = Model.DocumentName;
+    if (!string.IsNullOrEmpty(docname))
+    {
+        docname.Trim();
+    }
+}
+
+
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            @*<nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@Url.Action("DocumentGroups", "Document")">Document</a></li>
+                        @if (ViewBag.IsApproval)
+                        {
+
+                            <li class="breadcrumb-item"><a href="@Url.Action("ApprovalList", "Document")">List</a></li>
+
+                        }
+                        else
+                        {
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Document", new { DocumentType = ViewBag.DocumentType })">List</a></li>
+
+                        }
+                        <li class="breadcrumb-item active" aria-current="page">Details</li>
+                    </ol>
+                </nav>*@
+        </div>
+        <div class="col-12 col-sm-auto">
+            @*@if (ViewBag.IsApproval)
+                {
+                    <a class="mb-4 back-btn" href="@Url.Action("ApprovalList", "Document")"><i class="fas fa-arrow-left"></i>Back</a>
+                }
+                else
+                {*@
+            @*<a class="mb-4 back-btn" href="@Url.Action("Index", "Document", new { DocumentType = ViewBag.DocumentType })"><i class="fas fa-arrow-left"></i>Back</a>*@
+            <a class="mb-4 back-btn" href="@Url.Action("Index", "GuestDocument", new { ResId = ResId,Username=UserName })"><i class="fas fa-arrow-left"></i>Back</a>
+
+            @*}*@
+        </div>
+
+    </div>
+    <div class="content-wrap">
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @(ViewBag.Message)
+            </div>}
+        @if (ViewBag.InfoMessage != null)
+        {
+            <div class="alert alert-info" role="alert">
+                @(ViewBag.InfoMessage)
+            </div>}
+        <div class="row">
+            <div class="col-lg-6 col-xl-8">
+                <div class="pdf-view">
+                    <embed src="@Url.Action("GetPDFStream", "GuestDocuments",new {DocumentFile = Model.DocumentDetailID })#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" />
+                </div>
+
+                <div class="pdf-footer">
+                    <form class="row d-flex gy-2 gx-3 justify-content-center">
+                        <div class="col-auto">
+                            <label>Created On : </label><span>@(Model.CreatedDatetime.ToString("dd/MM/yyyy hh:mm:ss tt"))</span>
+                        </div>
+                        <div class="col-auto">
+                            <label>Modified Date : </label><span>@(Model.LastCommentedDateTime.Value.ToString("dd/MM/yyyy hh:mm:ss tt"))</span>
+                        </div>
+                        <div class="col-auto">
+                            <label>Updated by  : </label><span>@(Model.LastCommentedUser)</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal model-cstm fade" id="messageModal" aria-hidden="true" aria-labelledby="messageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Message</h5>
+            </div>
+            <div class="modal-body">
+                <div class="message">
+                    <p id="modalMessageContent">
+                        Success
+                    </p>
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal model-cstm fade" id="myModal" aria-hidden="true" aria-labelledby="MyModal" tabindex="-1">
+
+    <div class="modal-dialog  modal-dialog-scrollable cover-letter">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div class="centers">
+                    <h5>Cover Letter</h5>
+                </div>
+                <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal" aria-label="Close" value="Close">Close</button>
+            </div>
+            @using (Html.BeginForm("GetPDFApproverDetails", "GuestDocuments", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.DocumentHeaderID)
+                <div class="downloaddiv">
+
+                    <div class="downloadtext">
+
+                    </div>
+                    <div class="downloadicon">
+                        <button class="btn btn-primary" type="submit" @*onclick="download(@Model.DocumentHeaderID)"*@>Download</button>
+
+                    </div>
+                </div>
+                <div class="modal-body signaturebody">
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="loader-screen" id="loadingModal" style="display:block">
+    <div class="loadingio-spinner-cube-60bjxije365">
+        <div class="ldio-s3o3fb5tkrr">
+            <div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+
+    <script src="~/Assets/js/signature_pad.umd.js"></script>
+    <script src="~/Assets/js/app.js"></script>
+    <script>
+        function userfiledownload() {
+           /* alert("sdfds")*/
+
+             @*$.get("@Url.Action("DownloadFile", "Document")");*@
+
+                var mapForm = document.createElement("form");
+                 var strPageURL = "about:blank";
+               var strAction = "@Url.Action("DownloadFile", "Document")";
+                mapForm.target = "_self";
+                mapForm.id = "stmtForm";
+                mapForm.method = "GET";
+            mapForm.action = strAction;
+            mapForm.submit();
+
+
+
+
+            }
+        function Details(DocumentHeaderID) {
+            $.post("@Url.Action("GetApproverDetails", "Document")",
+                { // Data Sending With Request To Server
+                    DocumentHeaderID: DocumentHeaderID,
+                    "__RequestVerificationToken":
+                        $("input[name=__RequestVerificationToken]").val()
+                },
+                function (data) {
+                    if (data == null) {
+                        $('#modalMessageHeader').html('Message')
+                        $('#modalMessageContent').html('Comments field is empty')
+                        $('#messageModal').modal('show');
+                    }
+                    else {
+                        $('.signaturebody').html(data)
+                        $("#myModal").modal("show");
+
+                    }
+                });
+
+
+        }
+        function a() {
+            return "a";
+        }
+        $("#loadingModal").css("display", "none");
+     
+        $("button#form").click(function () {
+            @*$("#UpdatedDocumentName").val('@docname');*@
+            $("#formbx").toggleClass("formshow");
+        });
+
+       
+
+
+
+
+
+    </script>
+}

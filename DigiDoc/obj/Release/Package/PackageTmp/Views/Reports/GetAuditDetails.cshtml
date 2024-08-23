@@ -1,0 +1,26 @@
+﻿@using DigiDoc.DataAccess.Models;
+@model List<AuditDetailsModel>
+
+<table class="table table-bordered" >
+    <thead>
+        <tr>
+            <th>Information</th>
+            <th>Before Update</th>
+            <th>After Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var auditDetails in Model)
+            {
+                <tr>
+                    <td>@auditDetails.FieldName</td>
+                    <td>@auditDetails.OldValue</td>
+                    <td>@auditDetails.NewValue</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "NewProperty";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="property.html">Property</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">New Property</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <a class="mb-4 back-btn" href="@Url.Action("PropertyMaster","Home")" ><i class="fas fa-arrow-left"></i>Back</a>
+        </div>
+    </div>
+    <div class="content-wrap">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <label for="exampleInputEmail1" class="form-label">Property Status </label>
+                <div class="mb-4">
+
+                    <div class="form-check form-check-inline p-0">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Enable</label>
+                    </div>
+                    <div class="form-check form-check-inline p-0">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">
+                            Disable
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Property Name</label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Property Logo</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="upld-img mb-3">
+                    <a class="dlt-btn" href="#"><i class="fas fa-trash-alt"></i></a>
+                    <img class="img-fluid" src="images/logo_sample.png">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-10 col-xl-6">
+                <div class="mb-3">
+                    <label class="form-label">Property Address</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="mb-1">
+                    <label class="form-label">Property Contact Number</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="button-wrapper1 d-flex justify-content-between">
+                    <button class="btn btn-secondary m-0" type="button">Cancel</button>
+                    <button class="btn btn-primary mr-0" type="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

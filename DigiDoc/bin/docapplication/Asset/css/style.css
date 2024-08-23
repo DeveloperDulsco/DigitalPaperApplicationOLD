@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700&display=swap');
+body{background: #F3F3F3;font-family: 'Karla', sans-serif;}
+.header{background: #fff;box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.03);padding:20px 0;}
+.notification{position: relative;right: 5px;}
+.notification span{position: absolute;display: block;border-radius: 2px;background: #ff2323;color: #fff;padding:0 4px;top:-2px;right:-8px;font-size: 11px;}
+.notification-wrap {padding: 0;border: 1px solid #dfdfdf;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);border-radius: 7px;}
+.notification-wrap .head{background: #00C691;padding:7px 10px;color: #fff;border-top-left-radius:7px;border-top-right-radius:7px;border-bottom: 1px solid #dfdfdf;font-weight: 400;}
+.notification-wrap .iconcircle{background: #F6C23E;height: 41px;width: 41px;border-radius: 50%;justify-content: center;align-items: center;display: flex;}
+.notification-wrap .date{color: #C7C7C7;font-size: 14px;}
+.notification-wrap  .dropdown-item:hover{background: #FEFFEE;}
+.notification-wrap .dropdown-item:active{background: #FEFFEE;color: #000;}
+.notification-wrap  .dropdown-item{padding:20px 20px;border-bottom:1px solid #EBEBEB;}
+.notification-wrap  .dropdown-item span{display: block;width: 14rem;white-space: normal;font-size: 14px;}
+
+.footer{font-size: 16px;text-align: center;color: #474747;}
+
+.content{background: #fff;filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.03));border-radius: 6px;padding: 25px;}
+.idwrapp{border-radius: 12px;background: #fefff6;border: 1px dashed #a7a7a7;padding: 20px;}
+
+.confirm-wrapper{background: #f2f2f2;padding:35px;margin-top: 30px;border-radius: 6px;}
+.confirmation{border-radius: 17px;background: #f9f9f9;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.09);padding:25px 35px;}
+.confirmation dt{font-weight: 400;}
+.confirmation dd{font-weight: 700;}
+.brdr-btm{border-bottom: 1px solid #DEDEDE;padding-bottom: 5px;font-size: 14px;}
+
+.form .form-label{font-size: 14px;}
+
+.btn-grp {margin: 20px 0;}
+.btn-grp button{filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));border: 0 none;color: #fff;border-radius: 6px;padding:10px 25px;font-size:18px;font-weight: 400;text-transform:uppercase;}
+.btn-grp button i{margin: 0 7px 0 7px;}
+.btn_green{background: #00c691;}
+
+.btn_green:hover{background: #00BC8A;}
+.btn_red{background: #F55862;}
+.btn_red:hover{background: #EE555F;}
+
+
+.link1 a{color: #00c691;}
+
+
+.sign{position: relative;}
+/*canvas*/
+.signature-pad--actions .buttons button{border-radius: 5px;
+    background: #00c691;color: #ffffff;border: 0 none;padding:6px 20px;font-size: 16px;font-weight:500;}
+.signature-pad--actions .buttons button:hover{background:#00BC8A;}
+.signature-pad--footer{color:#555555;font-size:14px;}

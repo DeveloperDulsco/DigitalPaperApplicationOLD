@@ -1,0 +1,289 @@
+﻿
+@{
+    ViewBag.Title = "UserMaster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Assets/css/datatables.min.css">
+<link href="~/Assets/css/styles.css" rel="stylesheet" />
+<link href="~/Assets/css/custom.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+<div class="container-fluid px-4 pt-4">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-2 mb-3 mb-0">Users</h1>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <ul class="search">
+                <li>
+                    <a class="btn-link" href="@Url.Action("NewUser", "User")">New User</a>
+                </li>
+                <li>
+                    <a class="btn-link" href="#" onclick="UserUpload()">Upload UserList</a>
+                </li>
+                
+                <li>
+                    @*<form method="post" id="frmUploads" action="@Url.Action("DownloadFile","User")" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+
+
+                <button type="submit" class="btn-link" id="btnsample" value="Download Template" />
+            </form>*@
+                    <a class="btn-link" href="@Url.Action("DownloadFile", "User")">Download Template</a>
+                </li>
+                @*<li class="input-bx">
+            <input type="text" class="form-control" placeholder="Search ...">
+            <a class="icon" href="#"><img src="~/assets/images/search.svg"></a>
+        </li>*@
+            </ul>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <div class="row">
+            @if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+
+                if (ViewBag.Success)
+                {
+                    <div class="alert alert-success" role="alert" >
+
+                        @(ViewBag.Message)
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-danger" role="alert">
+
+                        @(ViewBag.Message)
+                    </div>
+                }
+            }
+            <div class="col-md-12">
+                <div class="table-responsive cstm-table">
+                    <table id="userTable" class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-nowrap" scope="col">Serial #</th>
+                                <th class="text-nowrap" scope="col">Name</th>
+                                <th class="text-nowrap" scope="col">User Name</th>
+                                <th class="text-nowrap" scope="col">User Profile</th>
+                                <th class="text-nowrap" scope="col">Status</th>
+                                <th class="text-nowrap text-center" scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+}
+<div class="modal model-cstm fade" id="ConfirmModal" aria-hidden="true" aria-labelledby="ConfirmmessageModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Confirm</h5>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("SetUserActive", "User", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="message">
+                        <p id="modalMessageContent">
+                            Do you want to deactivate the user?
+                        </p>
+                    </div>
+                    <div class="button-wrapper d-flex justify-content-center">
+                        <input type="hidden" id="hfusername" name="UserName">
+                        <input type="hidden" id="hfuserId" name="UserID">
+                        <input type="submit" name="ConfirmButon" id="ConfirmButon" value="Confirm" class="btn btn-primary" />
+                        <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="modal model-cstm fade" id="userModal" aria-hidden="true" aria-labelledby="userModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">User Upload</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                       
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <form method="post" id="frmUpload" action="@Url.Action("Upload","User")" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+
+                        <div class="">
+                            <input type="file" id="upload" name="upload" />
+                        </div>
+
+
+                        @Html.Label("Error", new { @class = "field-validation-error", @id = "Errortext" })
+
+                        <div class="button-wrapper d-flex justify-content-center">
+                            <button class="btn btn-primary" name="upload" type="submit" id="btncmt">Ok</button>
+                            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script src="~/Assets/js/datatables/dataTables.min.js"></script>
+    <script src="~/Assets/js/datatables/dataTables.bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.alert').remove();
+                if (window.location.href.indexOf('?') > -1) {
+                    history.pushState('', document.title, window.location.pathname);
+                }
+            }, 15000);
+
+            $('#frmUpload').on('submit', function (e) {
+                e.preventDefault();
+              
+                var url = $(this).attr('action');
+                var form = $('#frmUpload')
+                var data = $(this).serialize();
+                var formData = new FormData(form.get(0));
+               
+                formData.append("File", $('#upload')[0].files[0]);
+           
+                    $.ajax({
+                        url: url,
+                        data: formData,
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                           
+                            if (data.Result) {
+
+                                var baseUrl = "@Url.Action("UserList", "User")?Message=" + data.Message +"&Success="+true;
+
+                                window.location.href=baseUrl;
+                            }
+                            else {
+
+                                $("#Errortext").text(data.Message);
+                            }
+
+
+                        },
+                        error: function (error) {
+                            //  bootbox.alert("Failed");
+                        }
+                    })
+
+
+
+                })
+
+        });
+        $("#loadingModal").css("display", "none");
+        $(document).ready(function () {
+
+
+            $('#userTable').on('error.dt', function(e, settings, techNote, message){
+                console.log('An error has been reported by DataTables: ', message );
+                e.preventDefault();
+            });
+
+
+
+            var dt = $('#userTable').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    url: "@Url.Action("GetUserListAjax", "User")"
+
+                },
+                "columns": [
+                    {
+                        "data": "UserID",
+                     render: function (data, type, row, meta) {
+                            return meta.row + meta.settings._iDisplayStart + 1;
+                        }},
+                    { "data": "RealName" },
+                    { "data": "UserName" },
+                    { "data": "ProfileName" },
+                    {
+                        "data": "IsActive",
+                        "render": function (data, type, row) {
+                            if (row.IsActive == true)
+                                return 'Enabled'
+                            else
+                                return 'Disabled'
+                        }
+                    },
+
+                    {
+                        "data": null,
+                        "render": function (data, type, row) {
+                            if (row.IsActive == true)
+                               return ' <a class="tb-icon" href="@Url.Action("ViewUserDetails", "User")?UserID=' + row.UserID + '"><i class="far fa-eye"></i></a>&nbsp;<a class="tb-icon" href="#" confirm="Are you want to deleteuser?" onclick="return DeleteUser(\'' + row.UserName + '\',' + row.UserID+');"><i class="fa fa-trash"></i></a>'
+
+                            else
+
+                                return '<a class="tb-icon" href="@Url.Action("ViewUserDetails", "User")?UserID=' + row.UserID + '"><i class="far fa-eye"></i></a>'
+
+                        }
+
+                    }
+
+
+                ],
+               // "order": [[1, 'asc']]
+            });
+
+
+            $('input[type="file"]').change(function (e) {
+                var file = e.target.files[0].name;
+                $("#filetext").val(file);
+            });
+
+        });
+         function DeleteUser(UserName, UserID) {
+            $("#hfusername").val(UserName);
+            $("#hfuserId").val(UserID);
+            $('#ConfirmModal').modal('show');
+        }
+        function UserUpload() {
+            $('#upload').val('');
+            $("#Errortext").empty();
+            $('#userModal').modal('show');
+
+        }
+        function UserDownload() {
+           
+            $('#btnsample').trigger('click');
+   }
+        
+    </script>
+
+
+}
+

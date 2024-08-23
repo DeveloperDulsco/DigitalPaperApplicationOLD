@@ -1,0 +1,726 @@
+﻿@using DigiDoc.Models;
+
+@model DocumentModel
+@{ ViewBag.Title = "DocumentDetails";
+    Layout = "~/Views/Shared/_Layoutguest.cshtml";
+    var User = (DigiDoc.Models.SessionDataModel)Session["GuestDigiDocData"];
+    var UserName = User.UserName;
+    var UserID = User.UserID;
+    var isapproval = ViewBag.IsApproval;
+    var ResId = ViewBag.ResId;
+    var SignatureButonName = (Model.SignatureRequired != null && Model.SignatureRequired.Value) ? "Approve" : "Send For Approval"; }
+
+@{var AddSignatureComment = System.Configuration.ConfigurationManager.AppSettings["AddSignatureComment"];
+    var docname = Model.DocumentName;
+    if (!string.IsNullOrEmpty(docname))
+    {
+        docname.Trim();
+    }
+}
+
+
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            @*<nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("DocumentGroups", "Document")">Document</a></li>
+                    @if (ViewBag.IsApproval)
+                    {
+
+                        <li class="breadcrumb-item"><a href="@Url.Action("ApprovalList", "Document")">List</a></li>
+
+                    }
+                    else
+                    {
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Document", new { DocumentType = ViewBag.DocumentType })">List</a></li>
+
+                    }
+                    <li class="breadcrumb-item active" aria-current="page">Details</li>
+                </ol>
+            </nav>*@
+        </div>
+        <div class="col-12 col-sm-auto">
+            @*@if (ViewBag.IsApproval)
+            {
+                <a class="mb-4 back-btn" href="@Url.Action("ApprovalList", "Document")"><i class="fas fa-arrow-left"></i>Back</a>
+            }
+            else
+            {*@
+                @*<a class="mb-4 back-btn" href="@Url.Action("Index", "Document", new { DocumentType = ViewBag.DocumentType })"><i class="fas fa-arrow-left"></i>Back</a>*@
+                <a class="mb-4 back-btn" href="@Url.Action("Index", "GuestDocument", new { ResId = ResId,Username=UserName })"><i class="fas fa-arrow-left"></i>Back</a>
+
+            @*}*@
+        </div>
+
+    </div>
+    <div class="content-wrap">
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @(ViewBag.Message)
+            </div>}
+        @if (ViewBag.InfoMessage != null)
+        {
+            <div class="alert alert-info" role="alert">
+                @(ViewBag.InfoMessage)
+            </div>}
+        <div class="row">
+            <div class="col-lg-6 col-xl-8">
+                <div class="pdf-view">
+                    <embed src="@Url.Action("GetPDFStream", "GuestDocument",new {DocumentFile = Model.DocumentDetailID })#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" />
+                    @*<iframe src='@Url.Action("GetPDFStream", "Document",new {DocumentFile = Model.DocumentHeaderID })' width="100%"
+                        height="1000" frameBorder="0"></iframe>*@
+                    @*<iframe src="@Url.Action("GetPDFStream", "Document",new {DocumentFile = Model.DocumentHeaderID })#zoom=150" width="100%" height="600px" id="iFramePdf" #zoom="200" frameBorder="1" type="application/pdf"></iframe>*@
+                </div>
+                @*<iframe src="https://sindmsstore.blob.core.windows.net/dms3/documents109.pdf" width="100%" height="600px" id="iFramePdf" #zoom="200" frameBorder="1" type="application/pdf"></iframe>*@
+
+                <div class="pdf-footer">
+                    <form class="row d-flex gy-2 gx-3 justify-content-center">
+                        <div class="col-auto">
+                            <label>Created On : </label><span>@(Model.CreatedDatetime.ToString("dd/MM/yyyy hh:mm:ss tt"))</span>
+                        </div>
+                        <div class="col-auto">
+                            <label>Modified Date : </label><span>@(Model.LastCommentedDateTime.Value.ToString("dd/MM/yyyy hh:mm:ss tt"))</span>
+                        </div>
+                        <div class="col-auto">
+                            <label>Updated by  : </label><span>@(Model.LastCommentedUser)</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-4">
+                <div class="cmntbtn-wrap d-flex justify-content-between">
+                    @if (Model.IsEdit)
+                    {
+                        <button class="btn btn-primary" id="form">Document Info</button>}
+                    @*@if (ViewBag.ShowAprovalView != null && ViewBag.ShowAprovalView)
+                    {
+                        <button class="btn btn-primary" id="btnappdetais" onclick="Details(@Model.DocumentHeaderID)" data-backdrop="static" data-keyboard="false">Cover Letter</button>
+                    }
+                    @if (Model.IsComment && (ViewBag.ShowApprovalButon != null && ViewBag.ShowApprovalButon) && Model.IsNotRecycleBin)
+                    {
+                        <button class="btn btn-primary" id="sign-btn">@SignatureButonName</button>
+                    }
+                    @if ((Model.SignatureRequired != null && Model.SignatureRequired.Value) && Model.IsNotRecycleBin && ViewBag.ShowAprovalView != null && ViewBag.ShowAprovalView && (ViewBag.ShowApprovalButon != null && ViewBag.ShowApprovalButon))
+                    {
+                        <button class="btn btn-primary" id="reject-btn">Reject</button>
+
+                    }*@
+                </div>
+
+                <div id="formbx" class="form-wrap">
+                    <form name="documentInfoForm" id="documentInfoForm" method="post" action="@Url.Action("SaveDocumentInfo","GuestDocument")">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            @Html.HiddenFor(model => model.DocumentDetailID)
+                            @Html.HiddenFor(model => model.DocumentHeaderID)
+                            @Html.HiddenFor(model => model.DocumentType)
+                            @Html.HiddenFor(model => model.DocumentName)
+                            @Html.HiddenFor(model => model.UserID)
+                            @Html.Hidden("IsApproval", (bool)@isapproval)
+
+                            <label class="form-label">Document Type</label>
+                            <select name="UpdatedDocumentType" class="form-control form-select">
+                                @if (ViewBag.DocumentList != null)
+                                {
+                                    foreach (var documentType in ViewBag.DocumentList)
+                                    {
+                                        var isSelected = documentType.DocumentName == Model.DocumentType ? "selected" : "";
+                                        <option value="@documentType.DocumentName" @isSelected>@documentType.DocumentName</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Document Name</label>
+
+                            <input name="UpdatedDocumentName" id="UpdatedDocumentName" placeholder="" class="form-control" value="@Model.DocumentName">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+
+                            <input name="UpdatedEmailAddress" id="UpdatedEmailAddress" placeholder="" class="form-control" value="@Model.EmailAddress" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+
+                            <input name="UpdatedPhoneNumber" id="UpdatedPhoneNumber" placeholder="" class="form-control" value="@Model.Phone" disabled>
+                        </div>
+                        <div class="cmntbtn-wrap d-flex justify-content-between">
+                            <button class="btn btn-secondary">Cancel</button>
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                <div id="apprrovalFormBox" class="form-wrap">
+                    <form name="ApprrovalForm" id="apprrovalForm" method="post" action="@Url.Action("SendToApproval","GuestDocument")">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-3">
+                            @Html.HiddenFor(model => model.DocumentHeaderID)
+                            @Html.HiddenFor(model => model.UserID)
+                            @Html.HiddenFor(model => model.DocumentType)
+                            @Html.HiddenFor(model => model.DocumentDetailID)
+                            @Html.HiddenFor(model => model.DocumentName)
+                            @Html.Hidden("IsApproval", (bool)@isapproval)
+                            <label class="form-label">Approver's Name</label>
+                            <select name="ApproverUser" class="form-control form-select">
+                                @if (ViewBag.Userlist != null)
+                                {
+                                    foreach (var user in ViewBag.Userlist)
+                                    {
+                                        <option value='{"ApprUserID":"@user.UserID","ApprUserRealName":"@user.RealName"}'>@user.RealName</option>
+                                    }
+                                }
+                            </select>
+
+                        </div>
+                        <div class="cmntbtn-wrap d-flex justify-content-between">
+                            <button class="btn btn-secondary">Cancel</button>
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                <div id="signbx" class="sign">
+                    <form name="documentSignatureForm" id="documentSignatureForm" method="post" action="@Url.Action(" #")">
+                        @Html.AntiForgeryToken()
+                        <div id="signature-pad" class="signature-pad">
+                            @if (Model.IsSignaturePresent != null && Model.IsSignaturePresent.Value)
+                            {
+                                <div class="signature-pad--body">
+                                    <img class="img-fluid" src="@Model.SignatureFileBase64">
+                                </div> }
+                            else
+                            {
+                                <div class="signature-pad--body">
+                                    <canvas height=auto></canvas>
+                                </div>}
+                            <div class="signature-pad--footer">
+                                @Html.HiddenFor(model => model.DocumentDetailID)
+                                @Html.HiddenFor(model => model.DocumentHeaderID)
+                                @Html.HiddenFor(model => model.DocumentType)
+                                @Html.HiddenFor(model => model.DocumentFileName)
+                                @Html.HiddenFor(model => model.DocumentName)
+                                @Html.HiddenFor(model => model.UserID)
+                                @Html.Hidden("IsApproval", (bool)@isapproval)
+                                @Html.HiddenFor(model => model.LastCommentedUserID)
+                                @Html.HiddenFor(model => model.SenderId)
+                                <input name="ApprovalStatus" id="approvalStatus" value="@SignatureButonName" hidden />
+                                <div class="signature-pad--actions">
+                                    @if (Model.IsSignaturePresent != null && !Model.IsSignaturePresent.Value)
+                                    {
+                                        <div class="buttons">
+                                            <button type="button" class="button clear" data-action="clear">Clear</button>
+
+                                            <input type="button" id="btnsignatureconfirm" value="Save" class="button save" />
+                                            @*<input type="submit" id="btnsavesignature" value="Save" style="display:none"/>*@
+                                        </div>
+
+                                        <div class="description">Sign above</div>}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="commnets">
+                    @foreach (CommentDetails documentComments in Model.CommentDetails)
+                    {<!-- Media object -->
+                        <div class="cmt-wrap">
+                            <!-- Image -->
+                            <img src="~/Assets/images/avtar.svg" alt="John Doe" class="rounded-circle" />
+                            <!-- Body -->
+                            <div>
+                                <h5 class="fw-bold">
+                                    @documentComments.UserName
+
+
+                                    <span>Posted on @documentComments.CreatedDateTime.ToString("dd/MM/yyyy hh:mm:ss tt")</span>
+                                </h5>
+                                <p>
+                                    @documentComments.Comments
+                                </p>
+                            </div>
+                        </div>
+                    }
+                    <!-- Media object -->
+                </div>
+                <div class="cmt-bx">
+                    @if (Model.IsComment && Model.IsNotRecycleBin)
+                    {
+                        <img src="~/Assets/images/avtar.svg" />
+                        <form id="FormUserComments" method="post" action="@Url.Action("SaveComments", "GuestDocument")">
+                            @Html.AntiForgeryToken()
+                            @Html.HiddenFor(model => model.DocumentDetailID)
+                            @Html.HiddenFor(model => model.DocumentHeaderID)
+                            <input type="hidden" name="UserID" value="@UserID" id="myHiddenVar" />
+                            <textarea name="Comments" id="txtComments" class="form-control" placeholder="Document comment" maxlength="200"></textarea>
+                            <input type="submit" value="Comment" class="btn btn-secondary mt-3">
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal model-cstm fade" id="commentModal" aria-hidden="true" aria-labelledby="commentModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Comments</h5>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <p id="">
+                        <div class="mb-3">
+
+
+                            <textarea name="Comments" id="txtSignatureComments" class="form-control" placeholder="Enter Comments" maxlength="200"></textarea>
+
+
+                        </div>
+                    </p>
+                    @Html.HiddenFor(model => model.DocumentDetailID)
+                    @Html.HiddenFor(model => model.DocumentHeaderID)
+                    @Html.HiddenFor(model => model.DocumentType)
+                    @Html.HiddenFor(model => model.DocumentFileName)
+                    @Html.HiddenFor(model => model.DocumentName)
+                    @Html.HiddenFor(model => model.UserID)
+                    @Html.Hidden("IsApproval", (bool)@isapproval)
+                    @Html.HiddenFor(model => model.LastCommentedUserID)
+                    @Html.HiddenFor(model => model.SenderId)
+                    <input type="hidden" value="" name="hdnapproval" id="hdnapproval" />
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+                    <button class="btn btn-primary" type="button" id="btncmt">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal model-cstm fade" id="messageModal" aria-hidden="true" aria-labelledby="messageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Message</h5>
+            </div>
+            <div class="modal-body">
+                <div class="message">
+                    <p id="modalMessageContent">
+                        Success
+                    </p>
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal model-cstm fade" id="myModal" aria-hidden="true" aria-labelledby="MyModal" tabindex="-1">
+
+    <div class="modal-dialog  modal-dialog-scrollable cover-letter">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div class="centers">
+                    <h5>Cover Letter</h5>
+                </div>
+                <button type="button" class="btn btn-secondary mt-3" data-bs-dismiss="modal" aria-label="Close" value="Close">Close</button>
+            </div>
+            @using (Html.BeginForm("GetPDFApproverDetails", "GuestDocument", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.DocumentHeaderID)
+                <div class="downloaddiv">
+
+                    <div class="downloadtext">
+
+                    </div>
+                    <div class="downloadicon">
+                        <button class="btn btn-primary" type="submit" @*onclick="download(@Model.DocumentHeaderID)"*@>Download</button>
+
+                    </div>
+                </div>
+                <div class="modal-body signaturebody">
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="loader-screen" id="loadingModal" style="display:block">
+    <div class="loadingio-spinner-cube-60bjxije365">
+        <div class="ldio-s3o3fb5tkrr">
+            <div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+</div>
+<div class="modal model-cstm fade" id="RejectModal" aria-hidden="true" aria-labelledby="RejectModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRejectHeader">Warning</h5>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("RejectApproval", "GuestDocument", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="messagewarn">
+                        <p id="modalMessageContent">
+                            Do you want to reject this Document?
+                        </p>
+                    </div>
+                    <div class="button-wrapper d-flex justify-content-center">
+
+                        @Html.HiddenFor(model => model.DocumentDetailID)
+                        @Html.HiddenFor(model => model.DocumentHeaderID)
+                        @Html.HiddenFor(model => model.DocumentType)
+                        @Html.HiddenFor(model => model.DocumentFileName)
+                        @Html.HiddenFor(model => model.DocumentName)
+                        @Html.HiddenFor(model => model.UserID)
+                        @Html.Hidden("IsApproval", false)
+                        @Html.HiddenFor(model => model.LastCommentedUserID)
+                        @Html.HiddenFor(model => model.SenderId)
+                        <input type="button" name="ConfirmButon" id="ConfirmButon" value="Confirm" class="btn btn-primary" />
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+@section Scripts{
+
+
+    <script src="~/Assets/js/signature_pad.umd.js"></script>
+    <script src="~/Assets/js/app.js"></script>
+    <script>
+        function userfiledownload() {
+           /* alert("sdfds")*/
+
+             @*$.get("@Url.Action("DownloadFile", "Document")");*@
+
+                var mapForm = document.createElement("form");
+                 var strPageURL = "about:blank";
+               var strAction = "@Url.Action("DownloadFile", "GuestDocument")";
+                mapForm.target = "_self";
+                mapForm.id = "stmtForm";
+                mapForm.method = "GET";
+            mapForm.action = strAction;
+            mapForm.submit();
+
+
+
+
+            }
+        function Details(DocumentHeaderID) {
+            $.post("@Url.Action("GetApproverDetails", "GuestDocument")",
+                { // Data Sending With Request To Server
+                    DocumentHeaderID: DocumentHeaderID,
+                    "__RequestVerificationToken":
+                        $("input[name=__RequestVerificationToken]").val()
+                },
+                function (data) {
+                    if (data == null) {
+                        $('#modalMessageHeader').html('Message')
+                        $('#modalMessageContent').html('Comments field is empty')
+                        $('#messageModal').modal('show');
+                    }
+                    else {
+                        $('.signaturebody').html(data)
+                        $("#myModal").modal("show");
+
+                    }
+                });
+
+
+        }
+        function a() {
+            return "a";
+        }
+        $("#loadingModal").css("display", "none");
+        $("button#sign-btn").click(function () {
+
+            if ($(this).html() === 'Approve') {
+                /* $("#signbx").toggleClass("signshow");*/
+                $("#hdnapproval").val("0");
+                $("#txtSignatureComments").val('');
+                $('#commentModal').modal('show');
+
+            }
+            else {
+                $("#apprrovalFormBox").toggleClass("formshow");
+            }
+        });
+        $("#ConfirmButon").click(function () {
+            $("#RejectModal").modal('hide');
+            $("#txtSignatureComments").val('');
+            $("#hdnapproval").val("1");
+            $('#commentModal').modal('show');
+        })
+        $("button#reject-btn").click(function () {
+
+            $("#RejectModal").modal("show");
+        });
+        $("button#form").click(function () {
+            @*$("#UpdatedDocumentName").val('@docname');*@
+            $("#formbx").toggleClass("formshow");
+        });
+
+        $("#btncmt").on("click", function (e) {
+
+                e.preventDefault();
+             var txt = $("#txtSignatureComments").val();
+
+            if (txt == "" || txt == undefined || txt == null) {
+                $('#modalMessageHeader').html('Message')
+                $('#modalMessageContent').html('Comments field is empty')
+                $('#messageModal').modal('show');
+            }
+            else {
+                var hdnapps = $("#hdnapproval").val();
+
+                if (hdnapps == '0') {
+                    $('.loader-screen').fadeIn(100);
+                     const data = new FormData();
+                            data.append('DocumentDetailID', $('#DocumentDetailID').val());
+                            data.append('DocumentHeaderID', $('#DocumentHeaderID').val());
+                            data.append('DocumentType', $('#DocumentType').val());
+                            data.append('DocumentFileName', $('#DocumentFileName').val());
+                            data.append('DocumentName', $('#DocumentName').val());
+                            data.append('UserID', $('#UserID').val());
+                            data.append('ApprovalStatus', $('#approvalStatus').val());
+                            data.append('comment', $("#txtSignatureComments").val());
+                            data.append('IsApproval', $("#IsApproval").val());
+                data.append('LastCommentedUserID', $("#LastCommentedUserID").val());
+                data.append('SenderId', $("#SenderId").val());
+                data.append('__RequestVerificationToken',$("input[name = __RequestVerificationToken]").val());
+
+
+
+                data.append('Base64Signature', null);
+                    $('#commentModal').modal('hide');
+                $.ajax({
+                    url: "@Url.Action("SaveDocumentSignature", "GuestDocument")",
+                    type: "POST",
+                    data:
+                        data,
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+
+                                    if (data.Result) {
+                                        $('.loader-screen').fadeOut(800);
+                                        $("#loadingModal").css("display", "none");
+                                        window.location.href = "@Url.Action("DocumentDetails", "GuestDocument")" + '?DetailID=' + data.DetailID + '&DocumentType=' + data.DocumentType + '&UserID=' + @UserID +'&IsPageReloaded=true&isIsapproval=' + data.IsApproval;
+                                    }
+                                    else {
+                                        $('.loader-screen').fadeOut(800);
+                                        $('#modalMessageHeader').html('Message')
+                                        $('#modalMessageContent').html(data.Message)
+                                        $('#messageModal').modal('show');
+                                    }
+                                },
+                                error: function (ex) {
+                                    $('.loader-screen').fadeOut(800);
+                                    $('#modalMessageHeader').html('Message')
+                                    $('#modalMessageContent').html(ex.responseText)
+                                    $('#messageModal').modal('show');
+                                }
+                            })
+                }
+                else {
+                    $('.loader-screen').fadeIn(100);
+                    const data = new FormData();
+                            data.append('DocumentDetailID', $('#DocumentDetailID').val());
+                            data.append('DocumentHeaderID', $('#DocumentHeaderID').val());
+                            data.append('DocumentType', $('#DocumentType').val());
+                            data.append('DocumentFileName', $('#DocumentFileName').val());
+                            data.append('DocumentName', $('#DocumentName').val());
+                            data.append('UserID', $('#UserID').val());
+                            data.append('ApprovalStatus', $('#approvalStatus').val());
+                            data.append('comment', $("#txtSignatureComments").val());
+                            data.append('IsApproval', $("#IsApproval").val());
+                data.append('LastCommentedUserID', $("#LastCommentedUserID").val());
+                data.append('SenderId', $("#SenderId").val());
+                data.append('__RequestVerificationToken',$("input[name = __RequestVerificationToken]").val());
+
+
+
+                data.append('Base64Signature', null);
+                    $('#commentModal').modal('hide');
+                $.ajax({
+                    url: "@Url.Action("RejectApproval", "GuestDocument")",
+                    type: "POST",
+                    data:
+                        data,
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+
+                                    if (data.Result) {
+
+                                        $('.loader-screen').fadeOut(800);
+                                        window.location.href = "@Url.Action("DocumentDetails", "GuestDocument")" + '?DetailID=' + data.DetailID + '&DocumentType=' + data.DocumentType + '&UserID=' + @UserID +'&IsPageReloaded=true&isIsapproval=' + data.IsApproval;
+                                    }
+                                    else {
+                                        $('.loader-screen').fadeOut(800);
+                                        $('#modalMessageHeader').html('Message')
+                                        $('#modalMessageContent').html(data.Message)
+                                        $('#messageModal').modal('show');
+                                    }
+                                },
+                                error: function (ex) {
+                                    $('.loader-screen').fadeOut(800);
+                                    $('#modalMessageHeader').html('Message')
+                                    $('#modalMessageContent').html(ex.responseText)
+                                    $('#messageModal').modal('show');
+                                }
+                            })
+                }
+
+
+            }
+        });
+
+        $(document).ready(function () {
+
+
+            function btncmt() {
+                //alert("dfdsf");
+            }
+            $("#btnsignatureconfirm").on("click", function () {
+
+                if (signaturePad.isEmpty()) {
+
+                    /*$("#loadingModal").css("display", "none");*/
+                    $('#modalMessageHeader').html('Message')
+                    $('#modalMessageContent').html('signature field is empty')
+                    $('#messageModal').modal('show');
+                }
+                else {
+                    if (@AddSignatureComment) {
+
+                        $("#txtSignatureComments").val('');
+                        $('#commentModal').modal('show');
+                    }
+                    else {
+                        $('#documentSignatureForm').submit();
+                    }
+                }
+            });
+
+            $('#FormUserComments').on('submit', function (e) {
+                e.preventDefault();
+                $('.loader-screen').fadeIn(100);
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'post',
+                    data: $(this).serialize(),
+                    success: function (data) {
+
+                        console.log(data);
+                        var comment = $('#txtComments').val()
+                        var username = "@UserName"
+
+                        if (data.Result == true) {
+                            $('.loader-screen').fadeOut(800);
+                            var message = '<div class="cmt-wrap"><img src="/Assets/images/avtar.svg"  class="me-3 rounded-circle" /><div><h5 class="fw-bold">' + username + '<span>Posted on ' + data.CommentDate + '</span></h5><p>' + comment + '</p></div></div>'
+                            $('.commnets').append(message)
+                            $('#txtComments').val('')
+                        }
+                        else {
+                            $('.loader-screen').fadeOut(800);
+                            $('#modalMessageHeader').html('Message')
+                            $('#modalMessageContent').html(data.Message)
+                            $('#messageModal').modal('show');
+                        }
+                    },
+                    error: function(ex)
+                    {
+
+                        $('#modalMessageHeader').html('Message')
+                        $('#modalMessageContent').html(ex.responseText)
+                        $('#messageModal').modal('show');
+                    }
+                })
+
+            })
+
+             $('#documentSignatureForm').on('submit', function (e) {
+                        /*$("#loadingModal").css("display", "block");*/
+                        $("#loadingModal").css("display", "block");
+                 e.preventDefault();
+
+                        if (signaturePad.isEmpty()) {
+
+                            /*$("#loadingModal").css("display", "none");*/
+                            $('#modalMessageHeader').html('Message')
+                            $('#modalMessageContent').html('signature field is empty')
+                            $('#messageModal').modal('show');
+                        }
+                        else {
+                            const data = new FormData();
+                            data.append('DocumentDetailID', $('#DocumentDetailID').val());
+                            data.append('DocumentHeaderID', $('#DocumentHeaderID').val());
+                            data.append('DocumentType', $('#DocumentType').val());
+                            data.append('DocumentFileName', $('#DocumentFileName').val());
+                            data.append('DocumentName', $('#DocumentName').val());
+                            data.append('UserID', $('#UserID').val());
+                            data.append('ApprovalStatus', $('#approvalStatus').val());
+                            data.append('comment', $("#txtSignatureComments").val());
+                            data.append('IsApproval', $("#IsApproval").val());
+                            data.append('LastCommentedUserID', $("#LastCommentedUserID").val());
+
+                            var dataURL = signaturePad.toDataURL();
+                            var strImage = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
+                            data.append('Base64Signature', strImage);
+                            //console.log(data);
+                            $.ajax({
+                                url: "@Url.Action("SaveDocumentSignature", "GuestDocument")",
+                                type: "POST",
+                                data: data,
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+                                    /*$("#loadingModal").css("display", "none");*/
+                                    if (data.Result) {
+                                      //  alert(data.DocumentType);
+                                        $("#loadingModal").css("display", "none");
+                                        window.location.href = "@Url.Action("DocumentDetails", "GuestDocument")" + '?DetailID=' + data.DetailID + '&DocumentType=' + data.DocumentType + '&UserID=' + @UserID +'&IsPageReloaded=true&isIsapproval=' + data.IsApproval;
+                                    }
+                                    else {
+                                        /*$("#loadingModal").css("display", "none");*/
+                                        $('#modalMessageHeader').html('Message')
+                                        $('#modalMessageContent').html(data.Message)
+                                        $('#messageModal').modal('show');
+                                    }
+                                },
+                                error: function (ex) {
+                                    /*$("#loadingModal").css("display", "none");*/
+                                    $('#modalMessageHeader').html('Message')
+                                    $('#modalMessageContent').html(ex.responseText)
+                                    $('#messageModal').modal('show');
+                                }
+                            })
+                        }
+                    })
+
+
+        })
+
+
+
+
+    </script>
+}

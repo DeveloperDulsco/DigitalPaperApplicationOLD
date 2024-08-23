@@ -1,0 +1,196 @@
+﻿@using DigiDoc.Models;
+@{
+    ViewBag.Title = "ApprovalList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userID = (SessionDataModel)Session["DigiDocData"];
+}
+
+<link rel="stylesheet" href="~/assets/css/datatables.min.css">
+<link href="~/Assets/css/styles.css" rel="stylesheet" />
+<link href="~/Assets/css/custom.css" rel="stylesheet" />
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("DocumentGroups", "Document")">Document</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">List</li>
+                </ol>
+            </nav>
+        </div>
+        @*<div class="col-12 col-sm-auto">
+                <a class="mb-4 back-btn" href="#" onclick="history.go(-1); return false;"><i class="fas fa-arrow-left"></i>Back</a>
+            </div>*@
+    </div>
+    <div class="content-wrap">
+        <div class="row">
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @(ViewBag.Message)
+                </div>
+            }
+            <div class="col-lg-12">
+                <form name="ApprovalListForm" id="approvalListForm" method="post" action="@Url.Action("FetchAuditReport","Reports")">
+                  @Html.AntiForgeryToken()
+                    <div class="date_picker">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">Approval Status</label>
+                                <select name="ApprovalStatus" id="approvalStatus" class="form-control form-select">
+
+                                    @*var isSelected = documentType.DocumentName == Model.DocumentType ? "selected" : "";*@
+                                    <option value="false" selected>Pending</option>
+                                    <option value="true">Approved</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="space30"></div>
+                                <input type="submit" name="SubmitButon" id="viewButon" value="View" class="btn btn-primary" />
+                                @*<input type="submit" name="SubmitButon" id="exportButon" value="Export to PDF" class="btn btn-secondary" />*@
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <div class="col-md-12">
+                    <div class="table-responsive cstm-table">
+                        <table id="approvalListTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-nowrap" scope="col">Document Type</th>
+                                    <th class="text-nowrap" scope="col">Document Name</th>
+                                    <th class="text-nowrap" scope="col">Approval Created Date</th>
+                                    <th class="text-nowrap" scope="col">Approved Date</th>
+                                    <th class="text-nowrap" scope="col">Approval Status</th>
+                                    <th class="text-nowrap text-center" scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/Assets/js/datatables/dataTables.min.js"></script>
+    <script src="~/Assets/js/datatables/dataTables.bootstrap.min.js"></script>
+    <script>
+        $("#loadingModal").css("display", "none");
+    $(document).ready(function () {
+
+
+
+
+        var dt = $('#approvalListTable').DataTable({
+
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: "@Url.Action("FetchDocumentApprovalList", "Document")",
+                type: "POST",
+                "data": function (d) {
+                    return $.extend({}, d, {
+                        "ApprovalStatus": $('#approvalStatus').val(),
+                        "__RequestVerificationToken":
+                            $("input[name=__RequestVerificationToken]").val()
+                    });
+                }
+            },
+            "createdRow": function (a,b,c) {
+                if (b.DetailsAvailable) {
+                    $(a).find('td:first').addClass('dt-control');
+                }
+            },
+            "columns": [
+
+                {
+
+                    "data": "DocumentType"
+                },
+                { "data": "DocumentName" },
+                {
+                    "data": "ApprovalCreatedDateTime",
+                    "render": function (data, type, row) {
+                        if (row.ApprovalCreatedTime === null) {
+                            return "";
+                        }
+                        else {
+
+                            return row.ApprovalCreatedDate+ " " + row.ApprovalCreatedTime;
+                        }
+                    }
+                },
+                {
+                    "data": "ApprovallastUpdatedDateTime",
+                    "render": function (data, type, row) {
+                        if (row.ApprovallastUpdatedDateTime === null) {
+                            return "";
+                        }
+                        else {
+
+                            return row.ApprovallastUpdatedDate + " " + row.ApprovallastUpdatedTime;
+                        }
+                    }
+                },
+                {
+                    "data": null,
+                    "render": function (data, type, row) {
+                        /*if (row.ApprovalStatus == true)*/
+                        return $('#approvalStatus option:selected').text()
+                    }
+                },
+                {
+                        "data": null,
+                        "render": function (data, type, row) {
+                            return ' <a class="tb-icon" href="@Url.Action("DocumentDetails", "Document")?DetailID=' + row.DocumentDetailID + '&DocumentType=' + row.DocumentType + '&UserID=' + @userID.UserID +'&Isapproval=True"><i class="far fa-eye"></i></a>'
+                        }
+
+                    }
+            ]
+
+        });
+
+        $('#approvalListTable').on('error.dt', function (e, settings, techNote, message) {
+            console.log('An error has been reported by DataTables: ', message);
+            e.preventDefault();
+        });
+
+        $('#approvalListForm').on('submit', function (e) {
+            var butonValue = $("input[type=submit][clicked=true]").val();
+            if (butonValue === 'View') {
+                e.preventDefault();
+
+                dt.ajax.reload();
+
+            }
+
+        })
+
+        $("form input[type=submit]").click(function () {
+            $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
+            $(this).attr("clicked", "true");
+        });
+    });
+
+    $('.datepicker').datepicker({
+    clearBtn: true,
+        format: "mm/dd/yyyy",
+        showOn: "button",
+        buttonText: "<span class='glyphicon glyphicon-calendar'></span>"
+    });
+    </script>
+}
+

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PDFTYPES>
+<PDFTYPE>
+<DocumentName>Booking</DocumentName>
+<Signature>Guest Signature</Signature>
+<DataIdentifier>MRN</DataIdentifier>
+<DocumentType>RegCardTemplate</DocumentType>
+<imgheight>30</imgheight>
+<imgwidth>60</imgwidth>
+<imgxaxis>30</imgxaxis>
+<imgyaxis>2</imgyaxis>
+
+<Email>Email</Email>
+<EmailAddressxaxis>58</EmailAddressxaxis>
+<EmailAddressyaxis>2</EmailAddressyaxis>
+<EmailAddressheight>8</EmailAddressheight>
+<EmailAddresswidth>180</EmailAddresswidth>
+<EmailAddresssize>8</EmailAddresssize>
+<Phone>Contact No</Phone>
+<PhoneNumberxaxis>58</PhoneNumberxaxis>
+<PhoneNumberyaxis>2</PhoneNumberyaxis>
+<PhoneNumberheight>8</PhoneNumberheight>
+<PhoneNumberwidth>180</PhoneNumberwidth>
+<PhoneNumbersize>8</PhoneNumbersize>
+<Address>Address</Address>
+<Addressxaxis>58</Addressxaxis>
+<Addressyaxis>2</Addressyaxis>
+<Addressheight>8</Addressheight>
+<Addresswidth>180</Addresswidth>
+<Addresssize>10</Addresssize>
+<City>City</City>
+<Cityxaxis>58</Cityxaxis>
+<Cityyaxis>2</Cityyaxis>
+<Cityheight>8</Cityheight>
+<Citywidth>8</Citywidth>
+<Citysize>180</Citysize>
+<Country>Country</Country>
+<Countryxaxis>58</Countryxaxis>
+<Countryyaxis>2</Countryyaxis>
+<Countrysize>8</Countrysize>
+<Countryheight>8</Countryheight>
+<Countrywidth>180</Countrywidth>												
+</PDFTYPE>
+
+	<PDFTYPE>
+	<DocumentName>Registration</DocumentName>
+	<Signature>TOTAL</Signature>
+	<DataIdentifier>Guestsignature</DataIdentifier>
+	<DocumentType>FolioTemplate</DocumentType>
+	<imgheight>100</imgheight>
+	<imgwidth>100</imgwidth>
+	<imgxaxis>0</imgxaxis>
+	<imgyaxis>0</imgyaxis>
+	</PDFTYPE>
+</PDFTYPES>
+

@@ -1,0 +1,165 @@
+﻿@model DigiDoc.Models.Ereg.TempReservation
+
+@{
+    ViewBag.Title = "PDfApprove";
+    Layout = "~/Views/Shared/DigiDocMobLayout.cshtml";
+
+}
+
+<div class="container-fluid px-4 pt-4 mb-4">
+    <div class="content-wrap">
+        <div class="row">
+            <div class="">
+                <div class="">
+                    <iframe src="@Url.Action("GetPDFStream", "DigidocMobile",new {Id=Model.TempReservationID })#zoom=150" width="100%" height="600px" id="iFramePdf" #zoom="200" frameBorder="1" type="application/pdf"></iframe>
+                </div>
+
+                <div class="pdf-footer">
+                    <form class="row d-flex gy-2 gx-3 justify-content-center">
+                        <ul class="search">
+                            <li>
+                                <a class="btn-link" href="#" onclick="approve()">Approve</a>
+                            </li>
+                            <li>
+                                <a class="btn-link" href="#" onclick="reject()">Reject</a>
+                            </li>
+                        </ul>
+                        @*<div class="col-auto">
+
+                            </div>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal model-cstm fade" id="SignatureModal" aria-hidden="true" aria-labelledby="signatureModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div id="signbx" class="">
+                <form name="documentSignatureForm" id="documentSignatureForm" method="post" action="@Url.Action(" #")">
+                    @Html.HiddenFor(model => model.TempReservationID)
+                    <div id="signature-pad" class="signature-pad">
+
+                        <div class="signature-pad--body">
+                            <canvas height=auto></canvas>
+                        </div>
+                        <div class="signature-pad--footer">
+
+
+
+
+
+                            <div class="signature-pad--actions">
+
+                                <div class="buttons">
+                                    <button type="button" class="button clear" data-action="clear">Clear</button>
+
+                                    <input type="button" id="btnsignatureconfirm" value="Save" class="button save" />
+
+                                </div>
+
+                                <div class="description">Sign above</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/Assets/js/signature_pad.umd.js" type="text/javascript"></script>
+    <script src="~/Assets/js/app.js" type="text/javascript"></script>
+    <script>
+        function approve() {
+          
+            $("#SignatureModal").modal("show");
+        }
+                function reject() {
+
+            const data = new FormData();
+                    data.append('DocumentDetailID', $('#DocumentDetailID').val());
+
+
+                    var appid = getParameterByName('AppId');
+
+                     $.ajax({
+                                url: "@Url.Action("RejectDocument", "Home")",
+                                type: "POST",
+                                data: data,
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+
+                                    if (data.Result) {
+
+                                        $("#loadingModal").css("display", "none");
+                                    }
+                                    else {
+
+                                    }
+                                },
+                                error: function (ex) {
+
+                                }
+                            })
+        }
+
+        $("#btnsignatureconfirm").on("click", function () {
+
+                if (signaturePad.isEmpty()) {
+
+                    alert("signature required")
+                }
+                else {
+                    const data = new FormData();
+                    data.append('DocumentDetailID', $('#DocumentDetailID').val());
+
+
+                    var appid = getParameterByName('AppId');
+
+
+                    var dataURL = signaturePad.toDataURL();
+                    var strImage = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
+                    data.append('Base64Signature', strImage);
+
+                     $.ajax({
+                         url: "@Url.Action("SaveDocumentSignature", "Home")",
+                                type: "POST",
+                                data: data,
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+
+                                    if (data.Result) {
+
+                                        $("#loadingModal").css("display", "none");
+                                        window.location.href = '@Url.Action("SliderIndex", "Home")?AppId=' + appid;
+                                    }
+                                    else {
+
+                                    }
+                                },
+                                error: function (ex) {
+
+                                }
+                            })
+                }
+            });
+                function getParameterByName(name, url = window.location.href) {
+                    name = name.replace(/[\[\]]/g, '\\$&');
+                    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                        results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                }
+    </script>
+
+}

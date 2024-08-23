@@ -1,0 +1,8 @@
+﻿V1.0.0
+Basic version of Digi Doc
+V1.1.0
+1)Added cover letter
+2)Listed Approver in Alphabetical Order
+3)Download option for cover letter
+4)Pending Approval List
+5)Recycle Bin Items will not shown in Pending Approvals

@@ -1,0 +1,599 @@
+﻿@model DigiDoc.Models.Ereg.TempReservation
+@{
+    var childadultcount = Model.AdultCount + "/" + Model.ChildCount;
+    Html.EnableUnobtrusiveJavaScript(false);
+    Html.EnableClientValidation(false);
+    var OperaInterfaceEnabled = System.Web.Configuration.WebConfigurationManager.AppSettings["OperaInterfaceEnabled"];
+    var methodname = "SaveRegCardSignature";
+    if (OperaInterfaceEnabled == "False" || OperaInterfaceEnabled == "false")
+    {
+        methodname = "SaveRegCardSignatureWOI";
+    }
+    else
+    {
+        methodname = "SaveRegCardSignature";
+
+    }
+}
+<div id="divoverlay" class="overlay"></div>
+
+<form method="post" id="frmRegCard">
+    @Html.HiddenFor(m => m.TempReservationID)
+    @Html.HiddenFor(m => m.DocumentType)
+    @Html.HiddenFor(m => m.ClientConnection)
+    <div class="">
+        <div class="detail-wrapper bg mb-4">
+            @{
+                var fullname = "";
+                if (Model.FirstName != "")
+
+                {
+                    fullname = Model.FirstName + " ";
+                }
+                if (Model.MiddleName != "")
+
+                {
+                    fullname += Model.MiddleName + " ";
+                }
+                if (Model.MiddleName != "")
+
+                {
+                    fullname += Model.LastName;
+                }
+
+
+            }
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="det-wrap">
+                        <label>Guest Name</label>
+                        <span>@fullname</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="det-wrap">
+                        <label>Reservation Number</label>
+                        <span>@Model.ReservationNumber</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="det-wrap">
+                        <label>Room No</label>
+                        <span>@Model.RoomNo</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="det-wrap">
+                        <label>Room Type</label>
+                        <span>@Model.RoomType</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="det-wrap">
+                        <label>Check-in Date</label>
+                        <span>@Model.ArrivalDate.Value.ToString("dd/MM/yyyy")</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="det-wrap">
+                        <label>Check-out Date</label>
+                        <span>@Model.DepartureDate.Value.ToString("dd/MM/yyyy")</span>
+                    </div>
+                </div>
+                @{
+                    var result = (Model.DepartureDate.Value - Model.ArrivalDate.Value).Days;
+
+                }
+                <div class="col-md-6 col-lg-2">
+                    <div class="det-wrap">
+                        <label>No of days</label>
+                        <span>@result</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="det-wrap">
+                        <label>Adult Count</label>
+                        <span>@Model.AdultCount</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="det-wrap">
+                        <label>Child Count</label>
+                        <span>@Model.ChildCount</span>
+                    </div>
+                </div>
+                @if ((bool)Model.IsPrintRate)
+                {
+                    <div class="col-md-6 col-lg-4">
+                        <div class="det-wrap">
+                            <label>Stay Total</label>
+                            <span>@Model.AverageRoomRate</span>
+                        </div>
+                    </div>
+                }
+                @*<div class="col-md-6 col-lg-3">
+                    <div class="det-wrap">
+                        <label>Membership No</label>
+                        <span>@Model.MembershipNo</span>
+                    </div> </div>*@
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form  mb-3">
+            <div class="form-row">
+                <div class="form-group col-md-8 col-xl-6">
+                    <label>Email  Address</label>
+                    @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control", type = "email", @Id = "EmailAddress" })
+
+                </div>
+                <div class="form-group col-md-4 col-xl-6">
+                    <label>Phone Number</label>
+                    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", @Id = "Phone" })
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4 col-xl-6">
+                    <label>Address</label>
+                    @Html.TextBoxFor(model => model.AddressLine1, new { @class = "form-control", @title = "title", @Id = "AddressLine1" })
+                </div>
+
+                <div class="form-group col-md-4 col-xl-6">
+                    <label>Country</label>
+                    @Html.DropDownListFor(model => model.CountryMasterID, (SelectList)ViewBag.CountryList, "Select Country", new { @class = "form-control selectpicker drop", @data_live_search = "true", @title = "title", @Id = "CountryMasterID", style = "display:block!important;" })
+
+                </div>
+
+                <div class="form-group col-md-4 col-xl-6">
+                    <label>State</label>
+                    @Html.DropDownListFor(model => model.StateMasterID, (SelectList)ViewBag.StateList, "Select State", new { @class = "form-control selectpicker drop state", @data_live_search = "true", @title = "title", @Id = "StateMasterID", style = "display:block!important;" })
+
+                </div>
+                <div class="form-group col-md-4 col-xl-6">
+                    <label>City</label>
+                    @Html.TextBoxFor(model => model.City, new { @class = "form-control", @title = "title", @Id = "City" })
+                </div>
+
+
+                <div class="form-group col-md-4 col-xl-6">
+                    <label>Postal Code</label>
+                    @Html.TextBoxFor(model => model.PostalCode, new { @class = "form-control", value = "1212", @title = "title", @Id = "PostalCode", type = "number" })
+                </div>
+
+
+            </div>
+
+            @*<div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="d-flex justify-content-center">
+                            <a class="btn-link" href="#exampleModal1" data-toggle="modal">IHG One Rewards Membership Benefits</a>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+        <div class="form terms  mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="check">
+                        <label class="checkwrap">
+                            <input id="myCheck" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label><label class="mb-0 text-term">To read Terms and Condition '<a href="#exampleModal" data-toggle="modal">Click here</a>'.</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="btn-grp d-flex justify-content-between">
+                <button type="button" class="btn_red" onclick="reject()"><i class="fas fa-times-circle"></i>Reject</button>
+                <button type="button" class="btn_green" onclick="approve()"><i class="fas fa-check-circle"></i>Approve</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>
+
+
+
+
+
+<div class="modal fade" id="customerSignature" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Signature</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="signature-pad" class="signature-pad">
+                    <div class="signature-pad--body">
+                        <canvas></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning clear">Clear</button>
+                <button type="button" class="btn btn-success save">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade cstm-modal" id="confirmmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered privacy-model" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Warning </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close_icon"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="messagewarn">
+                    <div class="alert alert-info text-center" role="alert" id="modalMessageContent">
+                        Do you want to reject the document?
+                    </div>
+
+                </div>
+                <div class="button-wrap">
+
+                    <input type="button" name="ConfirmButon" id="ConfirmButon" value="Confirm" class="btnstyle" />
+                    <button type="button" data-dismiss="modal" class="btnstyle1">Cancel</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $("#divoverlay").hide();
+        $("#signbx").hide();
+        $("#CountryMasterID").change(function () {
+            var id = $(this).val();
+            $("#StateMasterID").empty();
+            $.get("State_Bind", { country_id: id }, function (data) {
+                var state = $('select.state');
+                $(state).find('option').remove().end();
+                $(state).append("<option>Select State</option>");
+                $(data).each(function (i, obj) {
+                    $(state).append("<option value='" + obj.StateMasterID + "'>" + obj.Statename + "</option>");
+                });
+                $(state).selectpicker('refresh');
+            });
+        });
+    $("#frmRegCard").validate({
+        rules: {
+            'EmailAddress': {
+                /*  required: true,*/
+                EmailValidate: true
+
+            },
+
+            //'City': {
+            //    required: true,
+
+            //},
+            //'Phone': {
+            //    phonevalidation: true,
+
+           // },
+            //'AddressLine1': {
+            //    required: true,
+
+            //},
+            //'CountryMasterID': {
+            //    required: true,
+            //},
+            'PostalCode': {
+                number: true
+            }
+        },
+        messages: {
+            'EmailAddress': {
+                /* required: 'Email Address is Required'*/
+            },
+            'City': {
+                required: 'City is Required',
+
+            },
+            'Phone': {
+
+                /*required: 'Phone is Required',*/
+
+            },
+
+            //'AddressLine1': {
+            //    required: 'AddressLine is Required',
+
+            //},
+            //'CountryMasterID': {
+            //    required: 'Country is Required',
+            //},
+            'PostalCode': {
+                /* required: 'PostalCode is Required',*/
+                number: 'PostalCode accepts only numbers'
+            }
+        }
+    })
+
+    jQuery.validator.addMethod("phonevalidation", function (phone_number, element) {
+
+        return this.optional(element) ||
+
+            // phone_number.match(/^[\d-+() ]*$/);
+            phone_number.match(/(?=.{0,50}$)([\d+( ]{0,1}[\d-()+ ]*)$/);
+    }, "Please specify a valid phone number");
+    jQuery.validator.addMethod("EmailValidate", function (value, element) {
+
+        return this.optional(element) || /^([a-zA-Z0-9_.+-])+\@@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+    }, 'Please enter a valid email address.');
+
+    $("#loadingModal").css("display", "none");
+    $(document).ready(function () {
+        notfication('@Model.ClientConnection','101');
+    });
+        function approve() {
+            if ($("#frmRegCard").valid()) {
+                var terms = $('#myCheck').is(':checked')
+
+                if (terms) {
+
+
+                    $('#customerSignature').modal('show');
+
+                }
+                else {
+
+                    $('#NotifyDiv').empty();
+                    $("#NotifyDiv").append("<div><center><label>Accept Terms and conditions</label></center></div>")
+                    $('#Notify').modal('show');
+                }
+            }
+        }
+
+        function reject() {
+            $("#confirmmodal").modal('show');
+            return false;
+        }
+        $("#ConfirmButon").on("click", function () {
+            $("#confirmmodal").modal('hide');
+             var token = $('input[name="__RequestVerificationToken"]').val();
+
+
+
+
+                     $.ajax({
+                                url: "@Url.Action("RejectReservation", "DigidocMobile")",
+                                type: "POST",
+                         data: {
+
+                             Id: $('#TempReservationID').val()
+                         },
+                                success: function (data) {
+
+                                    if (data.Result) {
+
+                                         notfication('@Model.ClientConnection','102');
+                                        window.location.reload();
+                                    }
+                                    else {
+
+                                    }
+                                },
+                                error: function (ex) {
+
+                                }
+                            })
+        });
+    $("#btnsignatureconfirm").on("click", function () {
+        debugger;
+
+                if (signaturePad.isEmpty()) {
+
+
+                    $('#NotifyDiv').empty();
+                    $("#NotifyDiv").append("<div><center><label>signature required</label></center></div>")
+                    $('#Notify').modal('show');
+                }
+                else {
+                    var dataURL = signaturePad.toDataURL();
+                    var strImage = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
+                     $.ajax({
+                         url: "@Url.Action(methodname, "DigidocMobile")",
+                         cache: false,
+                         type: "POST",
+
+                         data: {
+
+                             Base64Signature: strImage,
+                             TempReservationID: $("#TempReservationID").val(),
+                             DocumentType: $("#DocumentType").val(),
+                            EmailAddress: $("#EmailAddress").val(),
+                        Phone: $("#Phone").val(),
+                        AddressLine1: $("#AddressLine1").val(),
+                        PostalCode: $("#PostalCode").val(),
+                        CountryMasterID: $("#CountryMasterID").val(),
+                        StateMasterID: $("#StateMasterID").val(),
+                        City: $("#City").val(),
+                         },
+                         dataType: 'json',
+                                success: function (data) {
+
+                                    if (data.Result) {
+                                        debugger;
+                                        CallServer(data.ClientConnection, data.TempId, data.DocumentId);
+
+
+                                        //var myModal = $('#SuccesNotify').on('shown', function () {
+                                        //    clearTimeout(myModal.data('hideInteval'))
+                                        //    var id = setTimeout(function () {
+                                        //        myModal.modal('hide');
+                                        //    },3000);
+                                        //    myModal.data('hideInteval', id);
+                                        //})
+                                        var appid = getParameterByName('AppId');
+
+                                        if (appid != null) {
+                                            window.location = "/DigidocMobile/SliderIndex?AppId=" + appid;
+                                        }
+                                        else {
+                                            location.reload();
+                                        }
+                                        $('#SuccesNotify').on('shown', function () {
+                                            // remove previous timeouts if it's opened more than once.
+                                            clearTimeout(myModalTimeout);
+
+                                            // hide it after a minute
+                                            myModalTimeout = setTimeout(function () {
+                                                $('#SuccesNotify').modal('hide');
+                                            }, 4000);
+                                        });
+                                    }
+                                    else {
+
+                                    }
+                                },
+                                error: function (ex) {
+
+                                }
+                            })
+                }
+            });
+                function getParameterByName(name, url = window.location.href) {
+                    name = name.replace(/[\[\]]/g, '\\$&');
+                    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                        results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                }
+</script>
+
+<script type="text/javascript">
+
+        let signaturePad;
+        $('#customerSignature').on('shown.bs.modal', function (e) {
+            notfication('@Model.ClientConnection', '106');
+            let canvas = $("#signature-pad canvas");
+            let parentWidth = $(canvas).parent().outerWidth();
+            let parentHeight = $(canvas).parent().outerHeight();
+            canvas.attr("width", parentWidth + 'px')
+                .attr("height", parentHeight + 'px');
+            signaturePad = new SignaturePad(canvas[0], {
+                backgroundColor: 'rgb(255, 255, 255)'
+            });
+        })
+        $('#customerSignature').on('hidden.bs.modal', function (e) {
+            signaturePad.clear();
+        });
+        $(document).on('click', '#customerSignature .clear', function () {
+            signaturePad.clear();
+        });
+
+        $(document).on('click', '#customerSignature .save', function () {
+
+            if (signaturePad.isEmpty()) {
+                $('#NotifyDiv').empty();
+                $("#NotifyDiv").append("<div><center><label>signature required</label></center></div>")
+                $('#Notify').modal('show');
+            } else {
+                $('#customerSignature').modal('hide');
+                let dataURL = signaturePad.toDataURL();
+                 notfication('@Model.ClientConnection','107');
+                  var strImage = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
+                     $.ajax({
+                         url: "@Url.Action(methodname, "DigidocMobile")",
+                         cache: false,
+                         type: "POST",
+
+                         data: {
+
+                             Base64Signature: strImage,
+                             TempReservationID: $("#TempReservationID").val(),
+                             DocumentType: $("#DocumentType").val(),
+                            EmailAddress: $("#EmailAddress").val(),
+                        Phone: $("#Phone").val(),
+                        AddressLine1: $("#AddressLine1").val(),
+                        PostalCode: $("#PostalCode").val(),
+                        CountryMasterID: $("#CountryMasterID").val(),
+                        StateMasterID: $("#StateMasterID").val(),
+                             City: $("#City").val(),
+                             MembershipNo: null,
+                             EnrollMembership:false
+                         },
+                         dataType: 'json',
+                                success: function (data) {
+
+                                    if (data.Result) {
+
+                                        CallServer(data.ClientConnection, data.TempId, data.DocumentId);
+
+                                        var appid = getParameterByName('AppId');
+
+                                        if (appid != null) {
+                                            window.location = "/DigidocMobile/SliderIndex?AppId=" + appid;
+
+                                        }
+                                        else {
+                                            location.reload();
+                                        }
+                                    }
+                                    else {
+
+                                    }
+                                },
+                                error: function (ex) {
+                                    signaturePad.clear();
+                                }
+                            })
+
+
+            }
+        });
+</script>
+<style type="text/css">
+
+    #signature .modal-content .modal-body
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 70vh !important;
+        width: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0;
+        padding: 32px 16px;
+    }
+</style>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="522" viewBox="0 0 1366 522">
+  <defs>
+    <clipPath id="clip-Login_bg">
+      <rect width="1366" height="522"/>
+    </clipPath>
+  </defs>
+  <g id="Login_bg" clip-path="url(#clip-Login_bg)">
+    <g id="Group_477" data-name="Group 477" transform="translate(166.841 -167)">
+      <path id="Path_253" data-name="Path 253" d="M3708,464h653.774L3895.9,789.249Z" transform="translate(-3269.995 -322.602)" fill="#00c691" opacity="0.15"/>
+      <path id="Path_254" data-name="Path 254" d="M3123.115,8,3024,72.293,3700.012,412.67V8Z" transform="translate(-2482.591 133.398)" fill="#cd8ce8" opacity="0.08" style="mix-blend-mode: luminosity;isolation: isolate"/>
+      <path id="Path_255" data-name="Path 255" d="M3890.641-20.333,2940,332.335,3890.641,695.4Z" transform="translate(-2645.425 7.616)" fill="#00c691" opacity="0.03"/>
+      <path id="Path_258" data-name="Path 258" d="M211.364,0,0,100.289l197.767,72.08Z" transform="matrix(-0.809, -0.588, 0.588, -0.809, 173.68, 384.738)" fill="#00c691" opacity="0.03"/>
+      <path id="Path_259" data-name="Path 259" d="M104.076,0,0,35.726l109.821,49.95Z" transform="matrix(0.899, -0.438, 0.438, 0.899, -52.357, 153.012)" fill="#e86387" opacity="0.03"/>
+      <path id="Path_244" data-name="Path 244" d="M2826,1473" transform="translate(-2387.995 -1331.602)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

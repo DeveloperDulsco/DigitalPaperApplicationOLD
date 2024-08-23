@@ -1,0 +1,275 @@
+﻿@using DigiDoc.Models;
+@{
+    ViewBag.Title = "AuditReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userID = (SessionDataModel)Session["DigiDocData"];
+}
+
+<link rel="stylesheet" href="~/assets/css/datatables.min.css">
+<link href="~/Assets/css/styles.css" rel="stylesheet" />
+<link href="~/Assets/css/custom.css" rel="stylesheet" />
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="">Reports</a></li>
+                    <li class="breadcrumb-item"><a href="@Url.Action("AuditReport","Reports")">Audit Report</a></li>
+                    @*<li class="breadcrumb-item active" aria-current="page">View</li>*@
+                </ol>
+            </nav>
+        </div>
+        @*<div class="col-12 col-sm-auto">
+                <a class="mb-4 back-btn" href="#" onclick="history.go(-1); return false;"><i class="fas fa-arrow-left"></i>Back</a>
+            </div>*@
+    </div>
+    <div class="content-wrap">
+        <div class="row">
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-danger" role="alert" id="divmessage">
+                    @(ViewBag.Message)
+                </div>
+            }
+            <div class="col-lg-12">
+                <form name="AuditReportForm" id="auditReportForm1" method="post" action="@Url.Action("FetchAuditReport","Reports")">
+                   @Html.AntiForgeryToken()
+                    <div class="date_picker">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="form-label">Start Date</label>
+                                @*<div class="form-icon">
+                                    <span class="icon-append"><i class="far fa-calendar-alt"></i></span>
+                                    <input name="StartDate" id="startDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate">
+                                </div>*@
+                                <div class="input-group">
+                                    <input name="StartDate" id="startDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate">
+                                    <label class="" for="startDate">
+                                        <span class="btn btn-default iconclassaudit">
+                                            <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">End Date</label>
+
+                                @*<div class="form-icon">
+                                    <span class="icon-append"><i class="far fa-calendar-alt"></i></span>
+                                    <input name="EndDate" id="endDate" type="text" class="form-control datepicker" value="@ViewBag.EndDate">
+                                </div>*@
+                            <div class="input-group">
+                                <input name="EndDate" id="endDate" type="text" class="form-control datepicker" value="@ViewBag.EndDate">
+                                <label class="" for="endDate">
+                                    <span class="btn btn-default iconclassaudit">
+                                        <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+
+                                    </span>
+                                </label>
+                            </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="space30"></div>
+                                <input type="button" name="SubmitButon" id="viewButon" value="View" class="btn btn-primary" />
+                                <input type="submit" name="SubmitButon" id="exportButon" value="Export to PDF" class="btn btn-secondary" />
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <div class="col-md-12">
+                    <div class="table-responsive cstm-table">
+                        <table id="auditTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-nowrap" scope="col">#</th>
+                                    <th class="text-nowrap" scope="col">Serial #</th>
+                                    <th class="text-nowrap" scope="col">Menu Name</th>
+                                    <th class="text-nowrap" scope="col">User Name</th>
+                                    <th class="text-nowrap" scope="col">Action</th>
+                                    <th class="text-nowrap" scope="col">Date Time</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/Assets/js/datatables/dataTables.min.js"></script>
+    <script src="~/Assets/js/datatables/dataTables.bootstrap.min.js"></script>
+    <script>
+        $("#loadingModal").css("display", "none");
+    $(document).ready(function () {
+
+        //var token = $('[name=__RequestVerificationToken]').val();
+        //var headers = {};
+        //headers["__RequestVerificationToken"] = token;
+        //alert(token);
+
+        var dt = $('#auditTable').DataTable({
+
+            "processing": true,
+            "serverSide": true,
+            
+            "ajax": {
+                url: "@Url.Action("FetchAuditReport", "Reports")",
+                type: "POST",
+               
+                "data": function (d) {
+                    return $.extend({}, d, {
+                        "StartDate": $('#startDate').val(),
+                        "EndDate": $('#endDate').val(),
+                        "__RequestVerificationToken":
+                            $("input[name=__RequestVerificationToken]").val()
+                    });
+                }
+            },
+            "createdRow": function (a, b, c) {
+                $("#loadingModal").css("display", "none");
+                if (b.DetailsAvailable) {
+                    $(a).find('td:first').addClass('dt-control');
+                }
+            },
+            "columns": [
+                {
+                    "data": function () {
+                        return ""
+                    },
+                    //"className": function (a, b, c) {
+                    //    console.log(a)
+                    //    console.log(b)
+                    //    console.log(c)
+                    //    if (data) {
+                    //        alert("alert")
+                    //        return 'dt-control'
+                    //    }
+                    //}
+                },
+                {
+
+                    "data": "AuditHeaderID"
+                },
+                { "data": "ModuleName" },
+                { "data": "UserName" },
+                {
+                    "data": "ActionName",
+                    "render": function (data, type, row) {
+                        if (row.DetailsAvailable) {
+                            return data + '. (please click expand icon to see the details)'
+                        }
+                        else
+                            return data
+                    }
+                },
+                {
+                    "data": "AuditDateTime",
+                    "render": function (data, type, row) {
+                        return row.AuditDate + " " + row.AuditTime;
+                        
+                    }
+                }
+
+
+            ]
+
+        });
+
+
+        $('#auditTable tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = dt.row(tr);
+            //alert(row.data().AuditHeaderID);
+            if (row.data().DetailsAvailable) {
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+
+                    row.child('<span>Loading data Please wait</span>').show();
+                    tr.addClass('shown');
+                    /*console.log(row)*/
+                    setTimeout(function () {
+                        var token = $('input[name="__RequestVerificationToken"]').val();
+                        $.ajax({
+                            url: "@Url.Action("GetAuditDetails","Reports")",// + "?AuditID=" + row.data().AuditHeaderID,
+                            type: "POST",
+                            data: {
+                                __RequestVerificationToken: token,
+                                AuditID: row.data().AuditHeaderID
+                            },
+                            success: function (data) {
+                              
+                                //Replace child row data.
+                                row.child(data).show();
+                            },
+                            error: function (error) {
+
+                            }
+                        });
+                    }, 1000);
+
+                }
+            }
+        });
+
+
+
+
+
+            $('#auditTable').on('error.dt', function (e, settings, techNote, message) {
+                console.log('An error has been reported by DataTables: ', message);
+                e.preventDefault();
+            });
+        
+        $('#auditReportForm1').on('submit', function (e) {
+            var butonValue = $("input[type=submit][clicked=true]").val();
+        })
+        $('#viewButon').on('click', function (e) {
+            $('#divmessage').remove();
+            e.preventDefault();
+
+            dt.ajax.reload();
+
+
+
+        })
+        //$("form input[type=submit]").click(function () {
+        //    $("input[type=submit]", $(this).parents("form")).removeAttr("clicked");
+        //    $(this).attr("clicked", "true");
+        //});
+    });
+
+
+
+        $('#startDate').datepicker({
+            clearBtn: true,
+            format: "dd-mm-yyyy",
+            autoclose: true
+        });
+        $('#endDate').datepicker({
+            clearBtn: true,
+            format: "dd-mm-yyyy",
+            autoclose: true
+        });
+    </script>
+}
+
+

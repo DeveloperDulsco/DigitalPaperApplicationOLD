@@ -1,0 +1,115 @@
+﻿
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="~/assets/images/favicon-16x16.png" type="image/png" sizes="16x16">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Digi Doc</title>
+    <link href="~/assets/css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+    <script src="~/assets/js/jquery-3.5.1.slim.min.js"></script>
+        @*<script src="~/assets/js/jquery.validate.min.js"></script>*@
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+    <link href="~/Assets/css/bootstrap-side-modals.css" rel="stylesheet" />
+    <link href="~/Assets/css/custom.css" rel="stylesheet" />
+
+</head>
+<body class="login_bg">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content" class="d-flex  align-items-center">
+
+            <div class="container">
+                <div class="row align-items-center login-co">
+                    <div class="col-lg-6">
+                        <div class="logo-wrap">
+                            <img src="~/assets/images/Logo_login.svg">
+                            <h6>
+                                Welcome to <br>
+                                Digi Doc
+                            </h6>
+                        </div>
+                    </div>
+                 
+                        @RenderBody()
+                  
+                </div>
+            </div>
+        </div>
+        <div id="layoutAuthentication_footer">
+            <footer class="py-4 mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="small">
+                        <div class="text-muted">©2021 Digi Doc. All rights reserved.</div>
+                        <div class="text-muted">Version 1.2.1</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal modal-bottom fade" id="bottomModal" tabindex="-1" role="dialog" aria-labelledby="bottomModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog bill-view" role="document">
+            <form id="euCookiesConsent" action="">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <div class="cookies-inner-wrap">
+
+                            <div class="cookies-msg">
+                                We use cookies to provide you with better experience.<br>
+                                By clicking "ACCEPT" button using our website, you agree to the use of cookies. @*<a href="">Cookie Policy</a>.*@
+                            </div>
+                            <div class="accept-btn-wrap">
+                                @*<button type="button" class="btn decline-btn">DECLINE</button>*@
+
+                                <button type="submit" id="cookies-eu-ok" data-bs-dismiss="modal" class="btn accept-btn">ACCEPT</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- popup-->
+    @*<script src="~/assets/js/jquery-3.5.1.slim.min.js"></script>*@
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/scripts.js"></script>
+    <script>
+        $(window).on('load', function () {
+
+            if (localStorage.getItem('digiDocConsent')) {
+               
+            }
+            else {
+                var delayMs = 200; // delay in milliseconds
+
+                setTimeout(function () {
+                    
+                    $('#bottomModal').modal('show');
+                
+                }, delayMs);
+            }
+        });
+
+        $('#euCookiesConsent').click(function (e) {
+            e.preventDefault();
+            localStorage.setItem('digiDocConsent', true);
+            //var now = new Date();
+            //var expireDate = new Date();
+            //expireDate.setDate(now.get(now.) + ;
+            //document.cookie = 'digiDocConsent=true'
+            //alert('hi');
+        });
+    </script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

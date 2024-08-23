@@ -1,0 +1,415 @@
+﻿@using DigiDoc.Models;
+@using DigiDoc.DataAccess.Models;
+@model NewUserModel
+@{
+    ViewBag.Title = "NewUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var SecuirtyQuestionList = Model.securityQuestions;
+    Html.EnableUnobtrusiveJavaScript(true);
+    Html.EnableClientValidation(true);
+    var enabled = true;
+    var disabled = false;
+    if (Model.UserForm.IsUserEnabled == "True")
+    {
+        enabled = true;
+        disabled = false;
+    }
+    else if (Model.UserForm.IsUserEnabled == "True")
+    {
+        enabled = false;
+        disabled = true;
+    }
+    else
+    {
+        enabled = true;
+        disabled = false;
+    }
+}
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("UserList","User")">Users</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">New User</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <a class="mb-4 back-btn" href="@Url.Action("UserList","User")"><i class="fas fa-arrow-left"></i>Back</a>
+        </div>
+    </div>
+    <div class="content-wrap">
+        @if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="alert alert-danger" role="alert">
+                @(ViewBag.Message)
+            </div>
+           
+
+        }
+    <form method="post" action="@Url.Action("NewUser","User")">
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Status </label>
+                <div class="mb-4">
+
+                    <div class="form-check form-check-inline p-0">
+                        <input class="form-check-input" type="radio" checked name="UserForm.IsUserEnabled" id="isUserEnabled" value="true">
+                        <label class="form-check-label" for="isUserEnabled">Enable</label>
+                    </div>
+                    <div class="form-check form-check-inline p-0">
+                        <input class="form-check-input" type="radio" name="UserForm.IsUserEnabled" id="isUserDisabled" value="false">
+                        <label class="form-check-label" for="isUserDisabled">
+                            Disable
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                @*@Html.HiddenFor(model => model[0].UpdatedPasswordFlag)
+                @Html.HiddenFor(model => model[0].IsActive)*@
+
+                <input hidden name="UserForm.PropertyID" value=@((Model != null && Model.propertyMasters != null && Model.propertyMasters.Count > 0 ) ? Model.propertyMasters[0].PropertyID : "" )>
+
+                <div class="mb-3">
+                    <label class="form-label">Property Name</label>
+                    <input disabled="disabled" name="UserForm.PropertyName" type="text" value='@((Model != null && Model.propertyMasters != null && Model.propertyMasters.Count > 0 ) ? Model.propertyMasters[0].PropertyName : "")' class="form-control">
+
+                </div>
+
+                <div class="col-mb-3">
+                    <div class="form-group ">
+                        <label>User Profile</label>
+                        <select name="UserForm.UserProfileID" id="userProfileID" class="form-control form-select" tabindex="2">
+                            @if (Model != null && Model.userProfiles != null && Model.userProfiles.Count > 0)
+                            {
+                                foreach (UserProfileModel userProfile in Model.userProfiles)
+                                {
+                                    if (Model.UserForm.UserProfileID == userProfile.UserProfileID)
+                                    {
+
+                                        <option value="@(userProfile.UserProfileID)" selected>@(userProfile.ProfileName)</option>
+                                    }
+                                    else
+                                    {
+
+                                        <option value="@(userProfile.UserProfileID)">@(userProfile.ProfileName)</option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">
+                        Email
+                    </label>
+                    @Html.TextBoxFor(m => m.UserForm.Email, new { @class = "form-control", @id = "email",@tabindex=4, @maxlength = "100" })
+
+                    @*<input name="UserForm.Email" id="email" type="text" class="form-control" value="@Model.UserForm.Email">*@
+                    @Html.ValidationMessageFor(Model => Model.UserForm.Email, "", new { @class = "text-danger  " })
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">
+                        Password
+                    </label>
+                    <div class="icon-input">
+                        <a href="#">
+                            <i id="toggleNewPassword" class="far fa-eye" onclick="showNewPasswordClick()" tabindex="7"></i>
+                        </a>
+                        @Html.TextBoxFor(m => m.UserForm.UserPassword, new { @class = "form-control", @id = "userPassword", @type = "password",@tabindex="6", @maxlength = "100" })
+
+                        @*<input name="UserForm.UserPassword" autocomplete="off" id="userPassword" type="password" class="form-control" onKeyDown="preventBackspace(); value=@Model.UserForm.UserPassword">*@
+                        @Html.ValidationMessageFor(Model => Model.UserForm.UserPassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-mb-3">
+                    <div class="form-group ">
+                        <label>Security Question</label>
+                        <select name="UserForm.SecuirityQuestion" id="secuirityquestion" class="form-control form-select" tabindex="10">
+                            @if (SecuirtyQuestionList != null)
+                            {
+                                foreach (SecurityQuestionModel securityQuestion in SecuirtyQuestionList)
+                                {
+                                    if (Model.UserForm.SecuirityQuestion == securityQuestion.SecurityQuestion)
+                                    {
+                                        <option value="@(securityQuestion.SecurityQuestionID)" selected>@(securityQuestion.SecurityQuestion)</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@(securityQuestion.SecurityQuestionID)">@(securityQuestion.SecurityQuestion)</option>
+                                    }
+
+                                }
+                            }
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input name="UserForm.UpdatePassword" autocomplete="off" id="updatePassword" class="form-check-input" type="checkbox" value="@Model.UserForm.UpdatedPasswordFlag" tabindex="12">
+                        <label class="form-check-label" for="updatePassword" style="padding: 3px 4px;">
+                            Force Update Password
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-9">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                User Name
+                            </label>
+                            @*<input name="UserForm.UserName" id="userName" type="text" autocomplete="off" class="form-control" value="@Model.UserForm.UserName">*@
+                            @Html.TextBoxFor(m => m.UserForm.UserName, new { @class = "form-control", @id = "userName" , @tabindex = "1",@maxlength="100"})
+
+                            @Html.ValidationMessageFor(Model => Model.UserForm.UserName, "", new { @class = "text-danger  " })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Name
+                            </label>
+                            @*<input name="@Model.UserForm.RealName" id="realName" type="text" class="form-control" value="@Model.UserForm.RealName">*@
+                            @Html.TextBoxFor(m => m.UserForm.RealName, new { @class = "form-control", @id = "realName",@tabindex=3, @maxlength = "100" })
+                            @Html.ValidationMessageFor(m => m.UserForm.RealName, "", new { @class = "text-danger  " })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Phone Number
+                            </label>
+                            @Html.TextBoxFor(m => m.UserForm.PhoneNumber, new
+                       {
+                           @class = "form-control",
+                           @id = "securityaPhoneNumbernswer",
+                           autocomplete = "off",
+                           @tabindex = 5,
+                           @maxlength = "100"
+
+                       })
+                            @*<input name="UserForm.PhoneNumber" id="phoneNumber" type="text" class="form-control" value="@Model.UserForm.PhoneNumber">*@
+                            @Html.ValidationMessageFor(Model => Model.UserForm.PhoneNumber, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Confirm  Password
+                            </label>
+                            <div class="icon-input">
+                                <a href="#">
+                                    <i id="toggleRetypedPassword" class="far fa-eye" onclick="showRetypedPasswordClick()" tabindex="9"></i>
+                                </a>
+                                @Html.TextBoxFor(m => m.UserForm.ConfirmUserPassword, new
+                           {
+                               @class = "form-control",
+                               @id = "ConfirmUserPassword",
+                               autocomplete = "off",
+                               @onKeyDown = "preventBackspace()",
+                               @type = "password",
+                               @tabindex="8",
+                               @maxlength = "100"
+                           })
+
+                                @*<input name="UserForm.ConfirmUserPassword" id="confirmUserPassword" autocomplete="off" type="password" class="form-control" onKeyDown="preventBackspace(); value=@Model.UserForm.ConfirmUserPassword">*@
+                                @Html.ValidationMessageFor(Model => Model.UserForm.ConfirmUserPassword, "", new { @class = "text-danger  " })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="form-group ">
+                            <label>Answer</label>
+                            @Html.TextBoxFor(m => m.UserForm.SecurityAnswer, new { @class = "form-control", @id = "securityanswer", autocomplete = "off", tabindex = "11", @maxlength = "150" })
+
+                            @*<input name="@Model.UserForm.SecurityAnswer" id="securityanswer" autocomplete="off" type="text" class="form-control" value="@Model.UserForm.SecurityAnswer">*@
+                            @Html.ValidationMessageFor(Model => Model.UserForm.SecurityAnswer, "", new { @class = "text-danger  " })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="button-wrapper1 d-flex justify-content-between">
+                    <input class="btn btn-secondary m-0" type="button" name="CancelButon" id="cancelButon" value="Cancel" onclick="@("window.location.href='" + @Url.Action("UserList", "User") + "'");" tabindex="14" />
+                    @*<input class="btn btn-secondary m-0" type="submit" name="UpdateButon" id="updateButon" value="Cancel">*@
+                    <input class="btn btn-primary mr-0" type="submit" name="UserForm.UpdateButon" id="updateButon" value="Save" tabindex="13">
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+
+
+
+
+<div class="modal model-cstm fade" id="messageModal" aria-hidden="true" aria-labelledby="messageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Message</h5>
+            </div>
+            <div class="modal-body">
+                <div class="message">
+                    <p id="modalMessageContent">
+                        Success
+                    </p>
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $("#loadingModal").css("display", "none");
+        function showNewPasswordClick() {
+
+
+
+            if ($('#userPassword').attr('type') === 'password') {
+
+                $('#userPassword').attr('type', 'text');
+                document.getElementById("toggleNewPassword").classList.remove('fa-eye');
+                document.getElementById("toggleNewPassword").classList.add('fa-eye-slash');
+            }
+            else {
+
+                $('#userPassword').attr('type', 'password');
+                document.getElementById("toggleNewPassword").classList.remove('fa-eye-slash');
+                document.getElementById("toggleNewPassword").classList.add('fa-eye');
+            }
+        }
+        function showRetypedPasswordClick() {
+
+
+            var passwordType = $('#ConfirmUserPassword');
+
+            if ($('#ConfirmUserPassword').attr('type') === 'password') {
+                console.log('passord');
+                $('#ConfirmUserPassword').attr('type', 'text');
+                document.getElementById("toggleRetypedPassword").classList.remove('fa-eye');
+                document.getElementById("toggleRetypedPassword").classList.add('fa-eye-slash');
+            }
+            else {
+                console.log('text');
+                $('#ConfirmUserPassword').attr('type', 'password');
+                document.getElementById("toggleRetypedPassword").classList.remove('fa-eye-slash');
+                document.getElementById("toggleRetypedPassword").classList.add('fa-eye');
+            }
+        }
+        function preventBackspace(e) {
+           
+            var evt = e || window.event;
+            if (evt) {
+                var keyCode = evt.charCode || evt.keyCode;
+                if (keyCode === 32) {
+                    if (evt.preventDefault) {
+                        evt.preventDefault();
+                    } else {
+                        evt.returnValue = false;
+                    }
+                }
+            }
+        }
+
+
+        $(document).ready(function () {
+
+           
+        //    $("#InsertButon").click(function () {
+        //        alert("dsadas")
+        //        $("#frmuser").validate({
+        //        errorClass: 'help-block animation-slideDown', // You can change the animation class for a different entrance animation - check animations page  
+        //        errorElement: 'div',
+        //        errorPlacement: function (error, e) {
+        //            e.parents('.form-group > div').append(error);
+        //        },
+        //        highlight: function (e) {
+
+        //            $(e).closest('.form-group').removeClass('has-success has-error').addClass('has-error');
+        //            $(e).closest('.help-block').remove();
+        //        },
+        //        success: function (e) {
+        //            e.closest('.form-group').removeClass('has-success has-error');
+        //            e.closest('.help-block').remove();
+        //        },
+        //        rules: {
+        //            'UserName': {
+        //                required: true
+        //            }
+                
+        //        },
+        //        messages: {
+                
+        //            'UserName': {
+        //                required: 'Please provide a password',
+        //             },
+
+                  
+        //        }
+        //    });
+        //});
+          
+
+            //$('#newsletterForm').validate({
+            //    errorPlacement: function (error, element) {
+            //        error.appendTo($('#newsletterValidate'));
+            //    },
+            //    rules: {
+            //        email: {
+            //            required: true,
+            //            email: true
+            //        }
+            //    },
+            //    messages: {
+            //        email: {
+            //            required: "Please enter your email address",
+            //            email: "Please enter a valid email address"
+            //        }
+            //    },
+            //    submitHandler: function (form) {
+            //        var datastring = $('#newsletterForm').serialize();
+            //        alert(datastring);
+            //        return false;
+            //    }
+            //});
+        });
+
+    </script>
+}

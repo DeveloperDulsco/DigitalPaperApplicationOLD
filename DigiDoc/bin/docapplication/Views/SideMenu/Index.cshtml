@@ -1,0 +1,86 @@
+﻿@using DigiDoc.DataAccess.Models;
+@using DigiDoc.Models;
+@model List<DigiDoc.DataAccess.Models.UserProfileModel>
+@{
+    Layout = null;
+    var mainMenuName = "";
+    var subMenuName = "";
+    var sessionData = (SessionDataModel)Session["DigiDocData"];
+    if (sessionData != null)
+    {
+        mainMenuName = sessionData.MenuName;
+        subMenuName = sessionData.SubMenu;
+    }
+}
+<link href="~/assets/css/dataTables.bootstrap.css" rel="stylesheet" />
+<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+    <div class="sb-sidenav-menu">
+        <div class="nav">
+
+
+            @*Loop Menus*@
+
+            @if (Model != null && Model.Count > 0)
+            {
+                List<string> iteratedMenuLsit = new List<string>();
+                foreach (var menuItem in Model)
+                {
+                    if (!string.IsNullOrEmpty(menuItem.ModuleName) && !iteratedMenuLsit.Contains(menuItem.ModuleName))
+                    {
+                        iteratedMenuLsit.Add(menuItem.ModuleName);
+                        var subMenus = Model.FindAll(x => x.ModuleName.Equals(menuItem.ModuleName) && x.ModuleID != Int32.Parse(menuItem.ParentMenu));
+                        if (subMenus == null || subMenus.Count <= 1)
+                        {
+                            <a class="nav-link @(mainMenuName == menuItem.ModuleName ? "active" : "")" href="@Url.Action(menuItem.FunctionName, menuItem.ControllerName)">
+                                <div class="sb-nav-link-icon"><i class="far @menuItem.MenuIcon"></i></div>@(menuItem.ModuleName)
+                            </a>
+                        }
+                        else
+                        {
+                            
+                            <a class="nav-link collapsed @(mainMenuName == menuItem.ModuleName ? "active" : "")" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="far @(menuItem.MenuIcon)"></i></div>
+                                @(menuItem.ModuleName)
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    @foreach (var subMenu in subMenus)
+                                    {
+                                    <a class="nav-link @(subMenuName == subMenu.ModuleMenuName ? "active" : "")" href="@Url.Action(subMenu.FunctionName, subMenu.ControllerName)">@(subMenu.ModuleMenuName)</a>
+                                    }
+                                </nav>
+                            </div>
+                        }
+                    }
+                }
+            }
+
+        </div>
+    </div>
+    <div class="sb-sidenav-footer">
+        @*<div class="prp-stat">
+                <h6>Properties</h6>
+                <h4 class="mb-0">10K</h4>
+                <div class="icon"> <i class="far fa-building"></i></div>
+            </div>*@
+        @*<div class="prp-stat">
+            <h6>Documents</h6>
+            <h4 class="mb-0">125K</h4>
+            <div class="icon"><i class="far fa-address-card"></i></div>
+        </div>*@
+    </div>
+</nav>
+
+@section Scripts
+{
+    <script>
+        $("#loadingModal").css("display", "none");
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+            integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+    <script src="~/assets/js/jquery-3.5.1.slim.min.js"></script>
+}

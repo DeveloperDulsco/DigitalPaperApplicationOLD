@@ -1,0 +1,61 @@
+﻿@using DigiDoc.Models;
+@model List<ApproverDetails>
+    @{ 
+
+        var x=ViewBag.DocumentHeaderID;
+    }
+<div class="content-wrap signaturecontent">
+
+    @if (Model != null)
+    {
+        foreach (var r in Model)
+        {
+
+            <div class="row">
+                <div class="col-lg-6 col-xl-10">
+                    @*<div class="signatureheader">
+
+                        <label>This document is verified and approved by</label>
+                    </div>*@
+                    <div class="signaturerow">
+                        <label>@r.ApprovalStatus by  : </label> <label>@r.RealNames </label>
+                    </div>
+                    <div class="signaturerow">
+                       <span>@r.Comment</span>
+
+                    </div>
+                    <div class="signaturerow">
+                        <label>@r.CreatedDateTime.ToString("dd/MM/yyyy HH:mm:ss")</label>
+                        
+
+                    </div>
+                </div>
+                <!--<div class="col-lg-6 col-xl-2">
+                    <div class="signaturerow">-->
+                        @*<img src="@r.SignatureFileBase64" width="100" height="50">*@
+                        <!--<span>@r.RealNames</span>
+
+                    </div>
+                    <div class="signaturerow">
+
+                        <label>Signature</label>
+
+                    </div>
+                </div>-->
+            </div>
+        }
+
+        @*<div class="row">
+            <div class="col-lg-6 col-xl-9">
+                <a href="#" onclick="download()"> Download PDF</a>
+            </div></div>*@
+                }
+                else
+                {
+                <div class="row">
+                    <label>Document is Not Approved Yet</label>
+                </div>
+                }
+            </div>
+
+

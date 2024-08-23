@@ -1,0 +1,1442 @@
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CopyComplete
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\ProjectsToLive\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CopyComplete
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\project current working\DigitalPaperFiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CopyComplete
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\project current working\Digitalpapercpcafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CopyComplete
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\project current working\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CopyComplete
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\ProjectsToLive\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CopyComplete
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\ProjectsToLive\Digitalpaper\Digitalpaperbraiafiles\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\msvcr120.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\msvcr120.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x86.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\grpc_csharp_ext.x64.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.so
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\libgrpc_csharp_ext.x64.dylib
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll.config
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.exe.config
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csc.rsp
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.exe.config
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\csi.rsp
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.AppContext.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Collections.Immutable.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Console.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Http.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Net.Sockets.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.ValueTuple.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.exe.config
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\vbc.rsp
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\roslyn\VBCSCompiler.exe.config
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\BouncyCastle.Crypto.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Web.Infrastructure.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Owin.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\WebGrease.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.Common.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.SqlServer.Types.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.DataAccess.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\DigiDoc.PdfHelper.dll.config
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Antlr3.Runtime.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Core.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Identity.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Blobs.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Azure.Storage.Common.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\CsvHelper.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\FluentNHibernate.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Grpc.Core.Api.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Iesi.Collections.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\itextsharp.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Bcl.HashCode.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.Owin.Security.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\NHibernate.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\NLog.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Remotion.Linq.EagerFetching.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Buffers.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Diagnostics.DiagnosticSource.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.IO.Hashing.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Memory.Data.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Numerics.Vectors.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Security.Cryptography.ProtectedData.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Encodings.Web.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Text.Json.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Threading.Tasks.Extensions.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.ValueTuple.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Helpers.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Mvc.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Optimization.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.Razor.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Deployment.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\System.Web.WebPages.Razor.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Newtonsoft.Json.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\Dapper.xml
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.AssemblyReference.cache
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.Portal.csproj.CoreCompileInputs.cache
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.dll
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc.pdb
+C:\ProjectsToLive\Digitalpaper\digitalpaperbinmajid\DigitalPaperApplication-digidoc\DigiDoc\obj\Release\DigiDoc..0554B691.Up2Date

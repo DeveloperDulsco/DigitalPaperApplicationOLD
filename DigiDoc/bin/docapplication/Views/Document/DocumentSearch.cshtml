@@ -1,0 +1,640 @@
+﻿@using DigiDoc.Models;
+@model SearchRequestModel
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userID = (SessionDataModel)Session["DigiDocData"];
+}
+@{
+
+    var doctype = ViewBag.DocumentType;
+
+}
+
+<link rel="stylesheet" href="~/Assets/css/datatables.min.css">
+<link href="~/Assets/css/dataTables.checkboxes.css" rel="stylesheet" />
+<link href="~/Assets/css/styles.css" rel="stylesheet" />
+<link href="~/Assets/css/custom.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid px-4 pt-4">
+
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@Url.Action("DocumentSearch", "Document")">Document</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">List</li>
+                    </ol>
+                </nav>
+            </div>
+         
+            <div class="col-12 col-sm-auto">
+                <a class="mb-4 back-btn" href="@Url.Action("DocumentSearch", "Document")"><i class="fas fa-arrow-left"></i>Back</a>
+            </div>
+          
+        </div>
+        <div class="table-wrap">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (!string.IsNullOrEmpty(ViewBag.Message))
+                    {
+
+                        if (ViewBag.Success)
+                        {
+                            <div class="alert alert-success" role="alert">
+
+                                @(ViewBag.Message)
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger" role="alert">
+
+                                @(ViewBag.Message)
+                            </div>
+                        }
+                    }
+                    <form name="DocumnetListForm" id="Documentlist" method="post" action="@Url.Action("GetDocumentListAjax", "Document", new { DocumentType = ViewBag.documentType })">
+                        @Html.AntiForgeryToken()
+                        <div class="date_picker">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="form-label">Created Date</label>
+
+                                    @if (userID.IsEditable)
+                                    {
+                                        <div class="input-group">
+                                            <input name="StartDate" id="startDate" type="text" class="form-control datepicker" placeholder="Please Select a Date" autocomplete="off" />
+                                            <label class="" for="startDate">
+                                                <span class="btn btn-default iconclassaudit">
+                                                    <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        <div class="input-group">
+                                            <input name="StartDate" id="startDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate" autocomplete="off" disabled />
+                                            <label class="" for="startDate">
+                                                <span class="btn btn-default iconclassaudit">
+                                                    <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+
+                                                </span>
+                                            </label>
+                                        </div>
+                                    }
+
+
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Confirmation Number</label>
+
+
+                                    <div class="input-group">
+                                        <input name="txtConfirmationNumber" id="txtConfirmationNumber" type="text" class="form-control" placeholder="Please Enter the ConfirmationNumber" autocomplete="off" />
+
+                                    </div>
+
+                                </div>
+                                @if (userID.IsEditable)
+                                {
+                                    <div class="col-md-3">
+                                        <div class="space30"></div>
+                                        <input type="button" name="SubmitButon" id="viewButon" value="View" class="btn btn-primary" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="space30"></div>
+                                        <input type="button" name="ClearButon" id="clearButon" value="Clear" class="btn btn-primary" />
+                                    </div>}
+                                @if (userID.IsEdit)
+                                {
+                                    if (doctype != "Recycle Bin")
+
+                                    {
+                                        @*<div class="col-12 col-lg-auto">
+                    <div class="spacer-mb d-none d-lg-block"></div>
+                    <ul class="butttons">
+                        <li>
+                            <input type="button" name="SubmitButon" id="delButon" value="Delete Document" class="btn btn-primary" onclick="uploaddoc()" />
+
+
+                        </li>
+                        <li>
+                            <input type="button" name="SubmitButon" id="upButon" value="Upload Files" class="btn btn-secondary" onclick="docUpload()" />
+
+                        </li>
+                    </ul>
+                </div>*@
+                                    }
+                                }
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="table-responsive">
+                        <table id="documentTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-nowrap" scope="col">Document Type</th>
+                                    <th class="text-nowrap" scope="col">Document Name</th>
+                                    <th class="text-nowrap" scope="col">Created Date</th>
+                                    @*<th class="text-nowrap" scope="col">Created Time</th>*@
+                                    <th class="text-nowrap" scope="col">Guest Name</th>
+                                    <th class="text-nowrap" scope="col">Room No</th>
+                                    <th class="text-nowrap" scope="col">Chek-In Date</th>
+                                    <th class="text-nowrap" scope="col">Check-Out Date</th>
+                                    @*<th class="text-nowrap" scope="col">Modefied Date</th>*@
+                                    <th class="text-nowrap" scope="col">Last Modified By</th>
+                                    <th class="text-nowrap" scope="col">Status</th>
+                                    <th class="text-nowrap" scope="col">Approver/Rejector</th>
+                                    <th class="text-nowrap text-center" scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+<div class="modal model-cstm fade" id="ConfirmModals" aria-hidden="true" aria-labelledby="ConfirmmessageModals" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Warning</h5>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("ChangeMultipleDocumentType", "Document", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="messagewarn">
+                        <p id="modalMessageContent">
+                            Do you want to delete this documents?
+                        </p>
+                    </div>
+                    <div class="button-wrapper d-flex justify-content-center">
+                        <input type="hidden" id="hfdocuments" name="DocumentDetailIDs" />
+                        <input type="hidden" id="hfdocumentupdatedtype" name="UpdatedDocumentType" value="Recycle Bin">
+
+                        <input type="hidden" id="hfdocumenttypes" value="@ViewBag.documentType" name="DocumentTypes" />
+                        <input type="submit" name="ConfirmButon" id="ConfirmButon" value="Confirm" class="btn btn-primary" />
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="modal model-cstm fade" id="ConfirmModal" aria-hidden="true" aria-labelledby="ConfirmmessageModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Warning</h5>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("ChangeDocumentType", "Document", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="messagewarn">
+                        <p id="modalMessageContent">
+                            Do you want to delete this document?
+                        </p>
+                    </div>
+                    <div class="button-wrapper d-flex justify-content-center">
+                        <input type="hidden" id="hfdocument" name="DocumentDetailID">
+                        <input type="hidden" id="hfdocumentupdatedtype" name="UpdatedDocumentType" value="Recycle Bin">
+                        <input type="hidden" id="hfdocumentype" name="DocumentType">
+                        <input type="hidden" id="hfdocumentheader" name="DocumentHeaderID">
+                        <input type="submit" name="ConfirmButon" id="ConfirmButon" value="Confirm" class="btn btn-primary" />
+                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="modal model-cstm fade" id="messageModal" aria-hidden="true" aria-labelledby="messageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Message</h5>
+            </div>
+            <div class="modal-body">
+                <div class="message">
+                    <p id="modalMessageContent">
+                        Documents Not Selected for Deleting
+                    </p>
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal model-cstm fade" id="docModal" aria-hidden="true" aria-labelledby="docModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Document Upload</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <form method="post" id="frmUpload" action="@Url.Action("Upload","Document")" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Document File</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="file" id="upload" name="upload" accept=".pdf" multiple />
+                                @Html.Label("FileError", new { @class = "field-validation-error", @id = "FileError" })
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 ">
+                                <label>Document Name</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <input name="DocumentName" type="text" class="form-control" id="DocumentName">
+                                @Html.Label("NameError", new { @class = "field-validation-error", @id = "NameError" })
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label>Room No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input name="RoomNo" type="text" class="form-control" id="RoomNo">
+                                @Html.Label("RoomError", new { @class = "field-validation-error", @id = "RoomError" })
+
+                            </div>
+                        </div>
+
+
+                        <input type="hidden" id="hdfdocumenttypes" value="@ViewBag.documentType" name="DocumentTypes" />
+
+                        @Html.Label("Error", new { @class = "field-validation-error", @id = "Errortext" })
+
+                        <div class="button-wrapper d-flex justify-content-center">
+                            <button class="btn btn-primary" name="upload" type="submit" id="btncmt">Ok</button>
+                            <button class="btn btn-secondary" type="button" id="btncancl" onclick="btncancel()">Cancel</button>
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>5
+</div>
+@section Scripts{
+
+    <script src="~/Assets/js/datatables/dataTables.min.js"></script>
+
+    <script src="~/Assets/js/dataTables.checkboxes.min.js"></script>
+    <script src="~/Assets/js/datatables/dataTables.bootstrap.min.js"></script>
+
+    <script>
+        $("#loadingModal").css("display", "none");
+
+
+        $(document).ready(function () {
+            $("#loadingModal").css("display", "none");
+            setTimeout(function () {
+                $('.alert').remove();
+                if (window.location.href.indexOf('?') > -1) {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    if (urlParams.has('Message'));
+                    {
+
+                        if (urlParams.get('Message') != null) {
+
+                                if (urlParams.get('DocumentType') != null) {
+                                    if (urlParams.has('DocumentType'));
+                                    {
+                                        //var url = new URL(window.location);
+                                        //url.searchParams.set('DocumentType', urlParams.get('DocumentType'));
+
+                                        history.pushState('', document.title, window.location.pathname + "?DocumentType=" + urlParams.get('DocumentType'));
+
+                                    }
+                                }
+
+                        }
+
+                    }
+
+                }
+            }, 15000);
+
+            $('#documentTable').on('error.dt', function(e, settings, techNote, message){
+                console.log('An error has been reported by DataTables: ', message );
+                e.preventDefault();
+            });
+
+
+
+            var startdate = $('#startDate').val();
+            var enddate = $('#endDate').val();
+
+            var dt = $('#documentTable').DataTable({
+                initComplete: function () {
+                    var api = this.api();
+
+                    if ('@ViewBag.DocumentType'=='Recycle Bin') {
+                        // Hide Office column
+                        api.column(0).visible(false);
+                    }
+                },
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    url: "@Url.Action("GetDocumentListAjax", "Document",new { DocumentType = ViewBag.documentType})",
+                     type: "POST",
+                    "data": function (d) {
+                        return $.extend({}, d, {
+                            "CreatedDate": $('#startDate').val(),
+                            "__RequestVerificationToken":
+                                $("input[name=__RequestVerificationToken]").val(),
+                           "ReservationNumber":$("#txtConfirmationNumber").val()
+                        });
+                    }
+                },
+
+                'columnDefs': [
+                    {
+                        'targets': 0,
+                        'checkboxes': {
+                            'selectRow': true
+                        }
+                    }
+                ],
+                'select': {
+                    'style': 'multi'
+                },
+                "columns": [
+
+                    {
+                        "data": "DocumentDetailID",
+
+                    },
+                    { "data": "DocumentType" },
+                    { "data": "DocumentName" },
+
+                    {
+                        "data": "CreatedDatetime",
+                        "render": function (data, type, row) {
+                            if (row.CreatedDate == '1-01-01') {
+                                return null;
+                            }
+                            else {
+                                return row.CreatedDate;
+                            }
+                           // return formatDate(new Date(parseInt(row.CreatedDatetime.substr(6))));
+                        }
+                    },
+                    //{
+                    //    "data": "CreatedDatetime",
+                    //    "render": function (data, type, row) {
+
+
+                    //        return row.Createdtime;
+                    //    }
+                    //},
+                    //{
+                    //    "data": "CommentedDateTime",
+                    //    "render": function (data, type, row) {
+                    //        if (row.CommentedDateTime === null) {
+                    //            return "";
+                    //        }
+                    //        else {
+                    //            return formatDate(new Date(parseInt(row.CommentedDateTime.substr(6))));
+                    //        }
+                    //    }
+                    //},
+                    { "data": "GuestName" },
+                    { "data": "RoomNo" },
+                    {
+                        "data": "ArrivalDate",
+
+                        "render": function (data, type, row) {
+
+                            return formatDate(new Date(parseInt(row.ArrivalDate.substr(6))));
+                        }
+                    },
+                    {
+                        "data": "DepartureDate",
+
+                        "render": function (data, type, row) {
+
+                            return formatDate(new Date(parseInt(row.DepartureDate.substr(6))));
+                        }
+                    },
+                    { "data": "LastCommentedUser" },
+                    { "data": "ApprovalStatus" },
+                    { "data": "Approver" },
+
+                    {
+                        "data": null,
+                        "render": function (data, type, row) {
+                            if (row.DocumentCode != "RB") {
+                                return ' <a class="tb-icon" href="@Url.Action("DocumentDetails", "Document")?DetailID=' + row.DocumentDetailID + '&DocumentType=' + row.DocumentType + '&UserID=' + @userID.UserID + '"><i class="far fa-eye"></i></a>&nbsp;<a class="tb-icon" href="#" confirm="Are you want to deleteuser?" onclick="return DeleteDocument(' + row.DocumentDetailID + ',' + row.DocumentHeaderID + ',\'' + row.DocumentType + '\'); "><i class="fa fa-trash"></i></a>'
+                            }
+                            else {
+                                      return ' <a class="tb-icon" href="@Url.Action("DocumentDetails", "Document")?DetailID=' + row.DocumentDetailID + '&DocumentType=' + row.DocumentType + '&UserID=' + @userID.UserID + '"><i class="far fa-eye"></i></a>'
+
+                            }
+                            }
+
+                    }
+                ],
+                "order": [[3, 'desc']]
+            });
+
+
+
+
+
+
+
+            //var table = $('#fixedHeader').DataTable({
+            //    fixedHeader: true,
+            //    'iDisplayLength': 25,
+            //    "language": {
+            //        "lengthMenu": "Display _MENU_ Records Per Page",
+            //        "info": "Showing Page _PAGE_ of _PAGES_",
+            //    }
+            //});
+            $('#viewButon').on('click', function (e) {
+                    dt.ajax.reload();
+            });
+
+            $('#clearButon').on('click', function (e) {
+                $('#startDate').val('');
+                $("#txtConfirmationNumber").val('');
+                dt.ajax.reload();
+            });
+            //$('#Documentlist').on('submit', function (e) {
+            //    alert("dfdfs")
+
+            //        e.preventDefault();
+
+            //        dt.ajax.reload();
+
+
+
+            //    })
+
+
+
+
+            $('#delButon').on('click', function (e) {
+                var rows_selected = dt.column(0).checkboxes.selected();
+
+                $("#hfdocuments").val(rows_selected.join(","));
+
+                if (rows_selected.join(",") != null && rows_selected.join(",") != '') {
+
+                    $('#ConfirmModals').modal('show');
+                    $('#modalMessageContent').text('Do you want to delete the documents?')
+                }
+                else {
+                    $('#modalMessageContent').text('Documents Not Selected for Delete')
+                   $('#messageModal').modal('show');
+                }
+            });
+            $('#frmUpload').on('submit', function (e) {
+                e.preventDefault();
+                $("#loadingModal").css("display", "block");
+
+                var url = $(this).attr('action');
+                var form = $('#frmUpload')
+
+                var formData = new FormData(form.get(0));
+
+                var errorcount = 0;
+                if ($('#upload')[0].files.length == 0) {
+                    $("#FileError").text('Please Upload a File');
+                    errorcount++;
+                }
+                else {
+                    $("#FileError").empty();
+
+
+                }
+
+                if ($("#DocumentName").val() == "") {
+                    $("#NameError").text('Please Enter a DocumentName')
+                    errorcount++; alert($("#DocumentName").val());
+                }
+                else {
+                    $("#NameError").empty();
+
+                }
+                if ($("#RoomNo").val() == "") {
+                    $("#RoomError").text('Please Enter a RoomNo')
+                    errorcount++;
+                }
+                else {
+                    $("#RoomError").empty();
+                }
+                formData.append("File", $('#upload')[0].files);
+                formData.append("DocumentType", $('#hdfdocumenttypes').val());
+                formData.append("DocumentName", $('#DocumentName').val());
+                formData.append("RoomNo", $('#RoomNo').val());
+
+            if (errorcount<=0) {
+                    $.ajax({
+                        url: url,
+                        data: formData,
+                        type: "POST",
+                        contentType: false,
+                        processData: false,
+                        success: function (data) {
+                            $("#loadingModal").css("display", "none");
+                            if (data.Result) {
+
+                                $('#modalMessageContent').text("Document Uploaded Successfully");
+                                dt.ajax.reload();
+                                $('#messageModal').modal('show');
+                                $('#docModal').modal('hide');
+                            }
+                            else {
+                                $("#FileError").text('Please Upload a File');
+                                //$('#modalMessageContent').text(data.Message);
+                                //$('#messageModal').modal('show');
+                                $('#docModal').modal('show');;
+                            }
+
+
+                        },
+                        error: function (error) {
+                            /* $("#loadingModal").css("display", "none");*/
+                            //  bootbox.alert("Failed");
+                        }
+                    })
+                }
+            else {
+                $("#loadingModal").css("display", "none");
+                    $('#docModal').modal('show');
+
+                }
+
+
+            })
+        });
+
+
+
+        $('#startDate').datepicker({
+            clearBtn: true,
+            format: "dd-mm-yyyy",
+            autoclose: true
+        });
+        function DeleteDocument(documentid, documentheaderid, DocumentType) {
+            $("#hfdocument").val(documentid);
+            $("#hfdocumentype").val(DocumentType);
+            $("#hfdocumentheader").val(documentheaderid);
+            $('#ConfirmModal').modal('show');
+        }
+        function docUpload() {
+            $('#upload').val('');
+            $("#Errortext").empty();
+            $("#NameError").empty();
+            $("#FileError").empty();
+            $("#RoomError").empty();
+            $('#docModal').modal('show');
+
+        }
+        function btncancel() {
+            /*$("#loadingModal").css("display", "none");*/
+            $('#docModal').modal('hide');
+            alert('hi');
+        }
+    </script>
+
+
+}

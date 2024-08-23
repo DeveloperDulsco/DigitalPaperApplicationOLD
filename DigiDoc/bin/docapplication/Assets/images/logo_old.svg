@@ -1,0 +1,11 @@
+<svg id="Component_5_1" data-name="Component 5 – 1" xmlns="http://www.w3.org/2000/svg" width="126" height="42.584" viewBox="0 0 126 42.584">
+  <text id="Digi_Doc" data-name="Digi Doc" transform="translate(13 35.584)" fill="#00c691" font-size="29" font-family="FredokaOne-Regular, Fredoka One"><tspan x="0" y="0">Digi </tspan><tspan y="0" fill="#141212">Doc</tspan></text>
+  <g id="Layer_2" data-name="Layer 2" transform="translate(0 0)">
+    <g id="Layer_1" data-name="Layer 1">
+      <path id="Path_260" data-name="Path 260" d="M25.7,32.432H19.6a1.532,1.532,0,0,1-1.53-1.534V14.744a1.532,1.532,0,0,1,1.532-1.532h20.66v2.378a1.474,1.474,0,0,0,1.472,1.472h.128a1.474,1.474,0,0,0,1.471-1.472V8.568A4.6,4.6,0,0,0,38.732,4H32.614a4.644,4.644,0,0,0-3.686,1.84l-3.221,4.3H19.6a4.6,4.6,0,0,0-4.6,4.6V30.9a4.6,4.6,0,0,0,4.6,4.6h6.1a1.532,1.532,0,0,0,1.538-1.53h0A1.538,1.538,0,0,0,25.7,32.432ZM31.366,7.686a1.515,1.515,0,0,1,1.248-.613h6.118a1.532,1.532,0,0,1,1.532,1.532v1.538H29.52Z" transform="translate(-15 -4)" fill="#00c691"/>
+    </g>
+  </g>
+  <path id="Subtraction_2" data-name="Subtraction 2" d="M3.019,8.989H.044A5.6,5.6,0,0,1,0,8.29v-2.8a5.493,5.493,0,0,1,10.987,0v2.8a5.6,5.6,0,0,1-.044.7H7.969a2.591,2.591,0,0,0,.127-.8V5.6a2.6,2.6,0,1,0-5.2,0V8.184a2.592,2.592,0,0,0,.127.806Z" transform="translate(95.949 13.651)" fill="#141212"/>
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="1" cy="1" r="1" transform="translate(101 26.584)" fill="#141212"/>
+  <rect id="Rectangle_5" data-name="Rectangle 5" width="2" height="2" rx="1" transform="translate(101 29.584)" fill="#141212"/>
+</svg>

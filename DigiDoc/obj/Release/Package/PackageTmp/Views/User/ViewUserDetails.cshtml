@@ -1,0 +1,551 @@
+﻿@using DigiDoc.Models;
+@using DigiDoc.DataAccess.Models;
+
+@model  UpdateUserModel
+@{
+    ViewBag.Title = "NewUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Html.EnableUnobtrusiveJavaScript(true);
+    Html.EnableClientValidation(true);
+
+    if (Model != null   )
+    {
+        var userSettings = Model;
+    }
+    var SecuirtyQuestionList = new List<DigiDoc.DataAccess.Models.SecurityQuestionModel>();
+    if (ViewBag.SecurityQuestionList != null)
+    {
+        SecuirtyQuestionList = (List<DigiDoc.DataAccess.Models.SecurityQuestionModel>)ViewBag.SecurityQuestionList;
+    }
+    var UserProfileModelList = new List<DigiDoc.DataAccess.Models.UserProfileModel>();
+    if (ViewBag.UserProfileList != null)
+    {
+        UserProfileModelList = (List<DigiDoc.DataAccess.Models.UserProfileModel>)ViewBag.UserProfileList;
+    }
+    var PropertyDetailsList = new List<DigiDoc.DataAccess.Models.PropertyMasterModel>();
+    if (ViewBag.PropertyDetails != null)
+    {
+        PropertyDetailsList = (List<DigiDoc.DataAccess.Models.PropertyMasterModel>)ViewBag.PropertyDetails;
+    }
+}
+
+<div class="container-fluid px-4 pt-4 mb-4">
+
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("UserList","User")">Users</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit User</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <a class="mb-4 back-btn" href="@Url.Action("UserList","User")"><i class="fas fa-arrow-left"></i>Back</a>
+        </div>
+    </div>
+    <div class="content-wrap" id="divcontent">
+        @if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+
+            if (ViewBag.Success)
+            {
+                <div class="alert alert-success" role="alert">
+
+                    @(ViewBag.Message) 
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+
+                    @(ViewBag.Message) 
+                </div>
+            }
+        }
+    <form method="post" id="frmuserdetails" name="frmuserdetails" action="@Url.Action("ViewUserDetails","User")">
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Status </label>
+                <div class="mb-4">
+
+                    <div class="form-check form-check-inline p-0">
+                        <input class="form-check-input" type="radio" name="IsUserEnabled" id="isUserEnabled" @((Model != null && Model.IsActive != null && (Model.IsActive == "true" || Model.IsActive == "True")) ? "checked" : "" ) value="true">
+                        <label class="form-check-label" for="isUserEnabled">Enable</label>
+                    </div>
+                    <div class="form-check form-check-inline p-0">
+                        <input class="form-check-input" type="radio" name="IsUserEnabled" id="isUserDisabled" @((Model != null && Model.IsActive != null && (Model.IsActive == "false" || Model.IsActive == "False")) ? "checked" : "" ) value="false">
+                        <label class="form-check-label" for="isUserDisabled">
+                            Disable
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                @*@Html.HiddenFor(model => Model.UpdatedPasswordFlag)
+                @Html.HiddenFor(model => Model.IsActive)*@
+                <input name="UpdatedPasswordFlag" hidden="hidden" value="@(Model.UpdatedPasswordFlag != null ? Model.UpdatedPasswordFlag.ToString() : "false")" />
+                <input name="IsActive" hidden="hidden" value="@(Model.IsActive != null ? Model.IsActive.ToString() : "false")" />
+                <input name="UserID" hidden="hidden" value="@(Model.UserID)" />
+                <div class="mb-3">
+                    <label class="form-label">Property Name</label>
+                    <input name="PropertyName" type="text" value="@((Model != null    ) ? Model.PropertyName : "" )" class="form-control" readonly>
+
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        User Profile
+                    </label>
+                    <!--<input name="UserProfile" id="userProfile"--> @*readonly*@ <!--type="text" value="@((Model != null    ) ? Model.ProfileName : "" )" class="form-control">-->
+                    <select name="UserProfileID" id="userProfileID" class="form-control form-select">
+                        @if (UserProfileModelList != null)
+                        {
+                            foreach (UserProfileModel userProfile in UserProfileModelList)
+                            {
+                                if (Model.UserProfileID.ToString() == userProfile.UserProfileID)
+                                {
+                                    <option value="@(userProfile.UserProfileID)" selected>@(userProfile.ProfileName)</option>
+                                }
+                                else
+                                {
+                                    <option value="@(userProfile.UserProfileID)">@(userProfile.ProfileName)</option>
+                                }
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">
+                        Email
+                    </label>
+
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @id = "email", @maxlength = "100" })
+
+                    @*<input name="UserForm.Email" id="email" type="text" class="form-control" value="@Model.UserForm.Email">*@
+                    @Html.ValidationMessageFor(Model => Model.Email, "", new { @class = "text-danger  " })
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input name="UpdatePassword" id="updatePassword" @((Model != null && Model.UpdatedPasswordFlag != null && (Model.UpdatedPasswordFlag == "true" || Model.UpdatedPasswordFlag == "True")) ? "checked" : "" ) class="form-check-input" type="checkbox" value="true">
+                        <label class="form-check-label" for="updatePassword" style="padding: 3px 4px;">
+                            Force Update Password
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-9">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                User Name
+                            </label>
+                            @*<input name="UserForm.UserName" id="userName" type="text" autocomplete="off" class="form-control" value="@Model.UserForm.UserName">*@
+                            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @id = "userName" ,@maxlength = "100" })
+
+                            @Html.ValidationMessageFor(Model => Model.UserName, "", new { @class = "text-danger  " })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Name
+                            </label>
+                            @Html.TextBoxFor(m => m.RealName, new { @class = "form-control", @id = "realName" , @maxlength = "100" })
+                            @Html.ValidationMessageFor(m => m.RealName, "", new { @class = "text-danger  " })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Phone Number
+                            </label>
+                            @Html.TextBoxFor(m => m.PhoneNumber, new
+                       {
+                           @class = "form-control",
+                           @id = "securityaPhoneNumbernswer",
+                           autocomplete = "off",
+                           @maxlength = "100"
+
+                       })
+                            @*<input name="UserForm.PhoneNumber" id="phoneNumber" type="text" class="form-control" value="@Model.UserForm.PhoneNumber">*@
+                            @Html.ValidationMessageFor(Model => Model.PhoneNumber, "", new { @class = "text-danger  " })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    @*<div class="col-xl-4">
+                        <div class="mb-3">
+                            <label class="form-label">Retype Password</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>*@
+                    <div class="col-lg-12 col-xl-4">
+                        <a class="generate-btn" onclick="resetpassword()" href="#">Reset Password</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="button-wrapper1 d-flex justify-content-between">
+                    <input class="btn btn-secondary m-0" type="button" name="CancelButon" id="cancelButon" value="Cancel" onclick="@("window.location.href='" + @Url.Action("UserList", "User") + "'");" />
+
+                    <input class="btn btn-primary mr-0" type="submit" name="UpdateButon" id="updateButon" value="Save">
+
+                    <input class="btn btn-primary mr-0" type="button" onclick="SendUserDetails()" name="EmailButon" id="EmailButton" value="Email">
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div class="modal model-cstm fade" id="ResetPasswordModel" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Reset Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="frmResetPassword" method="post" action="@Url.Action("ResetPassword","User")">
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        
+                        <input name="UserID" id="UserID" hidden="hidden" value=@(Model.UserID) />
+                        <input name="UserName" id="UserName" hidden="hidden" value="@((Model != null    ) ? Model.UserName : "" )" >
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <div class="icon-input">
+                                    <a href="#">
+                                        <i id="toggleNewPassword" class="far fa-eye" onclick="showNewPasswordClick()" tabindex="2"></i>
+                                    </a>
+
+                                    <input name="NewPassword" id="newpassword" type="password" placeholder="New Password" class="form-control" tabindex="1" autocomplete="off" maxlength = "100">
+                               </div>
+                                </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Retype Password</label>
+                                <div class="icon-input">
+                                    <a href="#">
+                                        <i id="toggleRetypedPassword" class="far fa-eye" onclick="showRetypedPasswordClick()" tabindex="4"></i>
+                                    </a>
+                                    <input name="RetypedNewPassword" id="retypednewpassword" type="password" placeholder="Re-type New Password" class="form-control" tabindex="3" autocomplete="off" maxlength="100">
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group ">
+                                <label>New Security Question</label>
+                                <select name="SecuirityQuestion" id="secuirityquestion" class="form-control form-select" tabindex="5">
+                                    @if (SecuirtyQuestionList != null)
+                                    {
+                                        foreach (SecurityQuestionModel securityQuestion in SecuirtyQuestionList)
+                                        {
+                                            <option value="@(securityQuestion.SecurityQuestionID)">@(securityQuestion.SecurityQuestion)</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group ">
+                                <label>Answer</label>
+                                <input name="SecurityAnswer" id="securityanswer" type="text" class="form-control" tabindex="6" maxlength="150">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-wrapper d-flex justify-content-center">
+
+                        <input type="button" name="ResetSubmitButon" id="reset_cancel_buton" value="Cancel" class="btn btn-secondary" data-bs-dismiss="modal" tabindex="8">
+                        <input type="submit" name="ResetSubmitButon" id="reset_submit_buton" value="Ok" class="btn btn-primary" tabindex="7">
+                    </div>
+
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal model-cstm fade" id="messageModal" aria-hidden="true" aria-labelledby="messageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMessageHeader">Message</h5>
+            </div>
+            <div class="modal-body">
+                <div class="message">
+                    <p id="modalMessageContent">
+                       Success
+                    </p>
+                </div>
+                <div class="button-wrapper d-flex justify-content-center">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.alert').remove();
+                //if (window.location.href.indexOf('?') > -1) {
+                //    history.pushState('', document.title, window.location.pathname);
+                //}
+            }, 16000);
+        });
+        $("#loadingModal").css("display", "none");
+
+        function showNewPasswordClick() {
+
+
+
+            if ($('#newpassword').attr('type') === 'password') {
+
+                $('#newpassword').attr('type', 'text');
+                document.getElementById("toggleNewPassword").classList.remove('fa-eye');
+                document.getElementById("toggleNewPassword").classList.add('fa-eye-slash');
+            }
+            else {
+
+                $('#newpassword').attr('type', 'password');
+                document.getElementById("toggleNewPassword").classList.remove('fa-eye-slash');
+                document.getElementById("toggleNewPassword").classList.add('fa-eye');
+            }
+        }
+        function showRetypedPasswordClick() {
+
+
+            var passwordType = $('#retypednewpassword');
+
+            if ($('#retypednewpassword').attr('type') === 'password') {
+                console.log('passord');
+                $('#retypednewpassword').attr('type', 'text');
+                document.getElementById("toggleRetypedPassword").classList.remove('fa-eye');
+                document.getElementById("toggleRetypedPassword").classList.add('fa-eye-slash');
+            }
+            else {
+                console.log('text');
+                $('#retypednewpassword').attr('type', 'password');
+                document.getElementById("toggleRetypedPassword").classList.remove('fa-eye-slash');
+                document.getElementById("toggleRetypedPassword").classList.add('fa-eye');
+            }
+        }
+
+        function resetpassword() {
+
+
+            $("#newpassword").val('');
+            $("#retypednewpassword").val('');
+
+            $("#securityanswer").val('');
+            $("#ResetPasswordModel").modal('show');
+
+        }
+
+        function Updatdetails() {
+            $("div.alert").remove();
+            var a = document.forms["frmuserdetails"]["userName"].value;
+            if (!a) {
+                const myParent = document.getElementById("divcontent");
+                var message ='User name can not be blank';
+
+                var div = document.createElement('div');
+                div.innerHTML = message;
+
+                div.setAttribute('class', 'alert alert-danger');
+                div.setAttribute('role', 'alert');
+
+                myParent.prepend(div);
+
+                return;
+            }
+            var b = document.forms["frmuserdetails"]["realName"].value;
+            if (!b) {
+
+                const myParent = document.getElementById("divcontent");
+                var message = 'Name can not be blank';
+
+                var div = document.createElement('div');
+                div.innerHTML = message;
+
+                div.setAttribute('class', 'alert alert-danger');
+                div.setAttribute('role', 'alert');
+
+                myParent.prepend(div);
+                return;
+            }
+
+            var d = document.forms["frmuserdetails"]["userProfileID"].value;
+            if (!d) {
+                const myParent = document.getElementById("divcontent");
+                var message = 'userProfileID can not be blank';
+
+                var div = document.createElement('div');
+                div.innerHTML = message;
+
+                div.setAttribute('class', 'alert alert-danger');
+                div.setAttribute('role', 'alert');
+
+                myParent.prepend(div);
+            }
+            var e = document.forms["frmuserdetails"]["email"].value;
+            if (!e) {
+                const myParent = document.getElementById("divcontent");
+                var message = 'EmailID can not be blank';
+
+                var div = document.createElement('div');
+                div.innerHTML = message;
+
+                div.setAttribute('class', 'alert alert-danger');
+                div.setAttribute('role', 'alert');
+                myParent.prepend(div);
+                return;
+            }
+            else {
+                var mailformat = /^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                if (!mailformat.test(document.forms["frmuserdetails"]["email"].value)) {
+                    const myParent = document.getElementById("divcontent");
+                var message = 'Email Address is not valid';
+
+                var div = document.createElement('div');
+                div.innerHTML = message;
+
+                div.setAttribute('class', 'alert alert-danger');
+                div.setAttribute('role', 'alert');
+                myParent.prepend(div);
+                return;
+            }
+            }
+
+            var myform = document.getElementById("frmuserdetails");
+            myform.submit();
+        }
+        function SendUserDetails() {
+            var token = $('input[name="__RequestVerificationToken"]').val();
+               $.ajax({
+                   url: "@Url.Action("NewUserEmailSend", "User")",
+                   type: "POST",
+                   data: {
+                       __RequestVerificationToken: token,
+                       UserName: '@Model.UserName',
+                       UserPassword: '@Model.UserPassword',
+                       RealName: '@Model.RealName',
+                       Email:'@Model.Email',
+                       UserID:@Model.UserID,
+                       
+                       
+                   },
+                   dataType: 'json',
+       success: function (data) {
+
+           if (data.Result) {
+               /*  alert(data.Result);*/
+               $('#modalMessageHeader').html('Success')
+               $('#modalMessageContent').html(data.Message)
+               $('#modalMessageContent').parent().removeClass("");
+               $('#modalMessageContent').parent().addClass("message");
+               $('#messageModal').modal('show');
+
+           }
+           else {
+               $('#modalMessageHeader').html('Warning')
+               $('#modalMessageContent').html(data.Message)
+               $('#modalMessageContent').parent().removeClass("");
+               $('#modalMessageContent').parent().addClass("messagewarn");
+               $('#messageModal').modal('show');
+           }
+
+
+       },
+       error: function (error) {
+           //  bootbox.alert("Failed");
+       }
+   })
+        }
+        $(document).ready(function () {
+
+
+
+
+
+
+
+
+
+            $('#frmResetPassword').on('submit', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('action');
+                var data = $(this).serialize();
+
+                $.ajax({
+                    url: url,
+                    data: data,
+                    type: "POST",
+                    success: function (data) {
+                        $('#ResetPasswordModel').modal('hide')
+                       /* alert(data.Result+1);*/
+                        if (data.Result) {
+                          /*  alert(data.Result);*/
+                            $('#modalMessageHeader').html('Success')
+                            $('#modalMessageContent').html(data.Message)
+                            $('#modalMessageContent').parent().removeClass("");
+                            $('#modalMessageContent').parent().addClass("message");
+                            $('#messageModal').modal('show');
+
+                        }
+                        else {
+                            $('#modalMessageHeader').html('Warning')
+                            $('#modalMessageContent').html(data.Message)
+                            $('#modalMessageContent').parent().removeClass("");
+                            $('#modalMessageContent').parent().addClass("messagewarn");
+                            $('#messageModal').modal('show');
+                        }
+
+                    },
+                    error: function (error) {
+                      //  bootbox.alert("Failed");
+                    }
+                })
+
+
+
+            })
+
+        });
+
+
+    </script>
+}
+
