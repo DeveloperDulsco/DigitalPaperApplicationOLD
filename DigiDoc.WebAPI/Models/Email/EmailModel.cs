@@ -20,7 +20,8 @@ namespace DigiDoc.WebAPI.Controllers
         public string ApproverName { get; set; }
         public string AttchmentBase64 { get; set; }
         public string AttachmentFileName { get; set; }
-        
+        public string RealName { get; set; }
+        public string Password { get; set; }
     }
 
     public enum EmailType
@@ -28,7 +29,9 @@ namespace DigiDoc.WebAPI.Controllers
         Reject,
         Accept,
         SendToApproval,
-        GuestFolio
+        GuestFolio,
+        SendPassword
+
     }
 
 

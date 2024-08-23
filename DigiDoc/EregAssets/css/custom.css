@@ -254,14 +254,16 @@ width: 100%;
 .cstm-modal .close{opacity:1;}
 .cstm-modal .close_icon{background:url("../images/close_icon.png");height:23px;width: 23px;display: block;}
 .cstm-modal .modal-body p{font-size: 14px;color: #291f1d;}
+.cstm-modal .modal-dialog{width: 60vh;}
 /*loader*/
-
-.dropdown-toggle {
-  background: none;
-  border: 1px solid #B4BABF;
-  border-radius:8px;
-  font-size: 13px;
-  padding: 8px;}
+.dropdown-toggle
+{
+    background: none;
+    border: 1px solid #B4BABF;
+    border-radius: 8px;
+    font-size: 13px;
+    padding: 8px;
+}
 
   .dropdown-menu{font-size: 14px;}
 
@@ -346,4 +348,8 @@ width: 100%;
     width: 100%;
     z-index: 1001;
     height: 100px;
+}
+body.modal-open
+{
+    overflow: hidden;
 }

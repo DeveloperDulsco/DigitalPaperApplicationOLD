@@ -14995,3 +14995,53 @@ progress
 {
     padding-top: 0px!important;
 }
+#fileListContainer
+{
+    max-height: 200px; /* This ensures that the container won't exceed 300px in height */
+    overflow-y: auto; /* This enables vertical scrolling when content exceeds the container height */
+}
+
+#fileList
+{
+    /* No changes needed */
+}
+
+.file-item
+{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.file-info
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-name
+{
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-size
+{
+    font-size: 0.9em;
+    color: gray;
+}
+
+.btn-close
+{
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+}

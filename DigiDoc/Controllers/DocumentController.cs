@@ -1418,15 +1418,20 @@ namespace DigiDoc.Controllers
                                 if (result.result)
                                 {
                                     success++;
+                                   
+                                    bool IsBobEnaabled = ConfigurationManager.AppSettings["IsBlobEnaled"] != null ? Convert.ToBoolean(ConfigurationManager.AppSettings["IsBlobEnaled"].ToString()) : false; ;
                                     string ConnectionString = ConfigurationManager.AppSettings["CloudConnectionString"];
+
                                     LogHelper.Instance.Debug($"Document created for filename" + file.FileName + "Position:" + i, "Upload", "Portal", "Upload");
+                                    if (IsBobEnaabled)
+                                    {
+                                        BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
 
-                                    BlobServiceClient blobServiceClient = new BlobServiceClient(ConnectionString);
 
-
-                                    var res = await new BlobStorage().UploadFileBlobAsync(data, "document" + result.ResponseData + ".pdf", blobServiceClient);
-                                    // return Json(new { Result = true, Message = "Document Saved Successfully", Success = true });
-                                    LogHelper.Instance.Debug($"Document saved to cloud for filename" + file.FileName + "Position:" + i, "Upload", "Portal", "Upload");
+                                        var res = await new BlobStorage().UploadFileBlobAsync(data, "document" + result.ResponseData + ".pdf", blobServiceClient);
+                                        // return Json(new { Result = true, Message = "Document Saved Successfully", Success = true });
+                                        LogHelper.Instance.Debug($"Document saved to cloud for filename" + file.FileName + "Position:" + i, "Upload", "Portal", "Upload");
+                                    }
                                 }
                                 else
                                 {

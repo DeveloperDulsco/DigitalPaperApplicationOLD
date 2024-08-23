@@ -18,7 +18,8 @@ namespace DigiDoc.WebAPI.Controllers
     public class EmailLib
     {
       
-        public async Task<EmailResponse> SendEmail(string ToEmail, string FromEmail, EmailType emailType, string Subject, string Username, string Password, string Host, int port, bool enableSsl,string SMTPDefaultCredentials,string displayFromEmail,string DocumentName,string UserName,string ApprovedUser,string base64Attchement, string attachmentname)
+        public async Task<EmailResponse> SendEmail(string ToEmail, string FromEmail, EmailType emailType, string Subject, string Username, string Password, string Host, int port, bool enableSsl,string SMTPDefaultCredentials,string displayFromEmail,string DocumentName,string UserName,string ApprovedUser,string base64Attchement, string attachmentname, string RealName,string Userpassword)
+             
         {
             try
             {
@@ -33,7 +34,7 @@ namespace DigiDoc.WebAPI.Controllers
                 {
                     return true;
                 };
-                using (MailMessage message = createMailMessage(emailType, Subject, FromEmail, displayFromEmail, DocumentName, UserName, ApprovedUser))
+                using (MailMessage message = createMailMessage(emailType, Subject, FromEmail, displayFromEmail, DocumentName, UserName, ApprovedUser,RealName,Userpassword))
                 {
 
 
@@ -130,7 +131,7 @@ namespace DigiDoc.WebAPI.Controllers
         }
 
 
-        public MailMessage createMailMessage(EmailType emailType,string Subject,string FromEmail,string displayFromEmail,string DocumentName,string UserName,string ApprovedUser)
+        public MailMessage createMailMessage(EmailType emailType,string Subject,string FromEmail,string displayFromEmail,string DocumentName,string UserName,string ApprovedUser,string RealName, string Password)
         {
             try
             {
@@ -238,6 +239,38 @@ namespace DigiDoc.WebAPI.Controllers
                     if (!string.IsNullOrEmpty(UserName))
                         htmlBody = htmlBody.Replace("$$$$GUEST_NAME$$$$", UserName);
                   
+
+                    AlternateView avHtml = AlternateView.CreateAlternateViewFromString(htmlBody, null, MediaTypeNames.Text.Html);
+                    LinkedResource inline = new LinkedResource(header_image_path, MediaTypeNames.Image.Jpeg);
+                    inline.ContentId = header_content_id;
+                    avHtml.LinkedResources.Add(inline);
+                    //inline = new LinkedResource(button_image_path, MediaTypeNames.Image.Jpeg);
+                    //inline.ContentId = buton_content_id;
+                    //avHtml.LinkedResources.Add(inline);
+
+                    message.Subject = Subject;
+                    message.IsBodyHtml = true;
+                    message.AlternateViews.Add(avHtml);
+                    message.From = new MailAddress(FromEmail, displayFromEmail);
+                    return message;
+                }
+                else if (emailType == EmailType.SendPassword)
+                {
+                    MailMessage message = new MailMessage();
+                    string header_content_id = Guid.NewGuid().ToString();
+                    string buton_content_id = Guid.NewGuid().ToString();
+                    string header_image_path = System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\Images\\Logo_login.jpg");
+                    //string button_image_path = System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\Images\\checkout\\chkout.png");
+                    string htmlBody = System.IO.File.ReadAllText(System.Web.HttpContext.Current.Request.MapPath("~\\Resources\\HTML\\PasswordInform.html"));
+                    htmlBody = htmlBody.Replace("$$HEADER_IMAGE$$", header_content_id);
+
+                    if (!string.IsNullOrEmpty(RealName))
+                        htmlBody = htmlBody.Replace("$$REAL_NAME$$", RealName);
+                    if (!string.IsNullOrEmpty(UserName))
+                        htmlBody = htmlBody.Replace("$$USER_NAME$$", UserName);
+                    if (!string.IsNullOrEmpty(Password))
+                        htmlBody = htmlBody.Replace("$$PASSWORD$$", Password);
+
 
                     AlternateView avHtml = AlternateView.CreateAlternateViewFromString(htmlBody, null, MediaTypeNames.Text.Html);
                     LinkedResource inline = new LinkedResource(header_image_path, MediaTypeNames.Image.Jpeg);

@@ -20,7 +20,7 @@ namespace DigiDoc.Controllers
     public class UserController : BaseController
     {
         // GET: User
-             public ActionResult NewUser(string Message = null)
+        public ActionResult NewUser(string Message = null)
         {
             NewUserModel newUser = new NewUserModel();
             newUser.UserForm = new UserFormModel();
@@ -64,9 +64,9 @@ namespace DigiDoc.Controllers
             }
 
         }
-     
+
         [HttpPost]
-        
+
         public async Task<ActionResult> NewUser(NewUserModel newUser)
         {
             ViewBag.Message = string.Empty;
@@ -160,7 +160,7 @@ namespace DigiDoc.Controllers
 
                             }
                         }
-       
+
                     }
                     else
                     {
@@ -277,7 +277,7 @@ namespace DigiDoc.Controllers
                 return RedirectToAction("UserList", "User", new { Message = "Not able to fetch the user details" });
             }
         }
-      
+
         public ActionResult UserList(string Message = null, bool Success = false)
         {
 
@@ -287,10 +287,10 @@ namespace DigiDoc.Controllers
             sessionData.SubMenu = "User Master";
             Session["DigiDocData"] = sessionData;
             AuditHelper.InsertAuditLog("Masters", sessionData != null ? sessionData.UserName : "", "Viewed users list");
-            
-                ViewBag.Message = Message;
-                ViewBag.Success = Success;
-            
+
+            ViewBag.Message = Message;
+            ViewBag.Success = Success;
+
             return View();
         }
 
@@ -362,7 +362,7 @@ namespace DigiDoc.Controllers
                     draw = model.draw,
                     data = documentList,
                     recordsFiltered = TotalCount,
-                  
+
                     recordsTotal = TotalCount
                 };
                 return Json(response, JsonRequestBehavior.AllowGet);
@@ -476,9 +476,9 @@ namespace DigiDoc.Controllers
                             ViewBag.Message = "Changes updated successfully!";
                             ViewBag.UserID = userModel.UserID;
                             ViewBag.Success = true;
-                           
-                            
-                           
+
+
+
                         }
                         else if (spResponse != null)
                         {
@@ -492,7 +492,7 @@ namespace DigiDoc.Controllers
 
                             ViewBag.Message = $"Failled to update : {spResponse.ResponseMessage}";
                             ViewBag.UserID = userModel.UserID;
-                            
+
                         }
                         else
                         {
@@ -513,7 +513,7 @@ namespace DigiDoc.Controllers
 
 
                         ViewBag.Message = "No changes are made to update!";
-                        ViewBag.UserID = userModel.UserID; 
+                        ViewBag.UserID = userModel.UserID;
                     }
                 }
 
@@ -549,7 +549,7 @@ namespace DigiDoc.Controllers
         {
             if (ModelState.IsValid)
             {
-                   var password = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,16}$");
+                var password = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,16}$");
                 if (password.IsMatch(resetPassword.NewPassword))
                 {
                     if (password.IsMatch(resetPassword.RetypedNewPassword))
@@ -609,7 +609,7 @@ namespace DigiDoc.Controllers
                 else
                 {
                     return Json(new { Result = false, Message = "Password must contain 8 to 16 characters with 1 lower case, 1 upper case, 1 number,1 special character.", Success = false });
-                    }
+                }
 
             }
             else
@@ -693,11 +693,11 @@ namespace DigiDoc.Controllers
         [HttpPost]
         public async Task<ActionResult> Upload()
         {
-            
-                //Write your code here
 
-                DataTable dt = new DataTable();
-                dt.Columns.AddRange(new DataColumn[3] { new DataColumn("SL.No",typeof(int)), new DataColumn("Username", typeof(string)),
+            //Write your code here
+
+            DataTable dt = new DataTable();
+            dt.Columns.AddRange(new DataColumn[3] { new DataColumn("SL.No",typeof(int)), new DataColumn("Username", typeof(string)),
                             new DataColumn("Error Message", typeof(string)),
                              });
 
@@ -706,83 +706,83 @@ namespace DigiDoc.Controllers
             {
                 HttpPostedFileBase file = Request.Files[0] as HttpPostedFileBase;
                 UserFormModel usermodel = new UserFormModel();
-               
-                    if (file != null && file.ContentLength > 0)
+
+                if (file != null && file.ContentLength > 0)
+                {
+                    if (file.FileName.EndsWith(".csv"))
                     {
-                        if (file.FileName.EndsWith(".csv"))
+                        string extension = System.IO.Path.GetExtension(Request.Files["File"].FileName).ToLower();
+
+
+                        string path1 = string.Format("{0}/{1}", Server.MapPath("~/uploads"), Request.Files["File"].FileName + DateTime.Now.ToString("ddmmyyyyhhmmss"));
+                        if (!Directory.Exists(path1))
                         {
-                            string extension = System.IO.Path.GetExtension(Request.Files["File"].FileName).ToLower();
+                            Directory.CreateDirectory(Server.MapPath("~/uploads"));
+                        }
 
-
-                            string path1 = string.Format("{0}/{1}", Server.MapPath("~/uploads"), Request.Files["File"].FileName + DateTime.Now.ToString("ddmmyyyyhhmmss"));
-                            if (!Directory.Exists(path1))
+                        if (System.IO.File.Exists(path1))
+                        { System.IO.File.Delete(path1); }
+                        Request.Files["File"].SaveAs(path1);
+                        if (extension == ".csv")
+                        {
+                            using (StreamReader sr = new StreamReader(path1))
                             {
-                                Directory.CreateDirectory(Server.MapPath("~/uploads"));
-                            }
-
-                            if (System.IO.File.Exists(path1))
-                            { System.IO.File.Delete(path1); }
-                            Request.Files["File"].SaveAs(path1);
-                            if (extension == ".csv")
-                            {
-                                using (StreamReader sr = new StreamReader(path1))
+                                string[] headers = sr.ReadLine().Split(',');
+                                if (headers.Length == 8)
                                 {
-                                    string[] headers = sr.ReadLine().Split(',');
-                                    if (headers.Length == 8)
-                                    {
-                                        int i = 0;
+                                    int i = 0;
 
-                                        while (!sr.EndOfStream)
+                                    while (!sr.EndOfStream)
+                                    {
+                                        i++;
+                                        string[] rows = sr.ReadLine().Split(',');
+                                        if (rows.Length == 8)
                                         {
-                                            i++;
-                                            string[] rows = sr.ReadLine().Split(',');
-                                            if (rows.Length == 8)
-                                            {
-                                                usermodel.IsActive = "true";
-                                                usermodel.UserName = rows[0];
-                                                usermodel.RealName = rows[1];
-                                                usermodel.Email = rows[2];
-                                                usermodel.PhoneNumber = rows[3];
-                                                usermodel.UserPassword = rows[7];
+                                            usermodel.IsActive = "true";
+                                            usermodel.UserName = rows[0];
+                                            usermodel.RealName = rows[1];
+                                            usermodel.Email = rows[2];
+                                            usermodel.PhoneNumber = rows[3];
+                                            usermodel.UserPassword = rows[7];
                                             usermodel.SecuirityQuestion = "Mothers maiden Name";
                                             usermodel.SecurityAnswer = ConfigurationManager.AppSettings["DefaultAnswer"].ToString();
-                                           
+
                                             var spResponse = UtilityHelper.getPropertyDetails();
-                                                if (spResponse != null && spResponse.result)
-                                                {
-
-                                                    var propertyMasters = (List<PropertyMasterModel>)spResponse.ResponseData;
-                                                    if (propertyMasters != null)
-                                                    {
-                                                        var property = propertyMasters.Where(x => x.PropertyName.ToString().ToUpper() == rows[4].ToUpper());
-                                                        if (property != null && property.Count() > 0)
-                                                        {
-                                                            usermodel.PropertyID = propertyMasters.Where(x => x.PropertyName.ToString().ToUpper() == rows[4].ToUpper()).FirstOrDefault().PropertyID;
-                                                        }
-                                                    }
-                                                }
-                                                spResponse = UtilityHelper.getUserProfileDetails();
-                                                if (spResponse != null && spResponse.result)
-                                                {
-
-                                                    var UserProfile = (List<UserProfileModel>)spResponse.ResponseData;
-                                                    if (UserProfile != null)
-                                                    {
-                                                        var profileid = UserProfile.Where(x => x.ProfileName.ToString().ToUpper() == rows[5].ToUpper());
-                                                        if (profileid != null && profileid.Count() > 0)
-                                                        {
-                                                            usermodel.UserProfileID = UserProfile.Where(x => x.ProfileName.ToString().ToUpper() == rows[5].ToUpper()).FirstOrDefault().UserProfileID;
-                                                        }
-
-                                                    }
-                                                }
-                                                var securityquestion= UtilityHelper.fetchSecuirityQuestionMaster();
-                                            if(securityquestion != null)
+                                            if (spResponse != null && spResponse.result)
                                             {
-                                                if(securityquestion.Count() > 0)
+
+                                                var propertyMasters = (List<PropertyMasterModel>)spResponse.ResponseData;
+                                                if (propertyMasters != null)
                                                 {
-                                                    var securityquestionid=securityquestion.Where(x=>x.SecurityQuestion.ToLower()==usermodel.SecuirityQuestion.ToLower());
-                                                    if(securityquestionid != null && securityquestionid.Count() > 0)
+                                                    var property = propertyMasters.Where(x => x.PropertyName.ToString().ToUpper() == rows[4].ToUpper());
+                                                    if (property != null && property.Count() > 0)
+                                                    {
+                                                        usermodel.PropertyID = propertyMasters.Where(x => x.PropertyName.ToString().ToUpper() == rows[4].ToUpper()).FirstOrDefault().PropertyID;
+                                                    }
+                                                }
+                                            }
+                                            spResponse = UtilityHelper.getUserProfileDetails();
+                                            if (spResponse != null && spResponse.result)
+                                            {
+
+                                                var UserProfile = (List<UserProfileModel>)spResponse.ResponseData;
+                                                if (UserProfile != null)
+                                                {
+                                                    var profileid = UserProfile.Where(x => x.ProfileName.ToString().ToUpper() == rows[5].ToUpper());
+                                                    if (profileid != null && profileid.Count() > 0)
+                                                    {
+                                                        usermodel.UserProfileID = UserProfile.Where(x => x.ProfileName.ToString().ToUpper() == rows[5].ToUpper()).FirstOrDefault().UserProfileID;
+                                                    }
+
+                                                }
+                                            }
+                                            var securityquestion = UtilityHelper.fetchSecuirityQuestionMaster();
+                                            if (securityquestion != null)
+                                            {
+                                                if (securityquestion.Count() > 0)
+                                                {
+                                                    var securityquestionid = securityquestion.Where(x => x.SecurityQuestion.ToLower() == usermodel.SecuirityQuestion.ToLower());
+                                                    if (securityquestionid != null && securityquestionid.Count() > 0)
                                                     {
                                                         usermodel.SecuirityQuestion = securityquestionid.FirstOrDefault().SecurityQuestionID;
                                                     }
@@ -791,23 +791,23 @@ namespace DigiDoc.Controllers
 
                                             }
 
-                                                usermodel.UpdatePassword = rows[6].ToLower();
-                                                if (usermodel.UserName != null && usermodel.RealName != null && usermodel.UserPassword != null && usermodel.Email != null && usermodel.UserProfileID != null && usermodel.PropertyID != null && usermodel.UpdatePassword != null&&usermodel.SecuirityQuestion!=null&&usermodel.SecurityAnswer!=null)
-                                                {
-                                                    var usernameval = new Regex(@"^[a-zA-Z0-9 ]+$");
-                                                    var remailregex = new Regex(@"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$");
-                                                    var password = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,16}$");
-                                                    //  var phoneregex = new Regex(@"^(\+\d{1,3}[- ]?)?\d{10,15}$");
-                                                    var phoneregex = new Regex(@"^\(?([0-9]{2,3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4,9})$");
+                                            usermodel.UpdatePassword = rows[6].ToLower();
+                                            if (usermodel.UserName != null && usermodel.RealName != null && usermodel.UserPassword != null && usermodel.Email != null && usermodel.UserProfileID != null && usermodel.PropertyID != null && usermodel.UpdatePassword != null && usermodel.SecuirityQuestion != null && usermodel.SecurityAnswer != null)
+                                            {
+                                                var usernameval = new Regex(@"^[a-zA-Z0-9 ]+$");
+                                                var remailregex = new Regex(@"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$");
+                                                var password = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,16}$");
+                                                //  var phoneregex = new Regex(@"^(\+\d{1,3}[- ]?)?\d{10,15}$");
+                                                var phoneregex = new Regex(@"^\(?([0-9]{2,3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4,9})$");
 
-                                                    if ((usermodel.UserName.Length < 32 && usermodel.UserName.Length >= 3))
+                                                if ((usermodel.UserName.Length < 32 && usermodel.UserName.Length >= 3))
+                                                {
+                                                    if (usernameval.IsMatch(usermodel.UserName.ToString()))
                                                     {
-                                                        if (usernameval.IsMatch(usermodel.UserName.ToString()))
+                                                        if (password.IsMatch(usermodel.UserPassword))
                                                         {
-                                                            if (password.IsMatch(usermodel.UserPassword))
+                                                            if (remailregex.IsMatch(usermodel.Email.ToString()))
                                                             {
-                                                                if (remailregex.IsMatch(usermodel.Email.ToString()))
-                                                                {
                                                                 if (string.IsNullOrEmpty(usermodel.PhoneNumber))
                                                                 {
                                                                     spResponse = UtilityHelper.createUserAccount(usermodel, true);
@@ -857,23 +857,13 @@ namespace DigiDoc.Controllers
 
                                                                     }
                                                                 }
-                                                                }
-                                                                else
-                                                                {
-                                                                    DataRow dr = dt.NewRow();
-                                                                    dr[0] = dt.Rows.Count;
-                                                                    dr[1] = rows[0].ToString();
-                                                                    dr[2] = "Email is not valid";
-                                                                    dt.Rows.Add(dr);
-
-                                                                }
                                                             }
                                                             else
                                                             {
                                                                 DataRow dr = dt.NewRow();
                                                                 dr[0] = dt.Rows.Count;
                                                                 dr[1] = rows[0].ToString();
-                                                                dr[2] = "Password must contain 1 lower case 1 upper case 1 number 1 special character with 8 to 16 characters";
+                                                                dr[2] = "Email is not valid";
                                                                 dt.Rows.Add(dr);
 
                                                             }
@@ -883,82 +873,84 @@ namespace DigiDoc.Controllers
                                                             DataRow dr = dt.NewRow();
                                                             dr[0] = dt.Rows.Count;
                                                             dr[1] = rows[0].ToString();
-                                                            dr[2] = "Username accepts only alphabets";
+                                                            dr[2] = "Password must contain 1 lower case 1 upper case 1 number 1 special character with 8 to 16 characters";
                                                             dt.Rows.Add(dr);
 
                                                         }
-
                                                     }
                                                     else
                                                     {
                                                         DataRow dr = dt.NewRow();
                                                         dr[0] = dt.Rows.Count;
                                                         dr[1] = rows[0].ToString();
-                                                        dr[2] = "UserName shoulbe greater than 2 and less than 32";
+                                                        dr[2] = "Username accepts only alphabets";
                                                         dt.Rows.Add(dr);
 
-
                                                     }
+
                                                 }
-
-
                                                 else
                                                 {
                                                     DataRow dr = dt.NewRow();
                                                     dr[0] = dt.Rows.Count;
                                                     dr[1] = rows[0].ToString();
-                                                    dr[2] = "UserName,RealName,UserPassword,Email,UserProfileID,PropertyID columns should not be null";
+                                                    dr[2] = "UserName shoulbe greater than 2 and less than 32";
                                                     dt.Rows.Add(dr);
 
+
                                                 }
-
-
-
                                             }
+
 
                                             else
                                             {
                                                 DataRow dr = dt.NewRow();
                                                 dr[0] = dt.Rows.Count;
                                                 dr[1] = rows[0].ToString();
-                                                dr[2] = "No  of column should be 7";
+                                                dr[2] = "UserName,RealName,UserPassword,Email,UserProfileID,PropertyID columns should not be null";
                                                 dt.Rows.Add(dr);
 
                                             }
 
+
+
                                         }
 
-                                        if (dt.Rows.Count == 0)
-                                        {
-
-                                            return Json(new { Result = true, Message = "Users Saved Successfully", Success = true });
-                                        }
                                         else
                                         {
-
-                                            //byte[] filecontent = new DatatabletoPdf().exportpdf(dt);
-                                            //string filename = "Sample_PDF_" + DateTime.Now.ToString("MMddyyyyhhmmss") + ".pdf";
-                                            //return File(filecontent, "application/pdf", filename);
-
-
-                                            return Json(new { Result = true, Message = $"Users Success count-{i - dt.Rows.Count}=Fail count- {dt.Rows.Count}", Success = true });
+                                            DataRow dr = dt.NewRow();
+                                            dr[0] = dt.Rows.Count;
+                                            dr[1] = rows[0].ToString();
+                                            dr[2] = "No  of column should be 7";
+                                            dt.Rows.Add(dr);
 
                                         }
+
+                                    }
+
+                                    if (dt.Rows.Count == 0)
+                                    {
+
+                                        return Json(new { Result = true, Message = "Users Saved Successfully", Success = true });
                                     }
                                     else
                                     {
 
-                                        return Json(new { Result = false, Message = "No of Column should be 8", Success = false });
+                                        //byte[] filecontent = new DatatabletoPdf().exportpdf(dt);
+                                        //string filename = "Sample_PDF_" + DateTime.Now.ToString("MMddyyyyhhmmss") + ".pdf";
+                                        //return File(filecontent, "application/pdf", filename);
+
+
+                                        return Json(new { Result = true, Message = $"Users Success count-{i - dt.Rows.Count}=Fail count- {dt.Rows.Count}", Success = true });
 
                                     }
                                 }
+                                else
+                                {
 
+                                    return Json(new { Result = false, Message = "No of Column should be 8", Success = false });
 
-                            }
-                            else
-                            {
-                                return Json(new { Result = false, Message = "Upload a valid .csv file", Success = false });
-
+                                }
                             }
 
 
@@ -969,40 +961,88 @@ namespace DigiDoc.Controllers
 
                         }
 
+
                     }
                     else
                     {
                         return Json(new { Result = false, Message = "Upload a valid .csv file", Success = false });
 
-
-
                     }
-
 
                 }
                 else
                 {
-
                     return Json(new { Result = false, Message = "Upload a valid .csv file", Success = false });
 
+
+
                 }
-            
+
+
+            }
+            else
+            {
+
+                return Json(new { Result = false, Message = "Upload a valid .csv file", Success = false });
+
+            }
+
 
         }
-      
+
         public FileResult DownloadFile()
         {
             if (System.IO.File.Exists(System.Web.Hosting.HostingEnvironment.MapPath("~/Assets/Samples/") + "UserUploadSample.csv"))
             {
                 var sDocument = System.Web.Hosting.HostingEnvironment.MapPath("~/Assets/Samples/") + "UserUploadSample.csv";
                 byte[] fileBytes = System.IO.File.ReadAllBytes(sDocument);
-               
+
 
                 //Send the File to Download.
                 string fileName = "SampleUploadFile.csv";
                 return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
             }
             return null;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> NewUserEmailSend(UserEmailSend user)
+        {
+            string BaseURL = ConfigurationManager.AppSettings["EmailURL"].ToString();
+            string FromEmail = ConfigurationManager.AppSettings["FromEmail"].ToString();
+            string DisplayFromEmail = ConfigurationManager.AppSettings["DisplayFromEmail"].ToString();
+            string NewUserEmailSubject = ConfigurationManager.AppSettings["NewUserEmailSubject"].ToString();
+            var sessionData = (SessionDataModel)Session["DigiDocData"];
+            sessionData.MenuName = "Masters";
+            sessionData.SubMenu = "User Master";
+            Session["DigiDocData"] = sessionData;
+            string controllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
+
+            EmailResponse emailResponse = await new WSClientHelper().SendEmail(new EmailRequest()
+
+            {
+                FromEmail = FromEmail,
+                displayFromEmail = DisplayFromEmail,
+                ToEmail = user.Email,
+                Subject = NewUserEmailSubject,
+
+                UserName = user.UserName,
+                RealName = user.RealName,
+                Password=user.UserPassword,
+                EmailType = EmailType.SendPassword,
+
+
+            }, "NewUserEmailSend", new ServiceParameters { EmailAPIProxyHost = ConfigurationModel.EmailAPIProxyHost, EmailAPIProxyPswd = ConfigurationModel.EmailAPIProxyPswd, isProxyEnableForEmailAPI = ConfigurationModel.isProxyEnableForEmailAPI, EmailURL = ConfigurationModel.EmailURL });
+            if (emailResponse != null && emailResponse.result)
+            {
+                AuditHelper.InsertAuditLog("Masters", sessionData != null ? sessionData.UserName : "", "Email regarding password send to user" + user.RealName + " to his email" + user.Email);
+                return Json(new { Result = true, Message = "Success" });
+            }
+            else
+            {
+                AuditHelper.InsertAuditLog("Masters", sessionData != null ? sessionData.UserName : "", "Email regarding password Failed send to user" + user.RealName + " to his email" + user.Email);
+                return Json(new { Result = false, Message = "Failed" });
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace DigiDoc.WebAPI.Controllers
             try
             {
                EmailLib emailLib1 = new EmailLib();
-                EmailResponse emailResponse1 = await emailLib1.SendEmail(emailRequest.ToEmail, emailRequest.FromEmail, emailRequest.EmailType,  emailRequest.Subject, ConfigurationManager.AppSettings["SMTPUsername"], ConfigurationManager.AppSettings["SMTPPassword"], ConfigurationManager.AppSettings["SMTPHOST"], Int32.Parse(ConfigurationManager.AppSettings["PORT"]), bool.Parse(ConfigurationManager.AppSettings["SslEnabled"]),ConfigurationManager.AppSettings["SMTPDefaultCredentials"],emailRequest.displayFromEmail,emailRequest.DocumentName,emailRequest.UserName,emailRequest.ApproverName,emailRequest.AttchmentBase64,emailRequest.AttachmentFileName);
+                EmailResponse emailResponse1 = await emailLib1.SendEmail(emailRequest.ToEmail, emailRequest.FromEmail, emailRequest.EmailType,  emailRequest.Subject, ConfigurationManager.AppSettings["SMTPUsername"], ConfigurationManager.AppSettings["SMTPPassword"], ConfigurationManager.AppSettings["SMTPHOST"], Int32.Parse(ConfigurationManager.AppSettings["PORT"]), bool.Parse(ConfigurationManager.AppSettings["SslEnabled"]),ConfigurationManager.AppSettings["SMTPDefaultCredentials"],emailRequest.displayFromEmail,emailRequest.DocumentName,emailRequest.UserName,emailRequest.ApproverName,emailRequest.AttchmentBase64,emailRequest.AttachmentFileName,emailRequest.RealName,emailRequest.Password);
                 return emailResponse1;
             }
             catch (Exception ex)

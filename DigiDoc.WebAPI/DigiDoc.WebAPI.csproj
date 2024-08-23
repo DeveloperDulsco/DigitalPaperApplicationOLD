@@ -295,6 +295,7 @@
     <Content Include="Global.asax" />
     <Content Include="Resources\HTML\AcceptRequest.html" />
     <Content Include="Resources\HTML\GuestFolio.html" />
+    <Content Include="Resources\HTML\PasswordInform.html" />
     <Content Include="Resources\HTML\RejectRequest.html" />
     <Content Include="Resources\HTML\ApprovalRequest.html" />
     <Content Include="Resources\Images\Logo_login.jpg" />

@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var userID = (SessionDataModel)Session["DigiDocData"];
 }
-@{ 
+@{
 
     var doctype = ViewBag.DocumentType;
 
@@ -16,154 +16,155 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-<div class="container-fluid px-4 pt-4">
+    <div class="container-fluid px-4 pt-4">
 
-    <div class="row">
-        <div class="col">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="@Url.Action("DocumentGroups", "Document")">Document</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">List</li>
-                </ol>
-            </nav>
-        </div>
-        @*<div class="col-12 col-sm-auto">
-                <a class="mb-4 home-btn" href="/Document/DocumentGroups">
-                    <img src="~/Assets/images/home.svg" />
-                </a>
-            </div>*@
-        <div class="col-12 col-sm-auto">
-            <a class="mb-4 back-btn" href="@Url.Action("DocumentGroups", "Document")"><i class="fas fa-arrow-left"></i>Back</a>
-        </div>
-        @*<div class="col-12 col-sm-auto">
-                <ul class="search">
-                    <li>
-                        <a class="btn-link" href="#">Upload File</a>
-                    </li>
-                    <li class="input-bx">
-                        <input type="text" class="form-control" placeholder="Search ...">
-                        <a class="icon" href="#"><img src="~/assets/images/search.svg"></a>
-                    </li>
-                </ul>
-            </div>*@
-    </div>
-    <div class="table-wrap">
         <div class="row">
-            <div class="col-md-12">
-                @if (!string.IsNullOrEmpty(ViewBag.Message))
-                {
-
-                    if (ViewBag.Success)
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@Url.Action("DocumentGroups", "Document")">Document</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">List</li>
+                    </ol>
+                </nav>
+            </div>
+            @*<div class="col-12 col-sm-auto">
+                    <a class="mb-4 home-btn" href="/Document/DocumentGroups">
+                        <img src="~/Assets/images/home.svg" />
+                    </a>
+                </div>*@
+            <div class="col-12 col-sm-auto">
+                <a class="mb-4 back-btn" href="@Url.Action("DocumentGroups", "Document")"><i class="fas fa-arrow-left"></i>Back</a>
+            </div>
+            @*<div class="col-12 col-sm-auto">
+                    <ul class="search">
+                        <li>
+                            <a class="btn-link" href="#">Upload File</a>
+                        </li>
+                        <li class="input-bx">
+                            <input type="text" class="form-control" placeholder="Search ...">
+                            <a class="icon" href="#"><img src="~/assets/images/search.svg"></a>
+                        </li>
+                    </ul>
+                </div>*@
+        </div>
+        <div class="table-wrap">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (!string.IsNullOrEmpty(ViewBag.Message))
                     {
-                        <div class="alert alert-success" role="alert">
 
-                            @(ViewBag.Message)
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="alert alert-danger" role="alert">
+                        if (ViewBag.Success)
+                        {
+                            <div class="alert alert-success" role="alert">
 
-                            @(ViewBag.Message)
-                        </div>
+                                @(ViewBag.Message)
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger" role="alert">
+
+                                @(ViewBag.Message)
+                            </div>
+                        }
                     }
-                }
-                <form name="DocumnetListForm" id="Documentlist" method="post" action="@Url.Action("GetDocumentListAjax", "Document", new { DocumentType = ViewBag.documentType })">
-                  @Html.AntiForgeryToken()
-                    <div class="date_picker">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="form-label">Created Date</label>
-                                @*<div class="form-icon">
-                                *@
+                    <form name="DocumnetListForm" id="Documentlist" method="post" action="@Url.Action("GetDocumentListAjax", "Document", new { DocumentType = ViewBag.documentType })">
+                        @Html.AntiForgeryToken()
+                        <div class="date_picker">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="form-label">Created Date</label>
+                                    @*<div class="form-icon">
+                                    *@
+                                    @if (userID.IsEditable)
+                                    {
+                                        <div class="input-group">
+                                            <input name="StartDate" id="startDate" type="text" class="form-control datepicker" placeholder="Please Select a Date" autocomplete="off" />
+                                            <label class="" for="startDate">
+                                                <span class="btn btn-default iconclassaudit">
+                                                    <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+
+                                                </span>
+                                            </label>
+                                        </div>
+                                        @*<input name="StartDate" id="startDate" type="text" class="form-control datepicker" placeholder="Please Select a Date" autocomplete="off" />*@
+                                    }
+                                    else
+                                    {
+                                        <div class="input-group">
+                                            <input name="StartDate" id="startDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate" autocomplete="off" disabled />
+                                            <label class="" for="startDate">
+                                                <span class="btn btn-default iconclassaudit">
+                                                    <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+
+                                                </span>
+                                            </label>
+                                        </div>
+                                    }
+                                    @*</div>*@
+                                </div>
                                 @if (userID.IsEditable)
                                 {
-                                    <div class="input-group">
-                                        <input name="StartDate" id="startDate" type="text" class="form-control datepicker" placeholder="Please Select a Date" autocomplete="off" />
-                                        <label class="" for="startDate">
-                                            <span class="btn btn-default iconclassaudit">
-                                                <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
-
-                                            </span>
-                                        </label>
-                                    </div>
-                                    @*<input name="StartDate" id="startDate" type="text" class="form-control datepicker" placeholder="Please Select a Date" autocomplete="off" />*@
-                                }
-                                else
+                                    <div class="col-md-3">
+                                        <div class="space30"></div>
+                            
+                                        <input type="button" name="SubmitButon" id="viewButon" value="View" class="btn btn-primary" />
+                                    </div>}
+                                @if (userID.IsEdit)
                                 {
-                                    <div class="input-group">
-                                        <input name="StartDate" id="startDate" type="text" class="form-control datepicker" value="@ViewBag.StartDate" autocomplete="off" disabled />
-                                        <label class="" for="startDate">
-                                            <span class="btn btn-default iconclassaudit">
-                                                <span class="cal-append"><i class="far fa-calendar-alt"></i></span>
+                                    if (doctype != "Recycle Bin")
 
-                                            </span>
-                                        </label>
-                                    </div>
+                                    {
+                                        <div class="col-12 col-lg-auto">
+                                            <div class="spacer-mb d-none d-lg-block"></div>
+                                            <ul class="butttons">
+                                                <li>
+                                                    <input type="button" name="SubmitButon" id="delButon" value="Delete Document" class="btn btn-primary" onclick="uploaddoc()" />
+
+
+                                                </li>
+                                                <li>
+                                                    <input type="button" name="SubmitButon" id="upButon" value="Upload Files" class="btn btn-secondary" onclick="docUpload()" />
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    }
                                 }
-                                @*</div>*@
                             </div>
-                            @if (userID.IsEditable)
-                            {
-                                <div class="col-md-3">
-                                    <div class="space30"></div>
-                                    <input type="button" name="SubmitButon" id="viewButon" value="View" class="btn btn-primary" />
-                                </div>}
-                            @if (userID.IsEdit)
-                            {
-                                if (doctype != "Recycle Bin")
-
-                                {
-                                    <div class="col-12 col-lg-auto">
-                                        <div class="spacer-mb d-none d-lg-block"></div>
-                                        <ul class="butttons">
-                                            <li>
-                                                <input type="button" name="SubmitButon" id="delButon" value="Delete Document" class="btn btn-primary" onclick="uploaddoc()" />
-
-
-                                            </li>
-                                            <li>
-                                                <input type="button" name="SubmitButon" id="upButon" value="Upload Files" class="btn btn-secondary" onclick="docUpload()" />
-
-                                            </li>
-                                        </ul>
-                                    </div>
-                                }
-                            }
                         </div>
+
+                    </form>
+
+                    <div class="table-responsive">
+                        <table id="documentTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-nowrap" scope="col">Document Type</th>
+                                    <th class="text-nowrap" scope="col">Document Name</th>
+                                    <th class="text-nowrap" scope="col">Created Date</th>
+                                    @*<th class="text-nowrap" scope="col">Created Time</th>*@
+                                    <th class="text-nowrap" scope="col">Guest Name</th>
+                                    <th class="text-nowrap" scope="col">Room No</th>
+                                    <th class="text-nowrap" scope="col">Chek-In Date</th>
+                                    <th class="text-nowrap" scope="col">Check-Out Date</th>
+                                    @*<th class="text-nowrap" scope="col">Modefied Date</th>*@
+                                    <th class="text-nowrap" scope="col">Last Modified By</th>
+                                    <th class="text-nowrap" scope="col">Status</th>
+                                    <th class="text-nowrap" scope="col">Approver/Rejector</th>
+                                    <th class="text-nowrap text-center" scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
                     </div>
-
-                </form>
-
-                <div class="table-responsive">
-                    <table id="documentTable" class="table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-nowrap" scope="col">Document Type</th>
-                                <th class="text-nowrap" scope="col">Document Name</th>
-                                <th class="text-nowrap" scope="col">Created Date</th>
-                                @*<th class="text-nowrap" scope="col">Created Time</th>*@
-                                <th class="text-nowrap" scope="col">Guest Name</th>
-                                <th class="text-nowrap" scope="col">Room No</th>
-                                <th class="text-nowrap" scope="col">Chek-In Date</th>
-                                <th class="text-nowrap" scope="col">Check-Out Date</th>
-                                @*<th class="text-nowrap" scope="col">Modefied Date</th>*@
-                                <th class="text-nowrap" scope="col">Last Modified By</th>
-                                <th class="text-nowrap" scope="col">Status</th>
-                                <th class="text-nowrap" scope="col">Approver/Rejector</th>
-                                <th class="text-nowrap text-center" scope="col">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 }
 <div class="modal model-cstm fade" id="ConfirmModals" aria-hidden="true" aria-labelledby="ConfirmmessageModals" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
@@ -233,8 +234,8 @@
             </div>
             <div class="modal-body">
                 <div class="message">
-                    <p id="modalMessageContent">
-                        Documents Not Selected for Deleting
+                    <p id="modalMessageContents">
+                       
                     </p>
                 </div>
                 <div class="button-wrapper d-flex justify-content-center">
@@ -265,11 +266,33 @@
                                 <label>Document File</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="file" id="upload" name="upload" accept=".pdf" multiple />
-                                @Html.Label("FileError", new { @class = "field-validation-error", @id = "FileError" })
+                                <div class="text-center">
+                                    <button type="button" id="attachButton" class="btn btn-primary"><i class="fas fa-paperclip"></i> Attach Files</button>
+                                    <input type="file" id="fileInput" class="d-none"  accept=".pdf" multiple>
+                                    
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="container">
+
+
+
+                                    <div id="fileListContainer">
+
+                                        <div id="fileList" class="file-container"></div>
+                                    </div>
+
+                                    <div id="progressContainer" class="my-3"></div>
+                                    @Html.Label("FileError", new { @class = "field-validation-error", @id = "FileError" })
+
+                                    @*    <button id="uploadButton" class="btn btn-success btn-block"><i class="fas fa-upload"></i> Upload</button>*@
+                                </div>
+                            </div>
+
+                        </div>
                         <div class="row mb-3">
                             <div class="col-md-6 ">
                                 <label>Document Name</label>
@@ -298,7 +321,7 @@
 
                         <div class="button-wrapper d-flex justify-content-center">
                             <button class="btn btn-primary" name="upload" type="submit" id="btncmt">Ok</button>
-                            <button class="btn btn-secondary" type="button"id="btncancl" onclick="btncancel()">Cancel</button>
+                            <button class="btn btn-secondary" type="button" id="btncancl" onclick="btncancel()">Cancel</button>
                         </div>
 
 
@@ -328,24 +351,24 @@
                     var urlParams = new URLSearchParams(window.location.search);
                     if (urlParams.has('Message'));
                     {
-                       
+
                         if (urlParams.get('Message') != null) {
-                           
+
                                 if (urlParams.get('DocumentType') != null) {
                                     if (urlParams.has('DocumentType'));
                                     {
                                         //var url = new URL(window.location);
                                         //url.searchParams.set('DocumentType', urlParams.get('DocumentType'));
-                                       
+
                                         history.pushState('', document.title, window.location.pathname + "?DocumentType=" + urlParams.get('DocumentType'));
 
                                     }
                                 }
-                            
+
                         }
-                    
+
                     }
-                   
+
                 }
             }, 15000);
 
@@ -394,7 +417,7 @@
                     'style': 'multi'
                 },
                 "columns": [
-                   
+
                     {
                         "data": "DocumentDetailID",
 
@@ -445,9 +468,9 @@
                     },
                     {
                         "data": "DepartureDate",
-                        
+
                         "render": function (data, type, row) {
-                           
+
                             return formatDate(new Date(parseInt(row.DepartureDate.substr(6))));
                         }
                     },
@@ -500,8 +523,8 @@
 
             //    })
 
-         
-          
+
+
 
             $('#delButon').on('click', function (e) {
                 var rows_selected = dt.column(0).checkboxes.selected();
@@ -509,38 +532,43 @@
                 $("#hfdocuments").val(rows_selected.join(","));
 
                 if (rows_selected.join(",") != null && rows_selected.join(",") != '') {
-                 
+
                     $('#ConfirmModals').modal('show');
                     $('#modalMessageContent').text('Do you want to delete the documents?')
                 }
                 else {
-                    $('#modalMessageContent').text('Documents Not Selected for Delete')
+                    $('#modalMessageContents').text("Documents Not Selected for Delete");
                    $('#messageModal').modal('show');
                 }
             });
             $('#frmUpload').on('submit', function (e) {
+              
                 e.preventDefault();
                 $("#loadingModal").css("display", "block");
-               
+
                 var url = $(this).attr('action');
                 var form = $('#frmUpload')
-             
+
                 var formData = new FormData(form.get(0));
-              
+                var checkfiles = false;
                 var errorcount = 0;
-                if ($('#upload')[0].files.length == 0) {
+                filesArray.forEach((file) => {
+                    formData.append('files', file);
+                    checkfiles = true;
+                });
+                if (!checkfiles) {
                     $("#FileError").text('Please Upload a File');
                     errorcount++;
                 }
                 else {
                     $("#FileError").empty();
 
-                   
+
                 }
-                
+
                 if ($("#DocumentName").val() == "") {
                     $("#NameError").text('Please Enter a DocumentName')
-                    errorcount++; alert($("#DocumentName").val());
+                    errorcount++; 
                 }
                 else {
                     $("#NameError").empty();
@@ -553,11 +581,11 @@
                 else {
                     $("#RoomError").empty();
                 }
-                formData.append("File", $('#upload')[0].files);
+               // formData.append("File", $('#upload')[0].files);
                 formData.append("DocumentType", $('#hdfdocumenttypes').val());
                 formData.append("DocumentName", $('#DocumentName').val());
                 formData.append("RoomNo", $('#RoomNo').val());
-               
+
             if (errorcount<=0) {
                     $.ajax({
                         url: url,
@@ -568,11 +596,14 @@
                         success: function (data) {
                             $("#loadingModal").css("display", "none");
                             if (data.Result) {
-
-                                $('#modalMessageContent').text("Document Uploaded Successfully");
-                                dt.ajax.reload();
+                                
+                               
+                                $('#modalMessageContents').text("Document Uploaded Successfully");
                                 $('#messageModal').modal('show');
+                                dt.ajax.reload();
+                               
                                 $('#docModal').modal('hide');
+                              
                             }
                             else {
                                 $("#FileError").text('Please Upload a File');
@@ -592,7 +623,7 @@
             else {
                 $("#loadingModal").css("display", "none");
                     $('#docModal').modal('show');
-                   
+
                 }
 
 
@@ -613,20 +644,180 @@
             $('#ConfirmModal').modal('show');
         }
         function docUpload() {
-            $('#upload').val('');
+           
             $("#Errortext").empty();
             $("#NameError").empty();
             $("#FileError").empty();
             $("#RoomError").empty();
+            $("#DocumentName").val('');
+            $("#RoomNo").val('');
+            filesArray = [];
+            fileList.innerHTML = '';
+            progressContainer.innerHTML = '';
+            FileSize = 0;
+            updateContainerHeight();
             $('#docModal').modal('show');
 
         }
         function btncancel() {
             /*$("#loadingModal").css("display", "none");*/
+            $("#Errortext").empty();
+            $("#NameError").empty();
+            $("#FileError").empty();
+            $("#RoomError").empty();
+            $("#DocumentName").val('');
+            $("#RoomNo").val('');
+            filesArray = [];
+            fileList.innerHTML = '';
+            progressContainer.innerHTML = '';
+            FileSize = 0;
             $('#docModal').modal('hide');
-            alert('hi');
+            updateContainerHeight();
         }
     </script>
+    <script>
+        const attachButton = document.getElementById('attachButton');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const progressContainer = document.getElementById('progressContainer');
+       // const uploadButton = document.getElementById('uploadButton');
+        const maxFileSize = 5 * 1024 * 1024; // 5MB in bytes
+        const maxfullFileSize = 5 * 1024 * 1024; // 5MB in bytes
+        updateContainerHeight();
+        let filesArray = [];
+        let FileSize = 0;
+        attachButton.addEventListener('click', () => {
+            $("#NameError").empty();
+            $("#FileError").empty();
+            $("#RoomError").empty();
+            fileInput.click();
+           
+        });
 
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            handleFiles(files);
+        });
+
+        //uploadButton.addEventListener('click', () => {
+        //    uploadFiles();
+        //});
+
+        function handleFiles(files) {
+            Array.from(files).forEach((file) => {
+                if (FileSize <= maxfullFileSize) {
+                    if (file.size <= maxFileSize) {
+                       
+                        FileSize += file.size;
+                        if (!filesArray.includes(file)) {
+                            filesArray.push(file);
+                            displayFile(file);
+                            updateContainerHeight();
+                        }
+                    } else {
+                       
+                        $("#FileError").val("File" + file.name + "is too large. Maximum file size is 5MB.");
+
+                    }
+                }
+                else {
+                    $("#FileError").val("Total File is large. Maximum file size is 25MB.");
+                   
+
+                }
+            });
+        }
+        function updateContainerHeight() {
+            const container = document.getElementById('fileListContainer');
+            const fileList = document.getElementById('fileList');
+
+            if (fileList.children.length === 0) {
+                container.style.height = '0';
+            } else {
+                const fileListHeight = fileList.scrollHeight;
+                container.style.height = `${fileListHeight}px`;
+            }
+        }
+        function displayFile(file) {
+          
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.innerHTML = `
+        <div class="file-info">
+            <i class="fas fa-file-alt"></i> 
+            <span class="file-name" title="${file.name}">${truncateFileName(file.name)}</span>
+            <span class="file-size">${(file.size / 1024 / 1024).toFixed(2)} MB</span>
+            <button class="btn btn-sm btn-clse" aria-label="Close" title="Remove File" type="button"><i class="fas fa-times"></i></button>
+        </div>
+        
+    `;
+
+            const removeButton = fileItem.querySelector('.btn-clse');
+            removeButton.addEventListener('click', () => {
+                filesArray = filesArray.filter(f => f !== file);
+                FileSize = FileSize - fileItem.FileSize;
+                fileItem.remove();
+                updateContainerHeight();
+            });
+
+            fileList.appendChild(fileItem);
+           
+        }
+
+        function truncateFileName(name) {
+            if (name.length > 6) {
+                return name.substring(0, 6) + '...';
+            }
+            return name;
+        }
+
+        function uploadFiles() {
+            progressContainer.innerHTML = '';
+            filesArray.forEach((file) => {
+                uploadFile(file);
+            });
+        }
+
+        function uploadFile(file) {
+            const url = '@Url.Action("UploadFile", "Home")';
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+
+            xhr.upload.addEventListener('progress', (event) => {
+                if (event.lengthComputable) {
+                    const percentComplete = (event.loaded / event.total) * 100;
+                    updateProgress(file.name, percentComplete);
+                }
+            });
+
+            xhr.onload = () => {
+                if (xhr.status === 200) {
+                    updateProgress(file.name, 100);
+                } else {
+                    console.error('Upload failed');
+                }
+            };
+
+            xhr.send(formData);
+        }
+
+        function updateProgress(fileName, percentComplete) {
+            let progressBar = document.querySelector(`#progress-${fileName.replace(/\s/g, '')}`);
+            if (!progressBar) {
+                progressBar = document.createElement('div');
+                progressBar.id = `progress-${fileName.replace(/\s/g, '')}`;
+                progressBar.className = 'progress my-2';
+                progressBar.innerHTML = `
+                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">${fileName}</div>
+                `;
+                progressContainer.appendChild(progressBar);
+            }
+            progressBar.querySelector('.progress-bar').style.width = `${percentComplete}%`;
+            progressBar.querySelector('.progress-bar').setAttribute('aria-valuenow', percentComplete);
+        }
+    </script>
 
 }

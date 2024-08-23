@@ -266,7 +266,12 @@
                                 <label>Document File</label>
                             </div>
                             <div class="col-md-6">
-                                <input type="file" id="upload" name="upload" accept=".pdf" multiple />
+                                <div id="dropArea">
+                                    <h3>Drag & Drop Files Here</h3>
+                                    <p>or</p>
+                                    <input type="file" id="fileInput" name="upload" accept=".pdf" multiple>
+                                </div>
+                               @* <input type="file" id="upload" name="upload" accept=".pdf" multiple />*@
                                 @Html.Label("FileError", new { @class = "field-validation-error", @id = "FileError" })
                             </div>
                         </div>
@@ -632,7 +637,7 @@
         function btncancel() {
             /*$("#loadingModal").css("display", "none");*/
             $('#docModal').modal('hide');
-            alert('hi');
+           
         }
     </script>
 

@@ -205,6 +205,8 @@
                     <input class="btn btn-secondary m-0" type="button" name="CancelButon" id="cancelButon" value="Cancel" onclick="@("window.location.href='" + @Url.Action("UserList", "User") + "'");" />
 
                     <input class="btn btn-primary mr-0" type="submit" name="UpdateButon" id="updateButon" value="Save">
+
+                    <input class="btn btn-primary mr-0" type="button" onclick="SendUserDetails()" name="EmailButon" id="EmailButton" value="Email">
                 </div>
             </div>
         </div>
@@ -362,7 +364,7 @@
 
         function resetpassword() {
 
-            
+
             $("#newpassword").val('');
             $("#retypednewpassword").val('');
 
@@ -450,6 +452,48 @@
             var myform = document.getElementById("frmuserdetails");
             myform.submit();
         }
+        function SendUserDetails() {
+            var token = $('input[name="__RequestVerificationToken"]').val();
+               $.ajax({
+                   url: "@Url.Action("NewUserEmailSend", "User")",
+                   type: "POST",
+                   data: {
+                       __RequestVerificationToken: token,
+                       UserName: '@Model.UserName',
+                       UserPassword: '@Model.UserPassword',
+                       RealName: '@Model.RealName',
+                       Email:'@Model.Email',
+                       UserID:@Model.UserID,
+                       
+                       
+                   },
+                   dataType: 'json',
+       success: function (data) {
+
+           if (data.Result) {
+               /*  alert(data.Result);*/
+               $('#modalMessageHeader').html('Success')
+               $('#modalMessageContent').html(data.Message)
+               $('#modalMessageContent').parent().removeClass("");
+               $('#modalMessageContent').parent().addClass("message");
+               $('#messageModal').modal('show');
+
+           }
+           else {
+               $('#modalMessageHeader').html('Warning')
+               $('#modalMessageContent').html(data.Message)
+               $('#modalMessageContent').parent().removeClass("");
+               $('#modalMessageContent').parent().addClass("messagewarn");
+               $('#messageModal').modal('show');
+           }
+
+
+       },
+       error: function (error) {
+           //  bootbox.alert("Failed");
+       }
+   })
+        }
         $(document).ready(function () {
 
 
@@ -464,7 +508,7 @@
                 e.preventDefault();
                 var url = $(this).attr('action');
                 var data = $(this).serialize();
-              
+
                 $.ajax({
                     url: url,
                     data: data,

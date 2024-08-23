@@ -249,10 +249,13 @@
                             }
                             else {
                                 if (row.IsActive == true) {
-                                    return '<a class="tb-icon" href="#" onclick="openDetailModal(' + row.DocumentID + ', \'' + row.DocumentName + '\', \'' + row.IsActive + '\', \'' + row.DocumentCode + '\');"><i class="far fa-eye"></i></a>&nbsp;<a class="tb-icon" href="#" confirm="Are you want to delete document type?" onclick="return DeleteDocument(\'' + row.DocumentCode + '\',' + row.DocumentID + ');"><i class="fa fa-trash"></i></a>'
+                                    return '<a class="tb-icon" href="#" confirm="Are you want to delete document type?" onclick="return DeleteDocument(\'' + row.DocumentCode + '\',' + row.DocumentID + ');"><i class="fa fa-trash"></i></a>'
+
+                                  // return '<a class="tb-icon" href="#" onclick="openDetailModal(' + row.DocumentID + ', \'' + row.DocumentName + '\', \'' + row.IsActive + '\', \'' + row.DocumentCode + '\');"><i class="far fa-eye"></i></a>&nbsp;<a class="tb-icon" href="#" confirm="Are you want to delete document type?" onclick="return DeleteDocument(\'' + row.DocumentCode + '\',' + row.DocumentID + ');"><i class="fa fa-trash"></i></a>'
                                 }
                                 else {
-                                    return '<a class="tb-icon" href="#" onclick="openDetailModal(' + row.DocumentID + ', \'' + row.DocumentName + '\', \'' + row.IsActive + '\', \'' + row.DocumentCode + '\');"><i class="far fa-eye">'
+                                    return ''
+                                   // return '<a class="tb-icon" href="#" onclick="openDetailModal(' + row.DocumentID + ', \'' + row.DocumentName + '\', \'' + row.IsActive + '\', \'' + row.DocumentCode + '\');"><i class="far fa-eye">'
                                 }
                             }
                         }
